@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time management? Need it!</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <header>
+      <div id="info">
+        <img src="images/logotipo.png">
+        <h1><a href="index.php">Time management? Need it!</a></h1>
+      </div>
+      <div id="user">
+        <form action="action_login.php" method="post">
+          <input type="text" placeholder="username" name="username">
+          <input type="password" placeholder="password" name="password">
+          <div>
+            <input type="submit" value="Login">
+            <a href="register.php">Register</a>
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="about.php">About Us</a></li>
+        <li><a href="contacts.php">Contacts</a></li>
+      </ul>
+    </nav>
+
+    <section id="categories">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="?cat_id=1">Finances</a></li>
+        <li><a href="?cat_id=2">Books</a></li>
+        <li><a href="?cat_id=3">Sports</a></li>
+        <li><a href="?cat_id=4">Shopping</a></li>
+        <li><a href="?cat_id=5">Home Care</a></li>
+        <li><a href="?cat_id=6">Family</a></li>
+        <li><a href="?cat_id=7">Friends</a></li>
+      </ul>
+    </section>
+
+    <section id="products">
+      <article>
+        <h2>Apple</h2>
+        <p class="description">Especially high in vitamin C, apples also provide vitamin A as a powerful antioxidant to help resist infection and scavenge free radicals that cause inflammation. They also contain a significant amount of fiber, which can help prevent absorption of LDL (bad) cholesterol.</p>
+        <img src="images/products/1.png">
+        <p class="price">2.89€/kg</p>
+        <a href="action_add_to_cart.php?id=1">Buy</a>
+      </article>
+    </section>
+
+    <footer>
+      &copy; 2017 Time management? Need it!
+    </footer>
+
+  </body>
+</html>
