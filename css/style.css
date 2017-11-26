@@ -49,6 +49,35 @@ body > header {
   flex-grow: 1;
 }
 
+
+#about {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  background-color: inherit;
+}
+
+#about article {
+  padding: 1em;
+}
+
+#about article h2 {
+  grid-column-end: span 2;
+  margin: 0;
+  font-size: 2em;
+}
+
+#about article .description {
+  font-size: 1.6em;
+  grid-column-end: span 2;
+}
+
+#about article img {
+  grid-row-end: span 2;
+  max-width: 8em;
+  align-self: flex-end;
+}
+
+
 #user  {
   padding: 1em 0 1em 1em;
   /*border-bottom: 1px dotted #333;*/
@@ -102,40 +131,83 @@ body > header {
   font-size: 0.7em;
   border: 1px solid #000000;
   line-height: 150%;
-  padding: 3px;
+  padding: 10px;
   color: 		#000000;
-
+  opacity:0.9;
+  border-radius: 10px;
 }
 
-#about {
+#categories {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  background-color: inherit;
+  margin-right: 90px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin: 8px;
+  opacity:0.9;
+  border-radius: 10px;
+
 }
 
-#about article {
-  padding: 1em;
+#categories h2 {
+  display: none;
 }
 
-#about article h2 {
-  grid-column-end: span 2;
+#categories ul {
   margin: 0;
-  font-size: 2em;
+  padding: 0;
 }
 
-#about article .description {
-  font-size: 1.6em;
-  grid-column-end: span 2;
+#categories li {
+  margin: 3px;
+  border: 1px solid #000000;
+  line-height: 150%;
+  padding: 3px;
+  color: #000000;
+  display: block;
+  border-radius: 10px;
 }
 
-#about article img {
-  grid-row-end: span 2;
-  max-width: 8em;
-  align-self: flex-end;
+
+#categories li a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+  color: black;
+  border-radius: 10px;
 }
 
+#categories li a:hover {
+  background-color: #333;
+  color: white;
+}
+
+#buttons{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin: 6px;
+  opacity:0.9;
+  margin-left: 600px;
+  margin-top: 300px;
+}
+
+#buttons a{
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #000000;
+}
+
+#buttons a:first-child{
+  border-right: 2px solid black;
+}
+
+#buttons a{
+  padding: 0 1em;
+}
 
 footer {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
   grid-area: footer;
   background-color: #333;
   color: white;
