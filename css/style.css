@@ -54,6 +54,7 @@ body > header {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   background-color: inherit;
+  position: static;
 }
 
 #about article {
@@ -79,15 +80,15 @@ body > header {
 
 
 #user  {
-  padding: 1em 0 1em 1em;
+  padding: 2em 0 1em 1em;
   /*border-bottom: 1px dotted #333;*/
   position: fixed;
-  margin-left: 240px;
+  margin-left: 220px;
   margin-top: 30px;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   font-size: 3em;
-  background-color: inherit;
+
 }
 
 #user form {
@@ -121,13 +122,22 @@ body > header {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   font-size: 2em;
-  margin-left: 750px;
-  margin-top: 270px;
-  background-color: inherit;
+  padding: 0em 0em 0em 0em;
+  margin-right: 250px;
+  margin-left: 700px;
+  margin-top: 280px;
+  margin-bottom: 600px;
   position: fixed;
+  text-align: center;
 }
 #register p{
-  font-size: 0.8em;
+  font-size: 0.7em;
+  margin: 10px;
+  opacity:0.9;
+  background-color: #FFFFFF;
+  color: black;
+  border-radius: 0px 0px 5px 5px;
+  padding: 0px 1px 0px 1px;
 }
 #register a {
   text-decoration: none;
@@ -137,6 +147,9 @@ body > header {
   border: 1px solid #000000;
   line-height: 150%;
   padding: 10px;
+  position: static;
+  margin-left: 200px;
+  margin-top: 100px;
   color: 		#000000;
   opacity:0.9;
   border-radius: 10px;
