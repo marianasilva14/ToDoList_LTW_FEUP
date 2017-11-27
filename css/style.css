@@ -106,12 +106,17 @@ body > header {
   font-size: 0.3em;
 }
 
-#user div {
-  display: flex;
-  align-items: center;
-  margin-top: 7px;
+#user div input{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 5em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  vertical-align: middle;
+  margin-top: 3px;
+  height: 100px;
+  width: 70px;
 }
-
 #register{
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
