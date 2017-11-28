@@ -38,4 +38,4 @@ INSERT INTO to_do VALUES (5,'Changing the bathroom lamp',5,1);
 
 INSERT INTO to_do VALUES (6,'Watch Star Wars',6,1);
 
-INSERT INTO usr_info VALUES(1, 'John', 'John123', 25, 'john@fe.up.pt');
+INSERT INTO usr_info VALUES(1, 'John', 'a5391e96f8d48a62e8c85381df108e98', 25, 'john@fe.up.pt');

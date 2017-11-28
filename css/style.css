@@ -5,6 +5,7 @@ body {
   grid-template-columns: 2fr 3fr 2fr;
   grid-template-areas:
     "header     header       header"
+    "messages   messages     messages"
     "user       user         user"
     "footer     footer       footer";
   background-color: #94bfb6;
@@ -276,6 +277,9 @@ body > header {
   line-height: 150%;
   font-size: 0.8em;
 }
+
+
+
 footer {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
@@ -285,7 +289,6 @@ footer {
   color: white;
   padding: 1em;
 }
-
 @media (max-width: 70em) {
   body {
     width: 100%;
@@ -312,10 +315,31 @@ footer {
   #info h1 {
     font-size: 2em;
   }
+  #messages {
+  grid-column: 1/ span 2;
+}
 }
 
 @media (max-width: 520px) {
   #about {
     grid-template-columns: 1fr;
   }
+}
+#messages article {
+  text-align: center;
+  color: white;
+}
+
+#messages article p {
+  margin: 2px;
+  padding: 0.5em;
+}
+
+#messages article.error {
+  background-color: #F66;
+}
+
+#messages article.success {
+  background-color: #6D6;
+
 }
