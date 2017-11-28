@@ -1,3 +1,8 @@
+<?php
+$isLoggedIn = (isset($_SESSION['username']));
+$username= $_SESSION['username'];
+print_r($username);
+?>
 <section id="categories">
   <h2>Categories</h2>
   <ul>
