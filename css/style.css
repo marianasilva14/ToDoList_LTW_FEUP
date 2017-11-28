@@ -231,6 +231,51 @@ body > header {
   padding: 0 1em;
 }
 
+#new_register{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 5em;
+  height: 5.4em;
+  margin-top: 0.5em;
+  grid-area: user;
+  grid-column-start: 1;
+}
+
+#image_register {
+  grid-area: user;
+  padding: 2em 40em 2em 20em;
+  grid-column-start: 2;
+}
+#image_register img{
+    width: 300px;
+}
+
+#new_register form {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width: 40em;
+  height: 2em;
+  font-size: 0.3em;
+    justify-content: flex-end;
+}
+
+#new_register form  input{
+  width: 20em;
+  height: 2em;
+
+}
+
+#new_register form div input{
+  text-decoration: none;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  height: 2em;
+  width: 5em;
+  border-radius: 10px;
+  line-height: 150%;
+  font-size: 0.8em;
+}
 footer {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
