@@ -3,6 +3,7 @@
   function setCurrentUser($username) {
   $_SESSION['username'] = $username;
 }
+
 function getErrorMessages() {
   if (isset($_SESSION['error_messages']))
     return $_SESSION['error_messages'];
