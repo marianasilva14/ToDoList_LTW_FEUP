@@ -1,4 +1,3 @@
-<header>
 <div id="user">
   <form action="action_login.php" method="post">
     <input type="text" placeholder="username" name="username">
@@ -8,12 +7,11 @@
     </div>
   </form>
 </div>
-</header>
 
-<header id="register">
-<p href="description"><b>Create a new account</b></p>
-<a href="register.php">Register</a>
-</header>
+<section id="register">
+<img src="images/signup.png">
+<a href="register.php">SIGN UP</a>
+</section>
 
 <section id="about">
 <article>

@@ -13,6 +13,7 @@
   <header>
     <div id="info">
       <img src="images/logotipo.png">
-      <h1><a href="main.html">Time management? <br>  Need it!</a></h1>
+      <h1><a href='index.php'>Time management? <br>  Need it!</a></h1>
     </div>
   </header>
+  <?php include_once('templates/common/user.php'); ?>
