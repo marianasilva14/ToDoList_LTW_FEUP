@@ -1,3 +1,7 @@
+DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS to_do;
+DROP TABLE IF EXISTS usr_info;
+
 CREATE TABLE category (
   cat_id INTEGER PRIMARY KEY,
   cat_name VARCHAR NOT NULL
@@ -38,4 +42,4 @@ INSERT INTO to_do VALUES (5,'Changing the bathroom lamp',5,1);
 
 INSERT INTO to_do VALUES (6,'Watch Star Wars',6,1);
 
-INSERT INTO usr_info VALUES(1, 'John', 'a5391e96f8d48a62e8c85381df108e98', 25, 'john@fe.up.pt');
+INSERT INTO usr_info VALUES(1, 'John', '32c343450db19211767e52ea86c5133f73b6277b', 25, 'john@fe.up.pt');
