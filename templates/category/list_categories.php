@@ -1,9 +1,3 @@
-<?php
-include_once('../../database/connection.php');
-include_once('../../database/category.php');
-$categories = getAllCategories();
-?>
-
 <section id="categories">
   <h2>Categories</h2>
   <ul>
