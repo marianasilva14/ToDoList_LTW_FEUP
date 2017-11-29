@@ -1,7 +1,8 @@
 <?php
-$isLoggedIn = (isset($_SESSION['username']));
-$username= $_SESSION['username'];
-print_r($username);
+include_once('database/connection.php');
+include_once('database/category.php');
+$categories = getAllCategories();
+echo $categories;
 ?>
 <section id="categories">
   <h2>Categories</h2>

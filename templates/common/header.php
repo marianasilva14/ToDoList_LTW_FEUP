@@ -1,8 +1,4 @@
-<?php
-$isLoggedIn = (isset($_SESSION['username']));
-$username= $_SESSION['username'];
-print_r($username);
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
