@@ -215,7 +215,7 @@ body > header {
   color: white;
   border-radius: 0px 0px 5px 5px;
   padding-right: 5px;
-  padding-left: 610px;
+  padding-left: 480px;
 }
 
 #buttons a{
@@ -227,6 +227,10 @@ body > header {
 #buttons a:first-child{
   border-right: 2px solid black;
 }
+#buttons a:nth-child(2){
+  border-right: 2px solid black;
+}
+
 
 #buttons a{
   padding: 0 1em;
@@ -242,15 +246,6 @@ body > header {
   grid-column-start: 1;
 }
 
-#image_register {
-  grid-area: user;
-  padding: 2em 40em 2em 20em;
-  grid-column-start: 2;
-}
-#image_register img{
-    width: 300px;
-}
-
 #new_register form {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
@@ -259,12 +254,34 @@ body > header {
   font-size: 0.3em;
     justify-content: flex-end;
 }
-
-#new_register form  input{
+.input1{
   width: 20em;
   height: 2em;
-
+margin: 10px 0px 0px 100px;
+font-size: 12px;
 }
+
+.input2{
+  width: 20em;
+  height: 2em;
+margin: 10px 0px 0px 175px;
+font-size: 12px;
+}
+
+.input3{
+  width: 20em;
+  height: 2em;
+margin: 10px 0px 0px 160px;
+font-size: 12px;
+}
+
+.input4{
+  width: 20em;
+  height: 2em;
+margin: 10px 0px 0px 110px;
+font-size: 12px;
+}
+
 
 #new_register form div input{
   text-decoration: none;
@@ -277,8 +294,6 @@ body > header {
   line-height: 150%;
   font-size: 0.8em;
 }
-
-
 
 footer {
   font-family: 'Permanent Marker', cursive;
