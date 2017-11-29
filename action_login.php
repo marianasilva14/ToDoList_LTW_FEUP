@@ -6,7 +6,7 @@ include_once('database/user.php');
   if (isLoginCorrect($_POST['username'], $_POST['password'])) {
     setCurrentUser($_POST['username']);
     $_SESSION['success_messages'][] = "Login Successful!";
-    header("Location: ../templates/category/list_categories.php");
+    header("Location: logged.php");
     exit();
   } else {
     $_SESSION['error_messages'][] = "Login Failed!";

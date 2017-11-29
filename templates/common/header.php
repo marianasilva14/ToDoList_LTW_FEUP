@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +16,3 @@
       <h1><a href='index.php'>Time management? <br>  Need it!</a></h1>
     </div>
   </header>
-
-  <?php if($_SERVER['REQUEST_URI'] != '/register.php')
-  include_once('templates/session/user.php');
-  ?>
