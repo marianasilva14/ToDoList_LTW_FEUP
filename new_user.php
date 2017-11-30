@@ -1,5 +1,5 @@
 <?php
-
+echo "lalal";
 include_once('database/user.php');
 include_once('includes/init.php');
 
@@ -9,10 +9,11 @@ $username     = $_POST['username'];
 $password     = $_POST['password'];
 $age          = $_POST['age'];
 $email        = $_POST['email'];
+$photo        = $_FILES['photo'];
 
 
 // chamar a função para inserir na bd
-insert_new_user($name, $username,$password, $age, $email);
+insert_new_user($name, $username,$password, $age, $email,$photo);
   ob_start();
 header('Location: index.php');
   ob_end_flush();

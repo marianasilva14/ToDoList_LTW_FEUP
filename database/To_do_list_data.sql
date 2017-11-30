@@ -20,7 +20,8 @@ CREATE TABLE usr_info (
   usr_username VARCHAR NOT NULL,
   usr_password VARCHAR NOT NULL,
   usr_age Integer NOT NULL,
-  usr_email VARCHAR NOT NULL
+  usr_email VARCHAR NOT NULL,
+  usr_photo VARCHAR( 100 ) NOT NULL
 );
 
 INSERT INTO category VALUES (1, 'Finances');
@@ -42,5 +43,3 @@ INSERT INTO to_do VALUES (4,'Curry the car',3,1);
 INSERT INTO to_do VALUES (5,'Changing the bathroom lamp',5,1);
 
 INSERT INTO to_do VALUES (6,'Watch Star Wars',6,1);
-
-INSERT INTO usr_info VALUES(1, 'John Will','John', '32c343450db19211767e52ea86c5133f73b6277b', 25, 'john@fe.up.pt');

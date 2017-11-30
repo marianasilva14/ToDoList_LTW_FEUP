@@ -244,6 +244,7 @@ body > header {
   margin-top: 0.5em;
   grid-area: user;
   grid-column-start: 1;
+  margin-bottom:2em;
 }
 
 #new_register form {
@@ -253,6 +254,12 @@ body > header {
   height: 2em;
   font-size: 0.3em;
   justify-content: flex-end;
+}
+.input0{
+  width: 20em;
+  height: 2em;
+margin: 10px 0px 0px 150px;
+font-size: 12px;
 }
 .input1{
   width: 20em;
@@ -290,6 +297,7 @@ font-size: 12px;
   color: black;
   height: 2em;
   width: 5em;
+  margin-right: 5em;
   border-radius: 10px;
   line-height: 150%;
   font-size: 0.8em;

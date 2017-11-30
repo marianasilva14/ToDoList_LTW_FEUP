@@ -1,7 +1,7 @@
 <div id="new_register">
-  <form action="new_user.php" method="post">
+  <form action="new_user.php" method="post" enctype="multipart/form-data">
     <lable> Name:
-      <input class ="input1"type="text" name="name" value="">
+      <input class ="input0"type="text" name="name" value="">
     </lable>
         <br></br>
     <lable> Username:
@@ -20,6 +20,11 @@
     <input class ="input4" type="password" name="password" value="">
   </lable>
     <br></br>
+  <lable> Perfil Picture:
+    <input type="file" name="photo" />
+    <br /><br />
+  </lable>
+      <br></br>
     <div class="submit">
       <input type="submit" value="Register">
     </div>
