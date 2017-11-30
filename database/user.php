@@ -65,7 +65,7 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
         	$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
 
         	// Caminho de onde ficará a imagem
-        	$caminho_imagem = "../images/" . $nome_imagem;
+        	$caminho_imagem = "images/" . $nome_imagem;
 
 			// Faz o upload da imagem para seu respectivo caminho
 			move_uploaded_file($photo['tmp_name'], $caminho_imagem);
@@ -76,5 +76,6 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
 		  $stmt->execute(array(NULL,$name,$username,sha1($password),$age,$email,$nome_imagem));
 		}
   }
+}
 }
 ?>
