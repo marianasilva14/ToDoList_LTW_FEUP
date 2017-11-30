@@ -1,5 +1,5 @@
 <?php
-
+  ob_start();
 include_once('database/user.php');
 include_once('includes/init.php');
 
@@ -15,5 +15,5 @@ $photo        = $_FILES['photo'];
 insert_new_user($name, $username,$password, $age, $email,$photo);
 header('Location: index.php');
 
-
+  ob_end_flush();
 ?>

@@ -24,11 +24,11 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
     if (!empty($photo['name'])) {
 
 		// Largura máxima em pixels
-		$largura = 1024;
+		$largura = 10000;
 		// Altura máxima em pixels
-		$altura = 1024;
+		$altura = 10000;
 		// Tamanho máximo do arquivo em bytes
-		$tamanho = 10000;
+		$tamanho = 500000;
 
 		$error = array();
 
@@ -60,21 +60,21 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
 
 			// Pega extensão da imagem
 			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $photo['name'], $ext);
-  echo "hooooo";
+
         	// Gera um nome único para a imagem
         	$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
-  echo "h32vo32";
+
         	// Caminho de onde ficará a imagem
         	$caminho_imagem = "images/" . $nome_imagem;
-  echo "eblerbio";
+
 			// Faz o upload da imagem para seu respectivo caminho
 			move_uploaded_file($photo['tmp_name'], $caminho_imagem);
-  echo "aqui1234";
+
 			// Insere os dados no banco
       $stmt =$dbh->prepare('INSERT INTO usr_info(usr_id,usr_name,usr_username, usr_password, usr_age,usr_email,usr_photo)
       VALUES (?,?,?,?,?,?,?)');
 		  $stmt->execute(array(NULL,$name,$username,sha1($password),$age,$email,$nome_imagem));
-        echo "ultimo";
+
 		}
   }
 }
