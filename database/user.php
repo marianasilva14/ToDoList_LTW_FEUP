@@ -23,13 +23,6 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
 
     if (!empty($photo['name'])) {
 
-		// Largura máxima em pixels
-		$largura = 10000;
-		// Altura máxima em pixels
-		$altura = 10000;
-		// Tamanho máximo do arquivo em bytes
-		$tamanho = 500000;
-
 		$error = array();
 
     	// Verifica se o arquivo é uma imagem
@@ -37,23 +30,6 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
      	   $error[1] = "Isso não é uma imagem.";
    	 	}
 
-		// Pega as dimensões da imagem
-		$dimensoes = getimagesize($photo['tmp_name']);
-
-		// Verifica se a largura da imagem é maior que a largura permitida
-		if($dimensoes[0] > $largura) {
-			$error[2] = "A largura da imagem não deve ultrapassar ".$largura." pixels";
-		}
-
-		// Verifica se a altura da imagem é maior que a altura permitida
-		if($dimensoes[1] > $altura) {
-			$error[3] = "Altura da imagem não deve ultrapassar ".$altura." pixels";
-		}
-
-		// Verifica se o tamanho da imagem é maior que o tamanho permitido
-		if($photo['size'] > $tamanho) {
-   		 	$error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
-		}
 
 		// Se não houver nenhum erro
 		if (count($error) == 0) {
@@ -62,22 +38,53 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
 			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $photo['name'], $ext);
 
         	// Gera um nome único para a imagem
-        	$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+        	$name_image= md5(uniqid(time())) . "." . $ext[1];
 
         	// Caminho de onde ficará a imagem
-        	$caminho_imagem = "images/" . $nome_imagem;
+        	$path_image = "images/" . $name_image;
 
 			// Faz o upload da imagem para seu respectivo caminho
-			move_uploaded_file($photo['tmp_name'], $caminho_imagem);
+			move_uploaded_file($photo['tmp_name'], $path_image);
 
 			// Insere os dados no banco
       $stmt =$dbh->prepare('INSERT INTO usr_info(usr_id,usr_name,usr_username, usr_password, usr_age,usr_email,usr_photo)
       VALUES (?,?,?,?,?,?,?)');
-		  $stmt->execute(array(NULL,$name,$username,sha1($password),$age,$email,$nome_imagem));
+		  $stmt->execute(array(NULL,$name,$username,sha1($password),$age,$email,$name_image));
 
 		}
   }
 }
 
 }
+
+function changeUserName($userID,$newName){
+  global $db;
+  $stmt = $db->prepare('UPDATE usr_info SET usr_name = ? WHERE usr_id = ?');
+  return $stmt->execute(array($newName, $userID));
+}
+
+function changeUserUsername($userID,$newUsername){
+  global $db;
+  $stmt = $db->prepare('UPDATE usr_info SET usr_name = ? WHERE usr_id = ?');
+  return $stmt->execute(array($newUsername, $userID));
+}
+
+function changeUserAge($userID,$newAge){
+  global $db;
+  $stmt = $db->prepare('UPDATE usr_info SET usr_age = ? WHERE usr_id = ?');
+  return $stmt->execute(array($newAge, $userID));
+}
+
+function changeUserEmail($userID,$newEmail){
+  global $db;
+  $stmt = $db->prepare('UPDATE usr_info SET usr_email = ? WHERE usr_id = ?');
+  return $stmt->execute(array($newEmail, $userID));
+}
+
+function changeUserPassword($userID,$newPassword){
+  global $db;
+  $stmt = $db->prepare('UPDATE usr_info SET usr_password = ? WHERE usr_id = ?');
+	return $stmt->execute(array($newPassword, $userID));
+}
+
 ?>
