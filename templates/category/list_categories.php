@@ -14,8 +14,8 @@
 </header>
 
 <section id="user_info">
-  <p> Name: <?=$_SESSION['usr_info']['usr_name']?> </p>
-  <p> Username: <?=$_SESSION['usr_info']['usr_username']?> </p>
-  <p> Age: <?=$_SESSION['usr_info']['usr_age']?> </p>
-  <p> Email: <?=$_SESSION['usr_info']['usr_email']?> </p>
+  <p> <?=$_SESSION['usr_info']['usr_name']?> </p>
+  <p> Username:  &nbsp;<?=$_SESSION['usr_info']['usr_username']?> </p>
+  <p> Age:  &nbsp; <?=$_SESSION['usr_info']['usr_age']?> </p>
+  <p> Email: &nbsp; <?=$_SESSION['usr_info']['usr_email']?> </p>
 </section>
