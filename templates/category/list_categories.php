@@ -12,3 +12,10 @@
   <a href="profile.php"><b>Edit your profile</b></a>
   <a href="action_logout.php"><b>Logout</b></a>
 </header>
+
+<section id="user_info">
+  <p> Name: <?=$_SESSION['usr_info']['usr_name']?> </p>
+  <p> Username: <?=$_SESSION['usr_info']['usr_username']?> </p>
+  <p> Age: <?=$_SESSION['usr_info']['usr_age']?> </p>
+  <p> Email: <?=$_SESSION['usr_info']['usr_email']?> </p>
+</section>

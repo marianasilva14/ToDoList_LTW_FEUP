@@ -1,5 +1,9 @@
 <div id="new_register">
   <form action="new_user.php" method="post">
+    <lable> Name:
+      <input class ="input1"type="text" name="name" value="">
+    </lable>
+        <br></br>
     <lable> Username:
       <input class ="input1"type="text" name="username" value="">
     </lable>

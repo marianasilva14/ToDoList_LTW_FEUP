@@ -13,17 +13,17 @@ function isLoginCorrect($username, $password) {
   return true;
 }
 
-function insert_new_user($name, $password, $age,$email){
+function insert_new_user($name,$username, $password, $age,$email){
   // Verificar se todos os dados estão preenchidos
 
-  if (!empty($name) && !empty($password) && !empty($age) && !empty($email)) {
+  if (!empty($name) && !empty($username) !empty($password) && !empty($age) && !empty($email)) {
 
     global $dbh;
     // ENCRIPTAR E MANDAR PARA A BD
-    $stmt =$dbh->prepare('INSERT INTO usr_info(usr_id,usr_username, usr_password, usr_age,usr_email)
+    $stmt =$dbh->prepare('INSERT INTO usr_info(usr_id,usr_name,usr_username, usr_password, usr_age,usr_email)
     VALUES (?,?,?,?,?)');
 
-    $stmt->execute(array(NULL,$name,sha1($password),$age,$email));
+    $stmt->execute(array(NULL,$name,$username,sha1($password),$age,$email));
   }
 }
 ?>

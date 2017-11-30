@@ -16,6 +16,7 @@ CREATE TABLE to_do (
 
 CREATE TABLE usr_info (
   usr_id INTEGER PRIMARY KEY,
+  usr_name VARCHAR NOT NULL,
   usr_username VARCHAR NOT NULL,
   usr_password VARCHAR NOT NULL,
   usr_age Integer NOT NULL,
@@ -42,4 +43,4 @@ INSERT INTO to_do VALUES (5,'Changing the bathroom lamp',5,1);
 
 INSERT INTO to_do VALUES (6,'Watch Star Wars',6,1);
 
-INSERT INTO usr_info VALUES(1, 'John', '32c343450db19211767e52ea86c5133f73b6277b', 25, 'john@fe.up.pt');
+INSERT INTO usr_info VALUES(1, 'John Will','John', '32c343450db19211767e52ea86c5133f73b6277b', 25, 'john@fe.up.pt');
