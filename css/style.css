@@ -310,10 +310,17 @@ font-size: 12px;
   grid-column: 3;
 }
 
-#user_info p:first-child{
+#user_info p:nth-child(2){
     font-size: 3em;
 }
 
+#user_info article img{
+   border-radius: 50%;
+  margin-top: 1em;
+  grid-column: 2;
+  width: 10em;
+  height: 10em;
+}
 footer {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;

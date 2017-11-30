@@ -14,9 +14,13 @@
 </header>
 
 <section id="user_info">
+  <article>
+  <?php echo "<img src='images/".$_SESSION['usr_info']['usr_photo']."' alt='Foto de exibição' /><br />";
+   ?>
+ </article>
   <p> <?=$_SESSION['usr_info']['usr_name']?> </p>
   <p> Username:  &nbsp;<?=$_SESSION['usr_info']['usr_username']?> </p>
   <p> Age:  &nbsp; <?=$_SESSION['usr_info']['usr_age']?> </p>
   <p> Email: &nbsp; <?=$_SESSION['usr_info']['usr_email']?> </p>
-  <p> "<img src='images/"<?=$_SESSION['usr_info']['usr_email']?>"' alt='Foto de exibição' /><br />" </p>;
+
 </section>

@@ -2,7 +2,7 @@
 
 include_once('database/user.php');
 include_once('includes/init.php');
-echo "lalal";
+
 // Ler dados vindos do post
 $name         = $_POST['name'];
 $username     = $_POST['username'];
@@ -13,9 +13,7 @@ $photo        = $_FILES['photo'];
 
 // chamar a função para inserir na bd
 insert_new_user($name, $username,$password, $age, $email,$photo);
-  ob_start();
 header('Location: index.php');
-  ob_end_flush();
-  exit();
+
 
 ?>
