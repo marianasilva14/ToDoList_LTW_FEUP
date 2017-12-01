@@ -133,7 +133,7 @@ body > header {
   grid-area:user;
   grid-column: 3;
 
-  border: 1px solid #000000;
+  border: 1px solid white;
   color: 		#000000;
   opacity:0.9;
   border-radius: 10px;
@@ -143,6 +143,7 @@ body > header {
   margin-top: 1em;
   padding: 10px;
   position: static;
+  background:white;
 }
 
 #register img{
@@ -157,6 +158,7 @@ body > header {
   font-size: 0.7em;
   color: black;
   line-height: 150%;
+
 }
 
 #categories {

@@ -8,9 +8,10 @@
 
   function getAllToDoLists() {
     global $dbh;
-    $stmt = $dbh->prepare("SELECT toDO_description FROM to_do,category WHERE category.cat_id=to_do.cat_id
-    ORDER BY toDO_description");
-    echo "aquiiiii";
+    echo "aqui";
+    $stmt = $dbh->prepare("SELECT toDO_description FROM to_do
+      JOIN category USING(cat_id) WHERE toDO_id=?");
+      echo "aquino";
     $stmt->execute();
     return $stmt->fetchAll();
   }
