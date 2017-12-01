@@ -2,6 +2,7 @@
   <h2>Categories</h2>
   <ul>
     <?php foreach ($category as $category) { ?>
+      <h3> <?php echo $category['cat_name'] ?></h3>
       <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?></a></li>
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script type="text/javascript" src="../../scripts/list_categories.js"></script>
