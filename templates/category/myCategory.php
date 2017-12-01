@@ -1,8 +1,8 @@
 <section id="categories">
   <h2>Categories</h2>
   <ul>
-    <?php foreach ($categories as $category) { ?>
-      <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
+    <?php foreach ($category as $category) { ?>
+      <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?></a></li>
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script type="text/javascript" src="../../scripts/list_categories.js"></script>
     <?php } ?>

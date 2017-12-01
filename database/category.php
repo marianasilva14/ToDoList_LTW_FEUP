@@ -6,12 +6,10 @@
     return $stmt->fetchAll();
   }
 
-  function getAllToDoLists() {
+  function getAllToDoLists($cat_id) {
     global $dbh;
-    echo "aqui";
-    $stmt = $dbh->prepare("SELECT * FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) WHERE toDO_id=?");
-      echo "aquino";
-    $stmt->execute();
+    $stmt = $dbh->prepare("SELECT toDO_description FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) WHERE toDO_id=?");
+    $stmt->execute(array($cat_id));
     return $stmt->fetchAll();
   }
 ?>

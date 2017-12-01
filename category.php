@@ -1,8 +1,11 @@
 <?php
 session_start();
+include_once('database/connection.php');
 include_once('database/category.php');
 
-$category = getAllToDoLists();
+if(isset($_GET)){
+  $category = getAllToDoLists($_GET['cat_id']);
+}
 
 include_once('templates/common/header.php');
 include_once('templates/category/myCategory.php');
