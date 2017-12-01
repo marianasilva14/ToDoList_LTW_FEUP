@@ -13,6 +13,7 @@ $photo        = $_FILES['photo'];
 
 // chamar a função para inserir na bd
 insert_new_user($name, $username,$password, $age, $email,$photo);
+
 header('Location: index.php');
 
   ob_end_flush();

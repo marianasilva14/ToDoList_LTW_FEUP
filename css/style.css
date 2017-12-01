@@ -236,72 +236,6 @@ body > header {
   padding: 0 1em;
 }
 
-#new_register{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-size: 5em;
-  height: 5.4em;
-  margin-top: 0.5em;
-  grid-area: user;
-  grid-column-start: 1;
-  margin-bottom:2em;
-}
-
-#new_register form {
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  width: 40em;
-  height: 2em;
-  font-size: 0.3em;
-  justify-content: flex-end;
-}
-.input0{
-  width: 20em;
-  height: 2em;
-margin: 10px 0px 0px 150px;
-font-size: 12px;
-}
-.input1{
-  width: 20em;
-  height: 2em;
-margin: 10px 0px 0px 100px;
-font-size: 12px;
-}
-
-.input2{
-  width: 20em;
-  height: 2em;
-margin: 10px 0px 0px 175px;
-font-size: 12px;
-}
-
-.input3{
-  width: 20em;
-  height: 2em;
-margin: 10px 0px 0px 160px;
-font-size: 12px;
-}
-
-.input4{
-  width: 20em;
-  height: 2em;
-margin: 10px 0px 0px 110px;
-font-size: 12px;
-}
-
-
-#new_register form div input{
-  text-decoration: none;
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  color: black;
-  height: 2em;
-  width: 5em;
-  margin-right: 5em;
-  border-radius: 10px;
-  line-height: 150%;
-  font-size: 0.8em;
-}
 
 #user_info{
   font-family: 'Permanent Marker', cursive;
@@ -315,12 +249,124 @@ font-size: 12px;
 }
 
 #user_info article img{
-   border-radius: 50%;
+  border-radius: 50%;
   margin-top: 1em;
+  margin-left: 2em;
   grid-column: 2;
   width: 10em;
   height: 10em;
 
+}
+.new_register{
+  width: 50em;
+  height: 50em;
+}
+.popup-register {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width:100%;
+  height:100%;
+  display:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  background:rgba(0,0,0,0.75);
+}
+
+.popup-register #submit {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-top: 2px;
+  vertical-align: middle;
+  height: 50px;
+  width: 120px;
+  color: 	#000000;
+  opacity:0.9;
+  border-radius: 10px;
+
+}
+
+.popup-inner-register {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width:30%;
+  padding:60px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+  box-shadow:0px 2px 6px rgba(0,0,0,1);
+  border-radius:3px;
+  background:#fff;
+
+}
+
+.popup-inner-register .inputField-register {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+  font-size: 0.5em;
+}
+.popup-inner-register .inputField-registerPhoto{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+  font-size: 0.5em;
+}
+
+.popup-inner-register fieldset{
+	width: 75%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.popup-close-register {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width:50px;
+  height:50px;
+  padding-top:4px;
+  display:inline-block;
+  position:absolute;
+  top:0px;
+  right:0px;
+  transition:ease 0.35s all;
+  -webkit-transform:translate(50%, -50%);
+  transform:translate(50%, -50%);
+  border-radius:1000px;
+  background:#94bfb6;
+  font-size:10px;
+  text-align:center;
+  line-height:100%;
+  color:#94bfb6;
+}
+
+.popup-close-register:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:#94bfb6;
+}
+
+.inputField-register {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px;
+  padding-left: 10px;
+  border: solid 1px gray;
+  font-size: 10px;
+  text-align: center;
 }
 
 .popup {
