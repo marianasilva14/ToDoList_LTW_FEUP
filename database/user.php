@@ -58,32 +58,21 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
 }
 
 function changeUserName($userID,$newName){
-  global $db;
-  $stmt = $db->prepare('UPDATE usr_info SET usr_name = ? WHERE usr_id = ?');
+
+  global $dbh;
+  $stmt = $dbh->prepare('UPDATE usr_info SET usr_name = ? WHERE usr_id = ?');
   return $stmt->execute(array($newName, $userID));
 }
 
-function changeUserUsername($userID,$newUsername){
-  global $db;
-  $stmt = $db->prepare('UPDATE usr_info SET usr_name = ? WHERE usr_id = ?');
-  return $stmt->execute(array($newUsername, $userID));
-}
-
-function changeUserAge($userID,$newAge){
-  global $db;
-  $stmt = $db->prepare('UPDATE usr_info SET usr_age = ? WHERE usr_id = ?');
-  return $stmt->execute(array($newAge, $userID));
-}
-
 function changeUserEmail($userID,$newEmail){
-  global $db;
-  $stmt = $db->prepare('UPDATE usr_info SET usr_email = ? WHERE usr_id = ?');
+  global $dbh;
+  $stmt = $dbh->prepare('UPDATE usr_info SET usr_email = ? WHERE usr_id = ?');
   return $stmt->execute(array($newEmail, $userID));
 }
 
 function changeUserPassword($userID,$newPassword){
-  global $db;
-  $stmt = $db->prepare('UPDATE usr_info SET usr_password = ? WHERE usr_id = ?');
+  global $dbh;
+  $stmt = $dbh->prepare('UPDATE usr_info SET usr_password = ? WHERE usr_id = ?');
 	return $stmt->execute(array($newPassword, $userID));
 }
 
