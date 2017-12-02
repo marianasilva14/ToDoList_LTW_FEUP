@@ -47,9 +47,9 @@ function insert_new_user($name, $username,$password, $age, $email,$photo){
 			move_uploaded_file($photo['tmp_name'], $path_image);
 
 			// Insere os dados no banco
-      $stmt =$dbh->prepare('INSERT INTO usr_info(usr_id,usr_name,usr_username, usr_password, usr_age,usr_email,usr_photo)
-      VALUES (?,?,?,?,?,?,?)');
-		  $stmt->execute(array(NULL,$name,$username,sha1($password),$age,$email,$name_image));
+      $stmt =$dbh->prepare('INSERT INTO usr_info(usr_name,usr_username, usr_password, usr_age,usr_email,usr_photo)
+      VALUES (?,?,?,?,?,?)');
+		  $stmt->execute(array($name,$username,sha1($password),$age,$email,$name_image));
 
 		}
   }

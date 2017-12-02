@@ -8,14 +8,14 @@ CREATE TABLE category (
 );
 
 CREATE TABLE to_do (
-  toDO_id INTEGER PRIMARY KEY,
+  toDO_id INTEGER PRIMARY KEY AUTOINCREMENT,
   toDO_description VARCHAR NOT NULL,
   cat_id INTEGER REFERENCES category NOT NULL,
   usr_id INTEGER REFERENCES usr_info NOT NULL
 );
 
 CREATE TABLE usr_info (
-  usr_id INTEGER PRIMARY KEY,
+  usr_id INTEGER PRIMARY KEY AUTOINCREMENT,
   usr_name VARCHAR NOT NULL,
   usr_username VARCHAR NOT NULL,
   usr_password VARCHAR NOT NULL,
