@@ -31,15 +31,3 @@ INSERT INTO category VALUES (4, 'Sport');
 INSERT INTO category VALUES (5, 'Tasks');
 INSERT INTO category VALUES (6, 'Free time');
 INSERT INTO category VALUES (7, 'Others');
-
-INSERT INTO to_do VALUES (1,'Pay the light',1,1);
-
-INSERT INTO to_do VALUES (2,'Pay the water',1,1);
-
-INSERT INTO to_do VALUES (3,'Project LTW',2,1);
-
-INSERT INTO to_do VALUES (4,'Curry the car',3,1);
-
-INSERT INTO to_do VALUES (5,'Changing the bathroom lamp',5,1);
-
-INSERT INTO to_do VALUES (6,'Watch Star Wars',6,1);
