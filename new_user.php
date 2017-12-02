@@ -1,5 +1,5 @@
 <?php
-  ob_start();
+include_once('includes/session_start.php');
 include_once('database/user.php');
 include_once('includes/init.php');
 

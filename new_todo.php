@@ -1,7 +1,7 @@
 <?php
   ob_start();
 
-session_start();
+include_once('includes/session_start.php');
 include_once('includes/init.php');
 include_once('database/category.php');
 
