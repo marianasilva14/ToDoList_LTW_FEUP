@@ -7,12 +7,25 @@
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script type="text/javascript" src="../../scripts/list_categories.js"></script>
       <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
+      <script type="text/javascript" src="../../scripts/delete-to-do.js"></script>
     <?php } ?>
   </ul>
 </section>
 
-<header id="buttons">
+<header id="buttons_MyCategory">
+  <a class="delete_task" data-popup-deleteTask-open="popup-1" href="#"><b>Delete task</b></a>
+<div class="popup-deleteTask" data-popup-deleteTask="popup-1">
+    <div class="popup-inner-deleteTask">
 
+    <form action="delete_toDo.php" method="post">
+        <input class="inputField-deleteTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+        <br></br>
+        <input id="submit" type="submit" value ="DeleteTask">
+    </form>
+
+      <a class="popup-close-deleteTask" data-popup-close-deleteTask="popup-1" href="#"></a>
+    </div>
+  </div>
   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
       <div class="popup-inner-addTask">
