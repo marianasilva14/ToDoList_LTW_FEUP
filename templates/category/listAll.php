@@ -1,9 +1,9 @@
-<section id="categories">
+<section id="todolists">
   <h2>Categories</h2>
   <ul>
-    <h3> View All</h3>
-    <?php foreach ($allToDoLists as $category) { ?>
-      <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?></a></li>
+    <h3>Everything I have to do</h3>
+    <?php foreach ($allToDoLists as $todolist) { ?>
+      <li><p href="category.php?cat_id=<?=$todolist['cat_id']?>"><?=$todolist['toDO_description']?></p></li>
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script type="text/javascript" src="../../scripts/list_categories.js"></script>
       <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
