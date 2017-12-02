@@ -7,11 +7,11 @@
       <script type="text/javascript" src="../../scripts/list_categories.js"></script>
       <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
     <?php } ?>
-    <li><a href="allTasks.php"> View All </a></li>
   </ul>
 </section>
 
 <header id="buttons">
+  <a href="allTasks.php"><b>View All Tasks</b></a>
   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
       <div class="popup-inner-addTask">

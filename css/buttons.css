@@ -10,7 +10,7 @@
   color: white;
   border-radius: 0px 0px 5px 5px;
   padding-right: 5px;
-  padding-left: 480px;
+  padding-left: 270px;
 }
 
 #buttons a{
@@ -22,10 +22,15 @@
 #buttons a:first-child{
   border-right: 2px solid black;
 }
+#buttons a:nth-child(2){
+  border-right: 2px solid black;
+}
 #buttons a:nth-child(3){
   border-right: 2px solid black;
 }
-
+#buttons a:nth-child(4){
+  border-right: 2px solid black;
+}
 
 #buttons a{
   padding: 0 1em;
