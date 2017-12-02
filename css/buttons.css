@@ -1,0 +1,67 @@
+
+#buttons{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px;
+  opacity:0.9;
+  margin-left: 8px;
+  margin-top: 280px;
+  background-color: #FFFFFF;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  padding-right: 5px;
+  padding-left: 480px;
+}
+
+#buttons a{
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #000000;
+}
+
+#buttons a:first-child{
+  border-right: 2px solid black;
+}
+#buttons a:nth-child(3){
+  border-right: 2px solid black;
+}
+
+
+#buttons a{
+  padding: 0 1em;
+}
+
+#buttons_MyCategory{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin: 15px;
+  opacity:0.9;
+  margin-left: 1px;
+  margin-top: 280px;
+  background-color: #FFFFFF;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  padding-right: 0px;
+  padding-left: 300px;
+}
+
+#buttons_MyCategory a{
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #000000;
+}
+
+#buttons_MyCategory a:first-child{
+  border-right: 2px solid black;
+}
+#buttons_MyCategory a:nth-child(3){
+  border-right: 2px solid black;
+}
+#buttons_MyCategory a:nth-child(5){
+  border-right: 2px solid black;
+}
+
+
+#buttons_MyCategory a{
+  padding: 0 1em;
+}

@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Poppins" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/pop-ups.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
