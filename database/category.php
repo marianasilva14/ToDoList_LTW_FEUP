@@ -16,8 +16,8 @@
 
   function getAllToDoLists() {
     global $dbh;
-    $stmt = $dbh->prepare("SELECT toDO_description FROM to_do");
-    $stmt->execute();
+    $stmt = $dbh->prepare("SELECT toDO_description FROM to_do JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE usr_info.usr_id=?");
+    $stmt->execute(array($_SESSION['usr_info']['usr_id']));
     return $stmt->fetchAll();
   }
 

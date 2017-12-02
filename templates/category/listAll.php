@@ -1,17 +1,31 @@
 <section id="categories">
   <h2>Categories</h2>
   <ul>
-    <?php foreach ($categories as $category) { ?>
-      <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
+    <h3> View All</h3>
+    <?php foreach ($allToDoLists as $category) { ?>
+      <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?></a></li>
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script type="text/javascript" src="../../scripts/list_categories.js"></script>
       <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
+      <script type="text/javascript" src="../../scripts/delete-to-do.js"></script>
     <?php } ?>
-    <li><a href="allTasks.php"> View All </a></li>
   </ul>
 </section>
 
-<header id="buttons">
+<header id="buttons_MyCategory">
+  <a class="delete_task" data-popup-deleteTask-open="popup-1" href="#"><b>Delete task</b></a>
+<div class="popup-deleteTask" data-popup-deleteTask="popup-1">
+    <div class="popup-inner-deleteTask">
+
+    <form action="delete_toDo.php" method="post">
+        <input class="inputField-deleteTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+        <br></br>
+        <input id="submit" type="submit" value ="DeleteTask">
+    </form>
+
+      <a class="popup-close-deleteTask" data-popup-close-deleteTask="popup-1" href="#"></a>
+    </div>
+  </div>
   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
       <div class="popup-inner-addTask">
@@ -52,16 +66,5 @@
       </div>
     </div>
 
-  <a href="action_logout.php"><b>Logout</b></a>
+  <a href="back.php"><b>Back</b></a>
 </header>
-
-<section id="user_info">
-  <article>
-    <?php echo "<img src='images/".$_SESSION['usr_info']['usr_photo']."' alt='Foto de exibição' /><br />";
-    ?>
-  </article>
-  <p> <?=$_SESSION['usr_info']['usr_name']?> </p>
-  <p> Username:  &nbsp;<?=$_SESSION['usr_info']['usr_username']?> </p>
-  <p> Age:  &nbsp; <?=$_SESSION['usr_info']['usr_age']?> </p>
-  <p> Email: &nbsp; <?=$_SESSION['usr_info']['usr_email']?> </p>
-</section>
