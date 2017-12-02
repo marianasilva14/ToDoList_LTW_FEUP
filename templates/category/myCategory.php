@@ -66,5 +66,5 @@
       </div>
     </div>
 
-  <a href="action_logout.php"><b>Logout</b></a>
+  <a href="back.php"><b>Back</b></a>
 </header>
