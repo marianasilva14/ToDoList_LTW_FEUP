@@ -8,6 +8,16 @@ include_once('includes/init.php');
 $description = $_POST['Description'];
 $category = $_POST['Category'];
 
+/*
+//verificar se a categoria existe
+$consulta = mysql_query("SELECT * FROM category WHERE cat_name = '$category'");
+$numRegistros = mysql_num_rows($consulta);
+if( $numRegistros == 0){
+
+}else{
+
+}
+*/
 global $dbh;
 $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
 $stmt->execute(array($category));
@@ -34,8 +44,6 @@ foreach ($stmt3->fetch() as $result2){
 }*/
 
 header("Location: logged.php");
-
-
 
   ob_end_flush();
 

@@ -5,31 +5,27 @@
       <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script type="text/javascript" src="../../scripts/list_categories.js"></script>
+      <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
     <?php } ?>
   </ul>
 </section>
 
 <header id="buttons">
 
-
-
-  <a class="NewTask"><b>Add Task</b></a>
-  <div class="popup-addTask" >
+  <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
+  <div class="popup-addTask" data-popup-addTask="popup-1">
       <div class="popup-inner-addTask">
 
-      <form action="new_todo.php" method="post"  enctype="multipart/form-data">
+      <form action="new_todo.php" method="post">
           <input class="inputField-addTask" type="text" id="Category" name="Category" required="required" placeholder="Category">
           <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
           <br></br>
           <input id="submit" type="submit" value ="AddTask">
       </form>
 
-        <a class="popup-close-addTask"></a>
+        <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
       </div>
     </div>
- 
-
-
 
   <a class="edit_profile" data-popup-open="popup-1" href="#"><b>Edit your profile</b></a>
 
@@ -56,7 +52,6 @@
       </div>
     </div>
 
-  </a>
   <a href="action_logout.php"><b>Logout</b></a>
 </header>
 

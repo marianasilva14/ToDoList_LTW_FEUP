@@ -229,7 +229,7 @@ body > header {
 #buttons a:first-child{
   border-right: 2px solid black;
 }
-#buttons a:nth-child(2){
+#buttons a:nth-child(3){
   border-right: 2px solid black;
 }
 
@@ -469,6 +469,110 @@ body > header {
   font-size: 10px;
   text-align: center;
 }
+
+.NewTask{
+  width: 50em;
+  height: 50em;
+}
+.popup-addTask {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width:100%;
+  height:100%;
+  display:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  background:rgba(0,0,0,0.75);
+}
+
+.popup-addTask #submit {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-top: 2px;
+  vertical-align: middle;
+  height: 50px;
+  width: 120px;
+  color: 	#000000;
+  opacity:0.9;
+  border-radius: 10px;
+
+}
+
+.popup-inner-addTask {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width:30%;
+  padding:60px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+  box-shadow:0px 2px 6px rgba(0,0,0,1);
+  border-radius:3px;
+  background:#fff;
+
+}
+
+.popup-inner-addTask .inputField-addTask {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+	width: 98%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.popup-inner-addTask fieldset{
+	width: 75%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.popup-close-addTask {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width:30px;
+  height:30px;
+  padding-top:4px;
+  display:inline-block;
+  position:absolute;
+  top:0px;
+  right:0px;
+  transition:ease 0.35s all;
+  -webkit-transform:translate(50%, -50%);
+  transform:translate(50%, -50%);
+  border-radius:1000px;
+  background:#94bfb6;
+  font-size:10px;
+  text-align:center;
+  line-height:100%;
+  color:#94bfb6;
+}
+
+.popup-close-addTask:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:#94bfb6;
+}
+
+.inputField-addTask {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px;
+  padding-left: 10px;
+  border: solid 1px gray;
+  font-size: 20px;
+  text-align: center;
+}
+
 
 
 footer {
