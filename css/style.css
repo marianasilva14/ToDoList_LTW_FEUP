@@ -213,32 +213,33 @@ body > header {
   margin-top: 20px;
   margin-bottom: 40px;
   margin: 8px;
-  opacity:0.8;
-  text-align: center;
+  opacity:0.9;
+  border-radius: 10px;
+}
+
+.table_toDo{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin: 8px;
+  opacity:0.9;
+  border-radius: 10px;
 
 }
 
-#todolists h2 {
-  display: none;
+.table_toDo_priority{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 90px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin: 8px;
+  opacity:0.9;
+  border-radius: 10px;
 }
 
-#todolists ul {
-  margin: 0;
-  padding: 0;
-}
-
-#todolists li {
-  margin: 3px;
-  border: 0.05em solid #333;
-  list-style-type: square;
-  line-height: 100%;
-  padding: 1px;
-  color: #000000;
-  display: block;
-  border-radius: 9px;
-  line-height: 2px;
-
-}
 
 #user_info{
   font-family: 'Permanent Marker', cursive;
@@ -341,15 +342,4 @@ footer {
   width: 358px;
   height: 40px;
   background-color: #FFFFFF;
-}
-
-.toDO_priority{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  margin-right: 90px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin: 8px;
-  opacity:0.9;
-  border-radius: 10px;
 }
