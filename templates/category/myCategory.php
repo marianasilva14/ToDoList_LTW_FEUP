@@ -1,12 +1,19 @@
-<script type="text/javascript" src="../../scripts/priority.js"></script>
 <table id="todolists">
   <ul>
     <tr><td> <b><?php echo $categories[0]['cat_name'] ?></b></tr></td>
     <?php foreach ($categories as $category) { ?>
      <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
        <td><class="table_toDo_priority" type="text" ><?=$category['toDO_priority']?></td>
-       <!-- getPriorityColor($category['toDO_priority'])-->
-       <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="images/green.png"></td>
+       <?php if($category['toDO_priority']=='High priority'){
+         $imagem= "images/red.png";
+       }
+       else if($category['toDO_priority']=='Medium priority'){
+          $imagem= "images/yellow.png";
+       }
+       else{
+          $imagem= "images/green.png";
+       }?>
+       <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="<?php echo $imagem;?>"></td>
      </tr>
      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
      <script type="text/javascript" src="../../scripts/list_categories.js"></script>
