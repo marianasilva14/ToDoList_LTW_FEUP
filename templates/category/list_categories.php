@@ -39,7 +39,7 @@
 
   <a class="edit_profile" data-popup-open="popup-1" href="#"><b>Edit your profile</b></a>
 
-    <div class="popup" data-popup="popup-1">
+  <div class="popup" data-popup="popup-1">
       <div class="popup-inner">
 
         <form action="change_name.php" method="post">

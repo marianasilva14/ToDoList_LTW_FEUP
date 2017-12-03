@@ -7,6 +7,7 @@
   font-size: 3em;
   grid-area:user;
   grid-column: 2;
+  height: 9em;
 }
 
 #user form {
@@ -44,21 +45,11 @@
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   font-size: 2em;
-  text-align: center;
-  grid-area:user;
-  grid-column: 3;
-
-  border: 1px solid white;
-  color: 		#000000;
-  opacity:0.9;
-  border-radius: 10px;
-  margin-left: 3em;
-  margin-right: 3em;
-  margin-bottom: 15em;
-  margin-top: 1em;
-  padding: 3px;
-  position: static;
+  grid-area:header;
+  margin-top: 110px;
+  margin-left: 38em;
   background:white;
+
 }
 
 #register img{

@@ -13,6 +13,7 @@
 #buttons a{
   text-decoration: none;
   font-size: 1.5em;
+  padding: 0 1em;
   color: #000000;
 }
 
@@ -24,13 +25,6 @@
 }
 #buttons a:nth-child(4){
   border-right: 2px solid black;
-}
-#buttons a:nth-child(5){
-  border-right: 2px solid black;
-}
-
-#buttons a{
-  padding: 0 1em;
 }
 
 #buttons_MyCategory{
