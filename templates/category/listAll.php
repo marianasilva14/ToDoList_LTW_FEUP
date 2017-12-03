@@ -18,6 +18,12 @@
     <div class="popup-inner-deleteTask">
 
     <form action="delete_toDo.php" method="post">
+    <select class="dropdown"name="Category" >
+              <?php $categories = getAllCategories(); ?>
+              <?php foreach ($categories as $category) { ?>
+                <li><option class="cat" id="Category" name="Category" href="#"><?=$category['cat_name']?></option></li>
+              <?php } ?>
+            </select>
         <input class="inputField-deleteTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
         <br></br>
         <input id="submit" type="submit" value ="DeleteTask">
@@ -31,7 +37,12 @@
       <div class="popup-inner-addTask">
 
       <form action="new_todo.php" method="post">
-          <input class="inputField-addTask" type="text" id="Category" name="Category" required="required" placeholder="Category">
+      <select class="dropdown"name="Category" >
+              <?php $categories = getAllCategories(); ?>
+              <?php foreach ($categories as $category) { ?>
+                <li><option class="cat" id="Category" name="Category" href="#"><?=$category['cat_name']?></option></li>
+              <?php } ?>
+            </select>
           <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
           <br></br>
           <input id="submit" type="submit" value ="AddTask">

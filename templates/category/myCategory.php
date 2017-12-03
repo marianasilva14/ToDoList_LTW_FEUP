@@ -32,6 +32,9 @@
     <div class="popup-inner-deleteTask">
 
       <form action="delete_toDo.php" method="post">
+         <select class="dropdown"name="Category" >
+            <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
+        </select>
         <input class="inputField-deleteTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
         <br></br>
         <input id="submit" type="submit" value ="DeleteTask">
