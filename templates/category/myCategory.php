@@ -5,13 +5,13 @@
      <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
        <td><class="table_toDo_priority" type="text" ><?=$category['toDO_priority']?></td>
        <?php if($category['toDO_priority']=='High priority'){
-         $imagem= "images/red.png";
+         $imagem= "images/higher.png";
        }
        else if($category['toDO_priority']=='Medium priority'){
-          $imagem= "images/yellow.png";
+          $imagem= "images/medium.png";
        }
        else{
-          $imagem= "images/green.png";
+          $imagem= "images/lower.png";
        }?>
        <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="<?php echo $imagem;?>"></td>
      </tr>
