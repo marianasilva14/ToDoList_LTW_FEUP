@@ -18,6 +18,14 @@
 
       <form action="new_todo.php" method="post">
           <input class="inputField-addTask" type="text" id="Category" name="Category" required="required" placeholder="Category">
+          <div class="dropdown">
+            <button onclick="dropdownfunction()" class="dropbtn">Category</button>
+            <div id="myDropdown" class="dropdown-content" placeholder="Description">
+              <?php foreach ($categories as $category) { ?>
+                <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
+              <?php } ?>
+            </div>
+          </div>
           <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
           <br></br>
           <input id="submit" type="submit" value ="AddTask">
