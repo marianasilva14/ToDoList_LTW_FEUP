@@ -19,6 +19,7 @@
      <script type="text/javascript" src="../../scripts/list_categories.js"></script>
      <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
      <script type="text/javascript" src="../../scripts/delete-to-do.js"></script>
+    <script type="text/javascript" src="../../scripts/calendar.js"></script>
    <?php } ?>
   </ul>
 
@@ -87,3 +88,7 @@
 
   <a href="back.php"><b>Back</b></a>
 </header>
+
+<section id="calendar">
+<script>displayCalendar()</script>
+</section>

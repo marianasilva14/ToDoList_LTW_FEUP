@@ -38,9 +38,10 @@
       </div>
     </div>
 </section>
-
+<!---
 <section id="about">
   <article>
     <p class="description">We are a page designed to help you manage time. You have no longer an excuse to forget your daily tasks.</p>
   </article>
 </section>
+-->

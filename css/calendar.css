@@ -1,0 +1,34 @@
+#calendar{
+  grid-area: user;
+  grid-column: 3;
+  margin-top: 10em;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+
+.monthPre{
+ color: white;
+ text-align: center;
+}
+.monthNow{
+ color: black;
+ text-align: center;
+}
+.dayNow{
+ border: 2px solid black;
+ color: black;
+ text-align: center;
+}
+.calendar td{
+ width: 40px;
+}
+.monthNow th{
+ background-color: white;
+ color: #000000;
+ text-align: center;
+}
+.dayNames{
+ background: black;
+ color: #FFFFFF;
+ text-align: center;
+}

@@ -1,11 +1,10 @@
 body {
-  width: 65em;
+  width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-columns: 3fr 3fr 3fr;
   grid-template-areas:
     "header     header       header"
-    "messages   messages     messages"
     "user       user         user"
     "footer     footer       footer";
   background-color: #94bfb6;
@@ -15,22 +14,29 @@ body > header {
   justify-content: space-between;
   align-items: stretch;
   grid-area: header;
+  height: 100%
   background-color: inherit;
   grid-column-start: 1;
   grid-column-end: 4;
+}
+
+header{
+  width: 100%;
+  height: 50%;
 }
 
 #info {
   display: flex;
   align-items: center;
   flex-grow: 1;
-
-  background-color: inherit;
+  height: 10em;
+  background-color: #FFFFFF;
 }
 
 #info a {
   text-decoration: none;
   color: black;
+  width: 100%; /*largura*/
 }
 
 #info > a {
@@ -39,236 +45,27 @@ body > header {
   align-self: flex-end;
 }
 
-#info img {
-  width: 200px;
-  margin-right: 150px;
-}
 
 #info h1 {
-  font-size: 4em;
+  font-size: 1.5em;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  flex-grow: 1;
-}
-
-
-#about {
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  background-color: inherit;
-  position: static;
-  grid-area:user;
-    grid-column: 1;
-
-}
-
-#about article {
-  padding: 1em;
-}
-
-#about article h2 {
-  grid-column-end: span 2;
-  margin: 0;
-  font-size: 2em;
-}
-
-#about article .description {
-  font-size: 1.6em;
-  grid-column-end: span 2;
-}
-
-#about article img {
-  grid-row-end: span 2;
-  max-width: 8em;
-  align-self: flex-end;
-}
-
-
-#user  {
-  padding: 2em 0em 0em 0em;
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-size: 3em;
-  grid-area:user;
-  grid-column: 2;
-}
-
-#user form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 20px 32px;
-}
-
-#user input {
-  padding: 0.1em;
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  width: 25em;
-  height: 2em;
-  font-size: 0.3em;
-}
-
-#user div input{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.35em;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  margin-top: 3px;
-  vertical-align: middle;
-  height: 30px;
-  width: 100px;
-  color: 		#000000;
-  opacity:0.9;
-  border-radius: 10px;
-
-}
-#register{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2em;
-  text-align: center;
-  grid-area:user;
-  grid-column: 3;
-
-  border: 1px solid white;
-  color: 		#000000;
-  opacity:0.9;
-  border-radius: 10px;
-  margin-left: 1.8em;
-  margin-right: 2em;
-  margin-bottom: 7em;
-  margin-top: 1em;
-  padding: 10px;
-  position: static;
-  background:white;
-}
-
-#register img{
-  width: 25px;
-  margin-right: 20px;
-}
-
-#register a  {
-  text-decoration: none;
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.7em;
-  color: black;
-  line-height: 150%;
-
-}
-
-#categories {
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  margin-right: 90px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin: 8px;
-  opacity:0.9;
-  border-radius: 10px;
-
-}
-
-#categories h2 {
-  display: none;
-}
-
-#categories ul {
-  margin: 0;
-  padding: 0;
-}
-
-#categories li {
-  margin: 3px;
-  border: 1px solid #000000;
-  line-height: 150%;
-  padding: 3px;
-  color: #000000;
-  display: block;
-  border-radius: 10px;
-}
-
-
-#categories li a {
-  display: block;
-  text-decoration: none;
-  padding: 1em;
-  color: black;
-  border-radius: 10px;
-}
-
-#categories li a:hover {
-  background-color: #333;
-  color: white;
-}
-
-#todolists {
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  grid-area: user;
-  grid-column: 1,2;
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-table{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-}
-
-
-table tr td:first-child{
-    font-size: 1.5em;
-}
-
-table tr td:nth-last-child(1000n+2){
-  font-size: 1.2em;
-}
-
-table tr td img{
-  width: 50px;
-  height: 50px;
-}
-
-table tr td:nth-of-type(2n+2){
-  font-size: 1.2em;
-}
-
-
-#user_info{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1em;
-  grid-column: 3;
-}
-
-#user_info p:nth-child(2){
-    font-size: 3em;
-}
-
-#user_info article img{
-  border-radius: 50%;
-  margin-top: 1em;
-  margin-left: 2em;
-  grid-column: 2;
-  width: 10em;
-  height: 10em;
+  margin: 3em;
 
 }
 
 footer {
+  position:relative;
+  width:100%;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   grid-area: footer;
-  grid-column-end: 4;
   background-color: #333;
   color: white;
-  padding: 1em;
+  height: 55px;
+  text-align:justify;
 }
-@media (max-width: 70em) {
+@media (max-width: 500em) {
   body {
     width: 100%;
   }
@@ -281,14 +78,6 @@ footer {
   #about {
     grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
-  }
-
-  #info img {
-    width: 50px;
-  }
-
-  #info > a {
-    font-size: 1em;
   }
 
   #info h1 {
