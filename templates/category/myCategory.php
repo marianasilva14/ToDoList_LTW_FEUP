@@ -3,14 +3,19 @@
   <ul>
     <h3> <?php echo $categories[0]['cat_name'] ?></h3>
     <?php foreach ($categories as $category) { ?>
-      <li><p href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?></p></li>
-      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script type="text/javascript" src="../../scripts/list_categories.js"></script>
-      <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
-      <script type="text/javascript" src="../../scripts/delete-to-do.js"></script>
-    <?php } ?>
+     <li><p href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?></p></li>
+     <div class="toDO_priority" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_priority']?></div>
+     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+     <script type="text/javascript" src="../../scripts/list_categories.js"></script>
+     <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
+     <script type="text/javascript" src="../../scripts/delete-to-do.js"></script>
+   <?php } ?>
   </ul>
+
 </section>
+
+
+
 
 <header id="buttons_MyCategory">
   <a class="delete_task" data-popup-deleteTask-open="popup-1" href="#"><b>Delete task</b></a>
@@ -30,15 +35,9 @@
   <div class="popup-addTask" data-popup-addTask="popup-1">
     <div class="popup-inner-addTask">
       <form action="new_todo.php" method="post">
-        <input class="inputField-addTask" type="text" id="Category" name="Category" required="required" placeholder="Category">
-        <div class="dropdown">
-          <button onclick="dropdownfunction()" class="dropbtn">Dropdown</button>
-          <div id="myDropdown" class="dropdown-content">
-            <?php foreach ($categories as $category) { ?>
-              <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
-            <?php } ?>
-          </div>
-        </div>
+        <select class="dropdown"name="Category" >
+            <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
+        </select>
         <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
         <br></br>
         <input id="submit" type="submit" value ="AddTask">

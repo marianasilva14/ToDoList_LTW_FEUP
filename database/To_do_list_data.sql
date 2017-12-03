@@ -10,6 +10,7 @@ CREATE TABLE category (
 CREATE TABLE to_do (
   toDO_id INTEGER PRIMARY KEY AUTOINCREMENT,
   toDO_description VARCHAR NOT NULL,
+  toDO_priority VARCHAR NOT NULL,
   cat_id INTEGER REFERENCES category NOT NULL,
   usr_id INTEGER REFERENCES usr_info NOT NULL
 );

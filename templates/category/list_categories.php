@@ -17,16 +17,18 @@
       <div class="popup-inner-addTask">
 
       <form action="new_todo.php" method="post">
-          <input class="inputField-addTask" type="text" id="Category" name="Category" required="required" placeholder="Category">
-          <div class="dropdown">
-            <button onclick="dropdownfunction()" class="dropbtn">Category</button>
-            <div id="myDropdown" class="dropdown-content" placeholder="Description">
+            <select class="dropdown"name="Category" >
+              <?php $categories = getAllCategories(); ?>
               <?php foreach ($categories as $category) { ?>
-                <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
+                <li><option class="cat" id="Category" name="Category" href="#"><?=$category['cat_name']?></option></li>
               <?php } ?>
-            </div>
-          </div>
+            </select>
           <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+          <select class=priority name="priority" >
+              <li><option class="priority1" name="priority" id="priority" href="#">High priority</option></li>
+              <li><option class="priority2" name="priority" id="priority" href="#">Medium priority</option></li>
+              <li><option class="priority3" name="priority" id="priority" href="#">Low priority</option></li>
+          </select>
           <br></br>
           <input id="submit" type="submit" value ="AddTask">
       </form>
