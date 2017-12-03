@@ -266,7 +266,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 5px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .popup-inner-addTask fieldset{
@@ -311,6 +311,30 @@
   border: solid 1px gray;
   font-size: 20px;
   text-align: center;
+}
+.dropdown {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  font-size: 1em;
+  width: 417px;
+  height: 40px;
+  background-color: #94bfb6;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.priority {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  font-size: 1em;
+  width: 417px;
+  height: 40px;
+  background-color: #FFFFFF;
+  font-size: 1.2em;
+  text-align: center;
+
 }
 .delete_task{
   width: 50em;

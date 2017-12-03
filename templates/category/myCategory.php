@@ -1,9 +1,14 @@
-<section id="todolists">
+<script type="text/javascript" src="../../scripts/priority.js"></script>
+<table id="todolists">
   <ul>
-    <h3> <?php echo $categories[0]['cat_name'] ?></h3>
+    <tr><td> <b><?php echo $categories[0]['cat_name'] ?></b></tr></td>
     <?php foreach ($categories as $category) { ?>
-     <tr><td> <a><class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?></p></td>
-       <td><a><class="table_toDo_priority" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_priority']?></p></td></tr>
+     <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
+       <td><class="table_toDo_priority" type="text" ><?=$category['toDO_priority']?></td>
+       <!-- getPriorityColor($category['toDO_priority'])-->
+       <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="images/green.png"></td>
+     </tr>
+
      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
      <script type="text/javascript" src="../../scripts/list_categories.js"></script>
      <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
@@ -11,9 +16,7 @@
    <?php } ?>
   </ul>
 
-</section>
-
-
+</table>
 
 
 <header id="buttons_MyCategory">
@@ -38,6 +41,11 @@
             <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
         </select>
         <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+        <select class=priority name="priority" >
+            <li><option class="priority1" name="priority" id="priority" href="#">High priority</option></li>
+            <li><option class="priority2" name="priority" id="priority" href="#">Medium priority</option></li>
+            <li><option class="priority3" name="priority" id="priority" href="#">Low priority</option></li>
+        </select>
         <br></br>
         <input id="submit" type="submit" value ="AddTask">
       </form>
