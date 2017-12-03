@@ -38,8 +38,6 @@ function displayCalendar(){
  var numOfDays = dayPerMonth[month];
 
 
-
-
  // this leave a white space for days of pervious month.
  while (weekdays>0){
     htmlContent += "<td class='monthPre'></td>";

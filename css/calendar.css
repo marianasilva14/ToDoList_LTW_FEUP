@@ -2,6 +2,7 @@
   grid-area: user;
   grid-column: 3;
   margin-top: 10em;
+  margin-right: 5em;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
 }
@@ -9,10 +10,12 @@
 .monthPre{
  color: white;
  text-align: center;
+ font-size: 5px;
 }
 .monthNow{
  color: black;
  text-align: center;
+  font-size: 1.3em;
 }
 .dayNow{
  border: 2px solid black;
@@ -20,15 +23,15 @@
  text-align: center;
 }
 .calendar td{
- width: 40px;
+ width: 60px;
 }
 .monthNow th{
  background-color: white;
  color: #000000;
  text-align: center;
 }
+
 .dayNames{
- background: black;
- color: #FFFFFF;
+ color: black;
  text-align: center;
 }
