@@ -88,11 +88,11 @@
   -webkit-transform:translate(50%, -50%);
   transform:translate(50%, -50%);
   border-radius:1000px;
-  background:#333;
+  background:#4e96b4;
   font-size:10px;
   text-align:center;
   line-height:100%;
-  color:#333;
+  color:#4e96b4;
 }
 
 .popup-close-register:hover {
@@ -187,17 +187,17 @@
   -webkit-transform:translate(50%, -50%);
   transform:translate(50%, -50%);
   border-radius:1000px;
-  background:#94bfb6;
+  background:#4e96b4;
   font-size:20px;
   text-align:center;
   line-height:100%;
-  color:#94bfb6;
+  color:#4e96b4;
 }
 
 .popup-close:hover {
     -webkit-transform:translate(50%, -50%) rotate(180deg);
     transform:translate(50%, -50%) rotate(180deg);
-    background:#94bfb6;
+    background:#4e96b4;
 }
 
 .inputField {
@@ -291,17 +291,17 @@
   -webkit-transform:translate(50%, -50%);
   transform:translate(50%, -50%);
   border-radius:1000px;
-  background:#94bfb6;
+  background:#4e96b4;
   font-size:10px;
   text-align:center;
   line-height:100%;
-  color:#94bfb6;
+  color:#4e96b4;
 }
 
 .popup-close-addTask:hover {
     -webkit-transform:translate(50%, -50%) rotate(180deg);
     transform:translate(50%, -50%) rotate(180deg);
-    background:#94bfb6;
+    background:#4e96b4;
 }
 
 .inputField-addTask {
