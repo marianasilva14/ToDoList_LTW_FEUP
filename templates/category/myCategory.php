@@ -16,10 +16,10 @@
        <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="<?php echo $imagem;?>"></td>
      </tr>
      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-     <script type="text/javascript" src="../../scripts/list_categories.js"></script>
-     <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
-     <script type="text/javascript" src="../../scripts/delete-to-do.js"></script>
-    <script type="text/javascript" src="../../scripts/calendar.js"></script>
+     <script type="text/javascript" src="scripts/list_categories.js"></script>
+     <script type="text/javascript" src="scripts/add-to-do.js"></script>
+     <script type="text/javascript" src="scripts/delete-to-do.js"></script>
+    <script type="text/javascript" src="scripts/calendar.js"></script>
    <?php } ?>
   </ul>
 
@@ -32,6 +32,9 @@
     <div class="popup-inner-deleteTask">
 
       <form action="delete_toDo.php" method="post">
+         <select class="dropdown"name="Category" >
+            <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
+        </select>
         <input class="inputField-deleteTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
         <br></br>
         <input id="submit" type="submit" value ="DeleteTask">

@@ -1,8 +1,3 @@
-
-.new_register{
-  width: 50em;
-  height: 50em;
-}
 .popup-register {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
@@ -53,26 +48,16 @@
   font-family: 'Poppins', sans-serif;
   border-radius: 5px;
 	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
+  height: 20%;
+  margin-left: 2.9em;
 	margin-bottom: 5px;
   font-size: 1.5em;
-}
-.popup-inner-register .inputField-registerPhoto{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 5px;
-  font-size: 0.5em;
+  border: solid 1px gray;
+  text-align: center;
 }
 
-.popup-inner-register fieldset{
-	width: 75%;
-	text-align: left;
-	margin-left: auto;
-	margin-right: auto;
+.popup-inner-register .inputField-registerPhoto{
+	margin-left: 5.5em;
 }
 
 .popup-close-register {
@@ -102,22 +87,6 @@
     background:#333;
 }
 
-.inputField-register {
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  margin: 10px;
-  padding-left: 10px;
-  border: solid 1px gray;
-  font-size: 10px;
-  text-align: center;
-}
-.popup-inner-register .inputField-registerPhoto{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-  padding-left: 10px;
-  font-size: 2em;
-  text-align: center;
-}
 
 .popup {
   font-family: 'Permanent Marker', cursive;
@@ -273,8 +242,8 @@
   border-radius: 5px;
 	width: 415px;
   height: 30px;
-
-	margin-bottom: 5px;
+  margin-left: 0.05em;
+  margin-bottom: 5px;
   font-size: 1.2em;
 }
 

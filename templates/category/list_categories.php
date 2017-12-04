@@ -4,8 +4,8 @@
     <?php foreach ($categories as $category) { ?>
       <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script type="text/javascript" src="../../scripts/list_categories.js"></script>
-      <script type="text/javascript" src="../../scripts/add-to-do.js"></script>
+      <script type="text/javascript" src="scripts/list_categories.js"></script>
+      <script type="text/javascript" src="scripts/add-to-do.js"></script>
     <?php } ?>
   </ul>
 </section>
@@ -54,7 +54,7 @@
 
         <form action="change_password.php" onsubmit="return validate(this);" method="post">
 						<input class="inputField" type="password" minlength="8" id="password" name="password" required="required" placeholder="New password">
-						<input class="inputField" type="password" id="passwordConfirm" name="passwordConfirm" required="required" placeholder="Confirm password"><br>
+						<input class="inputField" type="password" id="passwordConfirm" name="passwordConfirm" required="required" placeholder="Confirm password">
 						<input id="submit" type="submit" value ="Submit">
 				</form>
 

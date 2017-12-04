@@ -18,7 +18,7 @@
 
 <aside id="register">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="../../scripts/register.js"></script>
+  <script type="text/javascript" src="scripts/register.js"></script>
   <img src="images/signup.png">
   <a class="new_register" data-popup-register-open="popup-1" href="#">SIGN UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
     <div class="popup-register" data-popup-register="popup-1">
