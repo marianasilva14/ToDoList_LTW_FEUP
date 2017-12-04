@@ -24,6 +24,7 @@
               <?php } ?>
             </select>
           <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+          <input class="deadline" type="date" name="deadline" id="deadline">
           <select class=priority name="priority" >
               <li><option class="priority1" name="priority" id="priority" href="#">High priority</option></li>
               <li><option class="priority2" name="priority" id="priority" href="#">Medium priority</option></li>

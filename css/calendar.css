@@ -1,8 +1,9 @@
 #calendar{
   grid-area: user;
   grid-column: 3;
-  margin-top: 10em;
-  margin-left: 20em;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 5em;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   order:3;
@@ -35,4 +36,12 @@
 .dayNames{
  color: black;
  text-align: center;
+}
+
+.deadline{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  width: 95%;
+  height: 2.5em;
+  font-size:1em;
 }
