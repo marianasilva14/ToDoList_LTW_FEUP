@@ -10,7 +10,7 @@
   </ul>
 </section>
 
-<header id="buttons">
+<aside id="buttons">
   <a href="allTasks.php"><b>View All Tasks</b></a>
   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
@@ -63,7 +63,7 @@
     </div>
 
   <a href="action_logout.php"><b>Logout</b></a>
-</header>
+</aside>
 
 <section id="user_info">
   <article>
@@ -71,7 +71,7 @@
     ?>
   </article>
   <p> <?=$_SESSION['usr_info']['usr_name']?> </p>
-  <p> Username:  &nbsp;<?=$_SESSION['usr_info']['usr_username']?> </p>
-  <p> Age:  &nbsp; <?=$_SESSION['usr_info']['usr_age']?> </p>
-  <p> Email: &nbsp; <?=$_SESSION['usr_info']['usr_email']?> </p>
+  <p> @<?=$_SESSION['usr_info']['usr_username']?> </p>
+  <p> <?=$_SESSION['usr_info']['usr_age']?> years</p>
+  <p> <?=$_SESSION['usr_info']['usr_email']?> </p>
 </section>

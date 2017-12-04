@@ -2,9 +2,10 @@
   grid-area: user;
   grid-column: 3;
   margin-top: 10em;
-  margin-right: 5em;
+  margin-left: 20em;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
+  order:3;
 }
 
 .monthPre{

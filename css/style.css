@@ -1,28 +1,25 @@
 body {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
-  grid-template-areas:
-    "header     header       header"
-    "user       user         user"
-    "footer     footer       footer";
+  display: flex;
+  flex-flow: row wrap;
   background-color: #4e96b4;
 }
 
-body > header {
+header{
   justify-content: space-between;
-  align-items: stretch;
-  grid-area: header;
-  height: 100%
-  background-color: inherit;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  display: flex;
+  flex: 0 0 0;
+  flex-grow: 0;
 }
 
-header{
-  width: 100%;
-  height: 50%;
+body > header {
+  display: flex;
+  justify-content: space-between;
+  height: 100%
+  background-color: inherit;
+  flex: 1 100%;
 }
 
 #info {
@@ -55,44 +52,17 @@ header{
 }
 
 footer {
-  position:relative;
+  display: flex;
   width:100%;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  grid-area: footer;
   background-color: #333;
   color: white;
   height: 55px;
   text-align:justify;
-}
-@media (max-width: 500em) {
-  body {
-    width: 100%;
-  }
-  #about {
-    grid-template-columns: 1fr 1fr;
-  }
+  order: 3;
 }
 
-@media (max-width: 768px) {
-  #about {
-    grid-template-columns: 1fr 1fr;
-    grid-column-start: 1;
-  }
-
-  #info h1 {
-    font-size: 2em;
-  }
-  #messages {
-  grid-column: 1/ span 2;
-}
-}
-
-@media (max-width: 520px) {
-  #about {
-    grid-template-columns: 1fr;
-  }
-}
 #messages article {
   text-align: center;
   color: white;

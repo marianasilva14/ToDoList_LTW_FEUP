@@ -26,7 +26,7 @@
 </table>
 
 
-<header id="buttons_MyCategory">
+<aside id="buttons_MyCategory">
   <a class="delete_task" data-popup-deleteTask-open="popup-1" href="#"><b>Delete task</b></a>
   <div class="popup-deleteTask" data-popup-deleteTask="popup-1">
     <div class="popup-inner-deleteTask">
@@ -87,7 +87,7 @@
   </div>
 
   <a href="back.php"><b>Back</b></a>
-</header>
+</aside>
 
 <section id="calendar">
 <script>displayCalendar()</script>

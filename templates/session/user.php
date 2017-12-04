@@ -7,6 +7,7 @@
   <?php } else { ?>
     <form action="action_login.php" method="post">
       <input type="text" placeholder="username" name="username">
+      <br></br>
       <input type="password" placeholder="password" name="password">
       <div>
         <input type="submit" value="Login">
@@ -15,11 +16,11 @@
   <?php } ?>
 </div>
 
-<header id="register">
+<aside id="register">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="../../scripts/register.js"></script>
   <img src="images/signup.png">
-  <a class="new_register" data-popup-register-open="popup-1" href="#">SIGN UP</a>
+  <a class="new_register" data-popup-register-open="popup-1" href="#">SIGN UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
     <div class="popup-register" data-popup-register="popup-1">
       <div class="popup-inner-register">
 
@@ -37,11 +38,4 @@
         <a class="popup-close-register" data-popup-register-close="popup-1" href="#"></a>
       </div>
     </div>
-</header>
-<!---
-<section id="about">
-  <article>
-    <p class="description">We are a page designed to help you manage time. You have no longer an excuse to forget your daily tasks.</p>
-  </article>
-</section>
--->
+</aside>
