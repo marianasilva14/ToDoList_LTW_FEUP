@@ -1,6 +1,5 @@
 <table id="todolists">
-  <ul>
-    <tr><td> <b><?php echo $categories[0]['cat_name'] ?></b></tr></td>
+    <tr><td> <b><?php echo $categories[0]['cat_name'] ?></b></td></tr>
     <?php foreach ($categories as $category) { ?>
      <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
        <td><class="table_toDo_priority" type="text" ><?=$category['toDO_priority']?></td>
@@ -22,8 +21,6 @@
      <script type="text/javascript" src="scripts/delete-to-do.js"></script>
      <script type="text/javascript" src="scripts/calendar.js"></script>
    <?php } ?>
-  </ul>
-
 </table>
 
 
@@ -71,6 +68,7 @@
             <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
         </select>
         <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+        <input class="deadline" type="date" name="deadline" id="deadline">
         <select class=priority name="priority" >
             <li><option class="priority1" name="priority" id="priority" href="#">High priority</option></li>
             <li><option class="priority2" name="priority" id="priority" href="#">Medium priority</option></li>

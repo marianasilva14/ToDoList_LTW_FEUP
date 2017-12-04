@@ -9,10 +9,10 @@ include_once('database/category.php');
 $description = $_POST['Description'];
 $category = $_POST['Category'];
 $priority= $_POST['priority'];
+$deadline=$_POST['deadline'];
 
 
-
-insert_new_toDoList($category,$description,$priority);
+insert_new_toDoList($category,$description,$priority,$deadline);
 
 header("Location: logged.php");
 
