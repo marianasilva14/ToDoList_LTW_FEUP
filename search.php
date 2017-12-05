@@ -6,16 +6,19 @@ include_once('includes/init.php');
 include_once('database/category.php');
 
 $search = $_POST['search'];
-echo $search;
 
-$toDo= getToDo($search)
+$toDo= getToDo($search);
 
-/*
-if( in_array ($search ,$todo,true)
-  header("Location: templates/category/search.php");
-else if{
-  header("Location: index.php");
+if($toDo[0]['toDO_description']==$search){
+  echo "lalala";
+  header("Location: search_found.php\?toDo=" .$toDo);
+
 }
+else{
+    echo "coco";
+  header("Location: logged.php");
+}
+
 ob_end_flush();
-*/
+
 ?>

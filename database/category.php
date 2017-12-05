@@ -30,7 +30,7 @@
 
   function getToDo($description) {
     global $dbh;
-    $stmt = $dbh->prepare("SELECT toDo_id, toDO_description, cat_name FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE to_do.toDO_description=? AND usr_info.usr_id=? AND to_do.toDo_isCompleted=?");
+    $stmt = $dbh->prepare("SELECT toDo_id, toDO_description, cat_name,toDO_priority,toDO_deadline FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE to_do.toDO_description=? AND usr_info.usr_id=? AND to_do.toDo_isCompleted=?");
     $stmt->execute(array($description,$_SESSION['usr_info']['usr_id'],0));
     return $stmt->fetchAll();
   }

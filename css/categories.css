@@ -127,8 +127,6 @@
 #todolists {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  grid-area: user;
-  grid-column: 1,2;
   margin-left: 30px;
   margin-top: 50px;
   margin-right: 12em;
@@ -192,4 +190,14 @@ table tr td:nth-of-type(2n+2){
   width: 10em;
   height: 10em;
 
+}
+
+#todo_search{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-right: 12em;
+  margin-bottom: 20em;
+  order: 2;
 }
