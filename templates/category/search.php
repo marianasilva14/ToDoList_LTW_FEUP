@@ -14,12 +14,6 @@
        <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="<?php echo $imagem;?>"></td>
       <td><class="table_toDo_deadline" type="text" >&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<?=$toDo[0]['toDO_deadline']?></td>
      </tr>
-     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-     <script type="text/javascript" src="scripts/list_categories.js"></script>
-     <script type="text/javascript" src="scripts/add-to-do.js"></script>
-     <script type="text/javascript" src="scripts/mark-as-completed.js"></script>
-     <script type="text/javascript" src="scripts/delete-to-do.js"></script>
-     <script type="text/javascript" src="scripts/calendar.js"></script>
 </table>
 
 <aside id="buttons_MyCategory">

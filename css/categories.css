@@ -25,12 +25,12 @@
   font-family: 'Poppins', sans-serif;
   width: 100%;
   height: 40px;
-  background-color: #FFFFFF;
   color: white;
   border-radius: 0px 0px 5px 5px;
   background-color: white;
   display: flex;
   justify-content:space-between;
+  order:2;
 }
 
 #buttons form{
@@ -80,48 +80,56 @@
 }
 
 #categories {
+  display: flex;
+  text-decoration: none;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  margin-left: 100px;
-  margin-right: 450px;
-  opacity:0.9;
-  border-radius: 10px;
-  margin-top: 50px;
-  margin-bottom: 2em;
-  order:2;
+  opacity: 0.9;
+  order:3;
+  text-align: center;
+  flex-direction: row wrap;
 }
 
-#categories h2 {
-  display: none;
+#categories > *{
+  flex: none;
 }
-
-#categories ul {
-  margin: 0;
-  padding: 0;
-}
-
-#categories li {
-  margin: 3px;
-  border: 1px solid #000000;
-  line-height: 150%;
-  padding: 3px;
-  color: #000000;
-  display: block;
-  border-radius: 10px;
-}
-
-
-#categories li a {
-  display: block;
+#categories a{
+  padding: 4em 1em 4em 1em;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  border: 1px ;
   text-decoration: none;
-  padding: 1em;
-  color: black;
-  border-radius: 10px;
+  font-size: 1.5em;
+  color:white;
+}
+#categories a:first-child{
+  background-color: #7cdbac;
+}
+#categories a:nth-child(2){
+  background-color: #ef7d61;
+}
+#categories a:nth-child(3){
+  background-color: #987dbe;
+}
+#categories a:nth-child(4){
+  background-color: #e36a76;
+}
+#categories a:nth-child(5){
+  background-color: #f3cd56;
+}
+#categories a:nth-child(6){
+background-color: #4e96b4;
+}
+#categories a img {
+  width: 30px;
+  height: 30px;
 }
 
-#categories li a:hover {
-  background-color: #333;
-  color: white;
+
+@media screen and (min-width: 480px) {
+    #categories {
+        flex-flow: column;
+    }
 }
 
 #todolists {
@@ -170,7 +178,7 @@ table tr td:nth-of-type(2n+2){
   margin-top: 50px;
   margin-right: 100px;
   margin-bottom: 2em;
-  order:2;
+  order:4;
   background: white;
   border-radius: 5px;
   border-left: 3em;

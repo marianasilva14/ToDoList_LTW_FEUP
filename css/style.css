@@ -3,8 +3,8 @@ body {
   height: 100%;
   margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  background-color: #4e96b4;
+  flex-flow: column wrap;
+  background-color: white;
 }
 
 header{
@@ -12,6 +12,7 @@ header{
   display: flex;
   flex: 0 0 0;
   flex-grow: 0;
+  order:1;
 }
 
 body > header {
@@ -27,7 +28,6 @@ body > header {
   align-items: center;
   flex-grow: 1;
   height: 10em;
-  background-color: #FFFFFF;
 }
 
 #info a {
@@ -60,7 +60,7 @@ footer {
   color: white;
   height: 55px;
   text-align:justify;
-  order: 3;
+  order: 5;
 }
 
 #messages article {

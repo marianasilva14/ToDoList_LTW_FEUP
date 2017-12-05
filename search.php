@@ -10,8 +10,10 @@ $search = $_POST['search'];
 $toDo= getToDo($search);
 
 if($toDo[0]['toDO_description']==$search){
-  echo "lalala";
-  header("Location: search_found.php\?toDo=" .$toDo);
+
+  include_once('templates/common/header.php');
+  include_once('templates/category/search.php');
+  include_once('templates/common/footer.php');
 
 }
 else{
@@ -20,5 +22,6 @@ else{
 }
 
 ob_end_flush();
+
 
 ?>

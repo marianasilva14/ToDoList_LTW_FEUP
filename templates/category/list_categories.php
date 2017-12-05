@@ -1,14 +1,8 @@
-<section id="categories">
-  <h2>Categories</h2>
-  <ul>
+<aside id="categories">
     <?php foreach ($categories as $category) { ?>
-      <li><a href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
-      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script type="text/javascript" src="scripts/list_categories.js"></script>
-      <script type="text/javascript" src="scripts/add-to-do.js"></script>
+      <a href="category.php?cat_id=<?=$category['cat_id']?>"><img src="<?php echo $category['cat_photo']?>">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<?=$category['cat_name']?></a>
     <?php } ?>
-  </ul>
-</section>
+</aside>
 
 <aside id="buttons" >
   <form method="post" action="search.php" >

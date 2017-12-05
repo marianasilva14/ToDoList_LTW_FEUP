@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS usr_info;
 
 CREATE TABLE category (
   cat_id INTEGER PRIMARY KEY,
-  cat_name VARCHAR NOT NULL
+  cat_name VARCHAR NOT NULL,
+  cat_photo VARCHAR( 100 ) NOT NULL
 );
 
 CREATE TABLE to_do (
@@ -27,10 +28,9 @@ CREATE TABLE usr_info (
   usr_photo VARCHAR( 100 ) NOT NULL
 );
 
-INSERT INTO category VALUES (1, 'Finances');
-INSERT INTO category VALUES (2, 'Job');
-INSERT INTO category VALUES (3, 'Personal Projects ');
-INSERT INTO category VALUES (4, 'Sport');
-INSERT INTO category VALUES (5, 'Tasks');
-INSERT INTO category VALUES (6, 'Free time');
-INSERT INTO category VALUES (7, 'Others');
+INSERT INTO category VALUES (1, 'Finances', 'images/finances.png');
+INSERT INTO category VALUES (2, 'Free time' , 'images/finances.png');
+INSERT INTO category VALUES (3, 'Job','images/finances.png');
+INSERT INTO category VALUES (4, 'Others' , 'images/finances.png');
+INSERT INTO category VALUES (5, 'Personal Projects ', 'images/finances.png');
+INSERT INTO category VALUES (6, 'Sport', 'images/finances.png');
