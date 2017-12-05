@@ -32,5 +32,5 @@ INSERT INTO category VALUES (1, 'Finances', 'images/finances.png');
 INSERT INTO category VALUES (2, 'Free time' , 'images/freeTime.png');
 INSERT INTO category VALUES (3, 'Job','images/job.png');
 INSERT INTO category VALUES (4, 'Others' , 'images/others.png');
-INSERT INTO category VALUES (5, 'Personal Projects ', 'images/projects.png');
+INSERT INTO category VALUES (5, 'Personal Projects', 'images/projects.png');
 INSERT INTO category VALUES (6, 'Sport', 'images/sports.png');
