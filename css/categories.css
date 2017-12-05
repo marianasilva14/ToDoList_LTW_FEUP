@@ -16,7 +16,7 @@
 }
 
 .search_bar:focus{
-   width: 20%;
+   width: 100%;
 }
 
 
@@ -67,7 +67,7 @@
   border-radius: 0px 0px 5px 5px;
   order: 1;
   background-color: white;
-  
+
 }
 
 #buttons_MyCategory a img{

@@ -11,8 +11,8 @@
 </section>
 
 <aside id="buttons" >
-  <form method="post" action="search.php"  id="search">
-  <input class="search_bar" type="text" name="search" placeholder="Search.." >
+  <form method="post" action="search.php" >
+  <input class="search_bar" type="text" name="search"  id="search" placeholder="Search.." >
   </form>
   <div>
   <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>

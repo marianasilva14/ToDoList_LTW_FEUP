@@ -7,6 +7,7 @@
   <?php } else { ?>
     <form action="action_login.php" method="post">
       <input type="text" placeholder="username" name="username">
+      <br>
       <input type="password" placeholder="password" name="password">
       <div>
         <input type="submit" value="Login">
