@@ -94,7 +94,7 @@
   flex: none;
 }
 #categories a{
-  padding: 4em 1em 4em 1em;
+  padding: 1em 1em 1em 1em;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   border: 1px ;
@@ -109,7 +109,7 @@
   background-color: #ef7d61;
 }
 #categories a:nth-child(3){
-  background-color: #987dbe;
+  background-color: #62c8f7;
 }
 #categories a:nth-child(4){
   background-color: #e36a76;
@@ -121,8 +121,8 @@
 background-color: #4e96b4;
 }
 #categories a img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -138,7 +138,7 @@ background-color: #4e96b4;
   margin-left: 30px;
   margin-top: 50px;
   margin-right: 12em;
-  margin-bottom: 20em;
+  margin-bottom: 2em;
   order: 2;
 }
 table{
@@ -174,16 +174,13 @@ table tr td:nth-of-type(2n+2){
   font-family: 'Poppins', sans-serif;
   font-size: 1em;
   grid-column: 3;
-  margin-left: 100px;
-  margin-top: 50px;
-  margin-right: 100px;
-  margin-bottom: 2em;
   order:4;
   background: white;
   border-radius: 5px;
   border-left: 3em;
-  padding: 1.5em 1.5em 1.5em 1.5em;
+  padding: 1.5em 0em 1.5em 0em;
   text-align: center;
+  width: 100%;
 }
 
 #user_info p:nth-child(2){
@@ -208,4 +205,15 @@ table tr td:nth-of-type(2n+2){
   margin-right: 12em;
   margin-bottom: 20em;
   order: 2;
+}
+
+#all{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-right: 12em;
+  margin-bottom: 20em;
+  order: 2;
+  background-color: #4e96b4;
 }

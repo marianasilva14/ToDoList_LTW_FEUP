@@ -63,31 +63,39 @@ $(function header_color() {
 
   let element = document.querySelector('#info');
   let element2 = document.querySelector('#buttons_MyCategory');
+  let element3 = document.querySelector('body');
+  console.log(element3);
   let cat_id= getAllUrlParams().cat_id;
 
   if(cat_id==1){
     element.style.backgroundColor = "#7cdbac";
     element2.style.backgroundColor = "#7cdbac";
+    element3.style.backgroundColor = "#FFFFFF";
   }
   else if(cat_id==2){
     element.style.backgroundColor = "#ef7d61";
     element2.style.backgroundColor = "#ef7d61";
+    element3.style.backgroundColor = "#FFFFFF";
   }
   else if(cat_id==3){
-    element.style.backgroundColor = "#987dbe";
-    element2.style.backgroundColor = "#987dbe";
+    element.style.backgroundColor = "#62c8f7";
+    element2.style.backgroundColor = "#62c8f7";
+    element3.style.backgroundColor = "#FFFFFF";
   }
   else if(cat_id==4){
     element.style.backgroundColor = "#e36a76";
     element2.style.backgroundColor = "#e36a76";
+    element3.style.backgroundColor = "#FFFFFF";
   }
   else if(cat_id==5){
     element.style.backgroundColor = "#f3cd56";
     element2.style.backgroundColor = "#f3cd56";
+    element3.style.backgroundColor = "#FFFFFF";
   }
   else if(cat_id==6){
     element.style.backgroundColor = "#4e96b4";
     element2.style.backgroundColor = "#4e96b4";
+    element3.style.backgroundColor = "#FFFFFF";
   }
 return;
 });

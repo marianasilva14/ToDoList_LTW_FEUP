@@ -1,4 +1,4 @@
-<section id="todolists">
+<section id="all">
   <ul>
     <h3>Everything I have to do</h3>
     <?php foreach ($allToDoLists as $todolist) { ?>

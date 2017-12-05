@@ -1,6 +1,6 @@
 <aside id="categories">
     <?php foreach ($categories as $category) { ?>
-      <a href="category.php?cat_id=<?=$category['cat_id']?>"><img src="<?php echo $category['cat_photo']?>">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<?=$category['cat_name']?></a>
+      <a href="category.php?cat_id=<?=$category['cat_id']?>"><img src="<?php echo $category['cat_photo']?>">&nbsp; &nbsp; &nbsp; &nbsp;<?=$category['cat_name']?></a>
     <?php } ?>
 </aside>
 

@@ -4,7 +4,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
-  background-color: white;
+  background-color: #4e96b4;
 }
 
 header{
@@ -13,6 +13,7 @@ header{
   flex: 0 0 0;
   flex-grow: 0;
   order:1;
+  background-color: white;
 }
 
 body > header {
