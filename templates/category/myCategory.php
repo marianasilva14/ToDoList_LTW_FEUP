@@ -1,7 +1,7 @@
 <table id="todolists">
     <tr><td> <b><?php echo $categories[0]['cat_name'] ?></b></td></tr>
     <?php foreach ($categories as $category) { ?>
-     <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
+     <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_id']?> : <?=$category['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
        <td><class="table_toDo_priority" type="text" ><?=$category['toDO_priority']?></td>
        <?php if($category['toDO_priority']=='High priority'){
          $imagem= "images/higher.png";
@@ -26,20 +26,20 @@
 
 <aside id="buttons_MyCategory">
 
-<a class="markTask" data-popup-deleteTask-open="popup-1" href="#"><b>Mark Task as completed</b></a>
-  <div class="popup-markTask" data-popup-deleteTask="popup-1">
+<a class="markTask" data-popup-markTask-open="popup-1" href="#"><b>Mark Task as completed</b></a>
+  <div class="popup-markTask" data-popup-markTask="popup-1">
     <div class="popup-inner-markTask">
 
       <form action="mark_as_completed.php" method="post">
          <select class="dropdown"name="Category" >
             <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
         </select>
-        <input class="inputField-markTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+        <input class="inputField-markTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">
         <br></br>
         <input id="submit" type="submit" value ="markTask">
       </form>
 
-      <a class="popup-close-markTask" data-popup-close-deleteTask="popup-1" href="#"></a>
+      <a class="popup-close-markTask" data-popup-close-markTask="popup-1" href="#"></a>
     </div>
   </div>
 
@@ -51,7 +51,7 @@
          <select class="dropdown"name="Category" >
             <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
         </select>
-        <input class="inputField-deleteTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
+        <input class="inputField-deleteTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">
         <br></br>
         <input id="submit" type="submit" value ="DeleteTask">
       </form>
@@ -79,31 +79,6 @@
       </form>
 
       <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
-    </div>
-  </div>
-
-  <a class="edit_profile" data-popup-open="popup-1" href="#"><b>Edit your profile</b></a>
-
-  <div class="popup" data-popup="popup-1">
-    <div class="popup-inner">
-
-      <form action="change_name.php" method="post">
-        <input class="inputField" type="text" id="name" required="required" name="name" placeholder="New name">
-        <input class= "editSubmit" id="submit" type="submit" value ="Change">
-      </form>
-
-      <form action="change_email.php" method="post">
-        <input class="inputField" type="email" id="email" required="required" name="email" placeholder="New email">
-        <input class= "editSubmit" id="submit" type="submit" value="Change">
-      </form>
-
-      <form action="change_password.php" onsubmit="return validate(this);" method="post">
-        <input class="inputField" type="password" minlength="8" id="password" name="password" required="required" placeholder="New password">
-        <input class="inputField" type="password" id="passwordConfirm" name="passwordConfirm" required="required" placeholder="Confirm password">
-        <input id="submit" type="submit" value ="Submit">
-      </form>
-
-      <a class="popup-close" data-popup-close="popup-1" href="#"></a>
     </div>
   </div>
 

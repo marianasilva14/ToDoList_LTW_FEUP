@@ -12,6 +12,7 @@
 
 <aside id="buttons">
   <a href="allTasks.php"><b>View All Tasks</b></a>
+  <a href="completedTasks.php"><b>Completed Tasks</b></a>
   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
       <div class="popup-inner-addTask">

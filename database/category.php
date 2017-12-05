@@ -8,16 +8,23 @@
 
   function getAllToDoListsByCategory($cat_id) {
     global $dbh;
-    $stmt = $dbh->prepare("SELECT cat_name, toDO_description, toDO_priority FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE category.cat_id=?
-    AND usr_info.usr_id=?");
-    $stmt->execute(array($cat_id,$_SESSION['usr_info']['usr_id']));
+    $stmt = $dbh->prepare("SELECT toDo_id, cat_name, toDO_description, toDO_priority FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE category.cat_id=?
+    AND usr_info.usr_id=? AND to_do.toDo_isCompleted=?");
+    $stmt->execute(array($cat_id,$_SESSION['usr_info']['usr_id'],0));
+    return $stmt->fetchAll();
+  }
+
+  function getAllToDoListsCompleted() {
+    global $dbh;
+    $stmt = $dbh->prepare("SELECT toDo_id, toDO_description, cat_name FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE usr_info.usr_id=? AND to_do.toDo_isCompleted=?");
+    $stmt->execute(array($_SESSION['usr_info']['usr_id'],1));
     return $stmt->fetchAll();
   }
 
   function getAllToDoLists() {
     global $dbh;
-    $stmt = $dbh->prepare("SELECT toDO_description FROM to_do JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE usr_info.usr_id=?");
-    $stmt->execute(array($_SESSION['usr_info']['usr_id']));
+    $stmt = $dbh->prepare("SELECT toDo_id, toDO_description, cat_name FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE usr_info.usr_id=? AND to_do.toDo_isCompleted=?");
+    $stmt->execute(array($_SESSION['usr_info']['usr_id'],0));
     return $stmt->fetchAll();
   }
 
@@ -35,7 +42,7 @@ function insert_new_toDoList($category,$description,$priority,$deadline){
   $stmt2->execute(array($description,$priority,$result['cat_id'], $_SESSION['usr_info']['usr_id'],$deadline));
 }
 
-function delete_toDo($category,$description){
+function delete_toDo($category,$to_doID){
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
   $stmt->execute(array($category));
@@ -44,21 +51,12 @@ function delete_toDo($category,$description){
   if(!$result)
       header("Location: logged.php");
 
-  $stmt2 =$dbh->prepare("DELETE FROM to_do WHERE toDO_description IN (SELECT toDO_description FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE category.cat_id=? AND usr_info.usr_id=? AND to_do.toDO_description=?)");
-  $stmt2->execute(array($result['cat_id'], $_SESSION['usr_info']['usr_id'], $description));
+  $stmt2 =$dbh->prepare("DELETE FROM to_do WHERE toDO_id IN (SELECT toDO_id FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE category.cat_id=? AND usr_info.usr_id=? AND to_do.toDO_id=?)");
+  $stmt2->execute(array($result['cat_id'], $_SESSION['usr_info']['usr_id'], $to_doID));
 }
 
 
-function markAsCompleted_toDo($category,$description){
-  global $dbh;
-  $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
-  $stmt->execute(array($category));
-  $result=$stmt->fetch();
-
-  if(!$result)
-      header("Location: logged.php");
-
-  $stmt2 =$dbh->prepare("DELETE FROM to_do WHERE toDO_description IN (SELECT toDO_description FROM to_do JOIN category ON(category.cat_id = to_do.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE category.cat_id=? AND usr_info.usr_id=? AND to_do.toDO_description=?)");
-  $stmt2->execute(array($result['cat_id'], $_SESSION['usr_info']['usr_id'], $description));
+function markAsCompleted_toDo($category,$to_doID){
+ // falta a querie
 }
 ?>

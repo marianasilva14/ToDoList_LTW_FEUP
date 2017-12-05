@@ -10,7 +10,7 @@ $id = $_POST['to_doID'];
 $category = $_POST['Category'];
 
 
-delete_toDo($category,$id);
+markAsCompleted_toDo($category,$id);
 
 header("Location: logged.php");
 
