@@ -13,6 +13,7 @@
           $imagem= "images/lower.png";
        }?>
        <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="<?php echo $imagem;?>"></td>
+        <td><class="table_toDo_deadline" type="text" >&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<?=$category['toDO_deadline']?></td>
      </tr>
      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
      <script type="text/javascript" src="scripts/list_categories.js"></script>
@@ -26,7 +27,7 @@
 
 <aside id="buttons_MyCategory">
 
-<a class="markTask" data-popup-markTask-open="popup-1" href="#"><b>Mark Task as completed</b></a>
+<a class="markTask" data-popup-markTask-open="popup-1" href="#"><img src="images/completed.png"></a>
   <div class="popup-markTask" data-popup-markTask="popup-1">
     <div class="popup-inner-markTask">
 
@@ -43,7 +44,7 @@
     </div>
   </div>
 
-  <a class="delete_task" data-popup-deleteTask-open="popup-1" href="#"><b>Delete task</b></a>
+  <a class="delete_task" data-popup-deleteTask-open="popup-1" href="#"><img src="images/delete.png"></a>
   <div class="popup-deleteTask" data-popup-deleteTask="popup-1">
     <div class="popup-inner-deleteTask">
 
@@ -60,7 +61,7 @@
     </div>
   </div>
 
-  <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
+  <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
     <div class="popup-inner-addTask">
       <form action="new_todo.php" method="post">
@@ -82,7 +83,7 @@
     </div>
   </div>
 
-  <a href="back.php"><b>Back</b></a>
+  <a href="back.php"><img src="images/back.png"></a>
 </aside>
 
 <section id="calendar">

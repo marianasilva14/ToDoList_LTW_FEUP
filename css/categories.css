@@ -1,5 +1,30 @@
+.search_bar{
+  width: 130px;
+  margin-left: 70px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-size: 20px;
+  background-image: url("../images/search.png");
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  padding: 10px 20px 0px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.search_bar:focus{
+   width: 20%;
+}
+.aside{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
 #buttons{
-  text-align: right;
+  text-align:right;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   width: 100%;
@@ -11,22 +36,20 @@
   background-color: white;
 }
 
-#buttons a{
-  padding: 0 1em;
+#buttons form{
+  text-align: left;
+}
+
+#buttons a img{
+
+  width: 25px;
+  margin-right: 20px;
+  padding: 0 0.5em;
   text-decoration: none;
   font-size: 1.5em;
   color: #000000;
 }
 
-#buttons a:first-child{
-  border-right: 2px solid black;
-}
-#buttons a:nth-child(2){
-  border-right: 2px solid black;
-}
-#buttons a:nth-child(4){
-  border-right: 2px solid black;
-}
 
 #buttons_MyCategory{
   text-align: right;
@@ -41,28 +64,13 @@
   background-color: white;
 }
 
-#buttons_MyCategory a{
-  padding: 0 1em;
+#buttons_MyCategory a img{
+  width: 25px;
+  margin-right: 20px;
+  padding: 0 0.5em;
   text-decoration: none;
   font-size: 1.5em;
   color: #000000;
-}
-
-#buttons_MyCategory a:first-child{
-  border-right: 2px solid black;
-}
-#buttons_MyCategory a:nth-child(3){
-  border-right: 2px solid black;
-}
-#buttons_MyCategory a:nth-child(4){
-  border-right: 2px solid black;
-}
-#buttons_MyCategory a:nth-child(5){
-  border-right: 2px solid black;
-}
-
-#buttons_MyCategory a{
-  padding: 0 1em;
 }
 
 #categories {
@@ -117,7 +125,7 @@
   grid-column: 1,2;
   margin-left: 30px;
   margin-top: 50px;
-  margin-right: 20em;
+  margin-right: 12em;
   margin-bottom: 20em;
   order: 2;
 }
@@ -156,6 +164,7 @@ table tr td:nth-of-type(2n+2){
   grid-column: 3;
   margin-left: 100px;
   margin-top: 50px;
+  margin-right: 100px;
   margin-bottom: 2em;
   order:2;
   background: white;
@@ -172,7 +181,7 @@ table tr td:nth-of-type(2n+2){
 #user_info article img{
   border-radius: 50%;
   margin-top: 1em;
-  margin-left: 6em;
+  margin-left: 1.8em;
   grid-column: 2;
   width: 10em;
   height: 10em;

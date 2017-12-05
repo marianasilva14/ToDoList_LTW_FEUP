@@ -10,10 +10,13 @@
   </ul>
 </section>
 
-<aside id="buttons">
-  <a href="allTasks.php"><b>View All Tasks</b></a>
-  <a href="completedTasks.php"><b>Completed Tasks</b></a>
-  <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><b>Add Task</b></a>
+<aside id="buttons" >
+  <form method="post" action="search.php"  id="search">
+  <input class="search_bar" type="text" name="search" placeholder="Search.." >
+  </form>
+  <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>
+  <a href="completedTasks.php"><img src="images/completed.png"></a>
+  <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></i></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
       <div class="popup-inner-addTask">
 
@@ -39,7 +42,7 @@
       </div>
     </div>
 
-  <a class="edit_profile" data-popup-open="popup-1" href="#"><b>Edit your profile</b></a>
+  <a class="edit_profile" data-popup-open="popup-1" href="#"><img src="images/edit.png"></a>
 
   <div class="popup" data-popup="popup-1">
       <div class="popup-inner">
@@ -64,7 +67,7 @@
       </div>
     </div>
 
-  <a href="action_logout.php"><b>Logout</b></a>
+  <a href="action_logout.php"><img src="images/logout.jpg"></a>
 </aside>
 
 <section id="user_info">

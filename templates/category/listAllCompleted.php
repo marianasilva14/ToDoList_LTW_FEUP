@@ -11,6 +11,6 @@
 </section>
 
 
-
-  <a href="back.php"><b>Back</b></a>
+<aside id="buttons_MyCategory">
+  <a href="back.php"><img src="images/back.png"></a>
 </aside>
