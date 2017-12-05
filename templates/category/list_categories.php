@@ -14,6 +14,7 @@
   <form method="post" action="search.php"  id="search">
   <input class="search_bar" type="text" name="search" placeholder="Search.." >
   </form>
+  <div>
   <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>
   <a href="completedTasks.php"><img src="images/completed.png"></a>
   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></i></a>
@@ -68,6 +69,7 @@
     </div>
 
   <a href="action_logout.php"><img src="images/logout.jpg"></a>
+</div>
 </aside>
 
 <section id="user_info">
