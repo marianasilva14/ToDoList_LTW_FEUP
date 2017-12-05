@@ -18,11 +18,8 @@
 .search_bar:focus{
    width: 20%;
 }
-.aside{
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-}
+
+
 #buttons{
   text-align:right;
   font-family: 'Permanent Marker', cursive;
@@ -32,14 +29,19 @@
   background-color: #FFFFFF;
   color: white;
   border-radius: 0px 0px 5px 5px;
-  order: 1;
   background-color: white;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #buttons form{
   text-align: left;
+  order: 1;
 }
 
+#buttons a {
+  order: 2;
+}
 #buttons a img{
 
   width: 25px;
@@ -50,6 +52,9 @@
   color: #000000;
 }
 
+#buttons .NewTask{
+    width: 3em;
+}
 
 #buttons_MyCategory{
   text-align: right;
