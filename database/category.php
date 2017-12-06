@@ -64,9 +64,12 @@ function delete_toDo($category,$to_doID){
 
 
 function markAsCompleted_toDo($category,$to_doID){
-/* global $dbh;
-  $stmt = $dbh->prepare('UPDATE to_do SET toDo_isCompleted = 1 WHERE to_do.toDo_id = ?');
-  return $stmt->execute(array($newName, $userID));*/
-  //SELECT toDO_description FROM to_do WHERE toDo_isCompleted = 1;
+  global $dbh;
+  $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
+  $stmt->execute(array($category));
+  $result=$stmt->fetch();
+
+  $stmt2 = $dbh->prepare('UPDATE to_do SET toDo_isCompleted = 1 WHERE to_do.toDo_id = ?');
+  return $stmt2->execute(array($to_doID));
 }
 ?>
