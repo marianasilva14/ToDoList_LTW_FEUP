@@ -2,10 +2,10 @@
     <tr><td> <b><?php echo $toDo[0]['cat_name'] ?></b></td></tr>
      <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$toDo[0]['cat_id']?>"><?=$toDo[0]['toDO_id']?> : <?=$toDo[0]['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
        <td><class="table_toDo_priority" type="text" ><?=$toDo[0]['toDO_priority']?></td>
-       <?php if($category['toDO_priority']=='High priority'){
+       <?php if($toDo[0]['toDO_priority']=='High priority'){
          $imagem= "images/higher.png";
        }
-       else if($category['toDO_priority']=='Medium priority'){
+       else if($toDo[0]['toDO_priority']=='Medium priority'){
           $imagem= "images/medium.png";
        }
        else{
