@@ -1,4 +1,5 @@
 <table id="todolists">
+  <?php if($categories){?>
     <tr><td> <b><?php echo $categories[0]['cat_name'] ?></b></td></tr>
     <?php foreach ($categories as $category) { ?>
      <tr><td> <class="table_toDo" href="category.php?cat_id=<?=$category['cat_id']?>"><?=$category['toDO_id']?> : <?=$category['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
@@ -15,13 +16,7 @@
        <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="<?php echo $imagem;?>"></td>
         <td><class="table_toDo_deadline" type="text" >&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<?=$category['toDO_deadline']?></td>
      </tr>
-     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-     <script type="text/javascript" src="scripts/list_categories.js"></script>
-     <script type="text/javascript" src="scripts/add-to-do.js"></script>
-     <script type="text/javascript" src="scripts/mark-as-completed.js"></script>
-     <script type="text/javascript" src="scripts/delete-to-do.js"></script>
-     <script type="text/javascript" src="scripts/calendar.js"></script>
-   <?php } ?>
+   <?php } } ?>
 </table>
 
 
