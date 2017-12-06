@@ -16,6 +16,7 @@
   padding: 20px 32px;
 }
 
+
 #user input {
   padding: 0.1em;
   font-family: 'Permanent Marker', cursive;
@@ -40,6 +41,24 @@
   border-radius: 10px;
 
 }
+
+@media screen and (max-width: 500px){
+  #user{
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  #user input{
+    padding: 0.1em;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Poppins', sans-serif;
+    height: 2em;
+    width: 12em;
+    font-size: 0.4em;
+  }
+}
+
+
 #register{
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
