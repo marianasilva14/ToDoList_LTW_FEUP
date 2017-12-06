@@ -224,3 +224,10 @@ table tr td:nth-of-type(2n+2){
   order: 2;
   background-color: #4e96b4;
 }
+#all h3{
+  font-size: 2em;
+}
+
+#all p{
+  font-size: 1.3em;
+}

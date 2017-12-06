@@ -1,10 +1,8 @@
 <section id="all">
-  <ul>
     <h3>Everything I have to do</h3>
     <?php foreach ($allToDoLists as $todolist) { ?>
-      <li><p href="category.php?cat_id=<?=$todolist['cat_id']?>"><?=$todolist['cat_name']?> : <?=$todolist['toDO_id']?> : <?=$todolist['toDO_description']?></p></li>
+      <p href="category.php?cat_id=<?=$todolist['cat_id']?>"><?=$todolist['toDO_id']?> : &nbsp; &nbsp; <?=$todolist['toDO_description']?></p>
     <?php } ?>
-  </ul>
 </section>
 
 <aside id="buttons_MyCategory">

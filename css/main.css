@@ -1,5 +1,9 @@
 #user  {
   background-image: url("../images/background.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 3em 0em 0em 1em;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
