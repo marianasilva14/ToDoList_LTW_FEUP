@@ -1,3 +1,13 @@
+$(document).ready(function(){
+    // set up hover panels
+    // although this can be done without JavaScript, we've attached these events
+    // because it causes the hover to be triggered when the element is tapped on a touch device
+    $('.hover').hover(function(){
+        $(this).addClass('flip');
+    },function(){
+        $(this).removeClass('flip');
+    });
+});
 function getAllUrlParams(url) {
 
   // get query string from url (optional) or window
@@ -70,32 +80,32 @@ $(function header_color() {
   if(cat_id==1){
     element.style.backgroundColor = "#7cdbac";
     element2.style.backgroundColor = "#7cdbac";
-    element3.style.backgroundColor = "#FFFFFF";
+    element3.style.backgroundColor = "#7cdbac";
   }
   else if(cat_id==2){
     element.style.backgroundColor = "#ef7d61";
     element2.style.backgroundColor = "#ef7d61";
-    element3.style.backgroundColor = "#FFFFFF";
+    element3.style.backgroundColor = "#ef7d61";
   }
   else if(cat_id==3){
     element.style.backgroundColor = "#62c8f7";
     element2.style.backgroundColor = "#62c8f7";
-    element3.style.backgroundColor = "#FFFFFF";
+    element3.style.backgroundColor = "#62c8f7";
   }
   else if(cat_id==4){
     element.style.backgroundColor = "#e36a76";
     element2.style.backgroundColor = "#e36a76";
-    element3.style.backgroundColor = "#FFFFFF";
+    element3.style.backgroundColor = "#e36a76";
   }
   else if(cat_id==5){
     element.style.backgroundColor = "#f3cd56";
     element2.style.backgroundColor = "#f3cd56";
-    element3.style.backgroundColor = "#FFFFFF";
+    element3.style.backgroundColor = "#f3cd56";
   }
   else if(cat_id==6){
     element.style.backgroundColor = "#4e96b4";
     element2.style.backgroundColor = "#4e96b4";
-    element3.style.backgroundColor = "#FFFFFF";
+    element3.style.backgroundColor = "#4e96b4";
   }
 return;
 });

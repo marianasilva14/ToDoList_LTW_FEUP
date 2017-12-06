@@ -1,6 +1,23 @@
 <table id="todolists">
     <?php foreach ($toDoLists as $toDoList) { ?>
-     <tr><td><li><a class="table_toDo" href="toDoList.php?toDoList_id=<?=$toDoList['toDoList_id']?>"><?=$toDoList['toDoList_name']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</a></li></td>
+     <tr><td><li>
+       <div class="wrapper">
+       <div class="col_third">
+        <div class="hover panel">
+       <a class="table_toDo" href="toDoList.php?toDoList_id=<?=$toDoList['toDoList_id']?>">
+       <div class="front">
+         <div class="box1">
+           <p><?=$toDoList['toDoList_name']?></p>
+         </div>
+       </div>
+       <div class="back">
+         <div class="box2">
+           <p><?=$toDoList['toDoList_name']?></p>
+         </div>
+       </div></a>
+     </div>
+   </div>
+ </div></li></td>
       </tr>
    <?php } ?>
 </table>
@@ -68,7 +85,3 @@
 
   <a href="back.php"><img src="images/back.png"></a>
 </aside>
-
-<section id="calendar">
-<script>displayCalendar()</script>
-</section>

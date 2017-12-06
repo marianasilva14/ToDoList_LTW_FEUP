@@ -12,10 +12,10 @@
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="scripts/list_categories.js"></script>
   <script type="text/javascript" src="scripts/add-to-do.js"></script>
-  <script src="scripts/header_color.js" defer></script>
   <script type="text/javascript" src="scripts/mark-as-completed.js"></script>
   <script type="text/javascript" src="scripts/delete-to-do.js"></script>
   <script type="text/javascript" src="scripts/calendar.js"></script>
+  <script type="text/javascript" src="scripts/header_color.js"></script>
 </head>
 
 <body>
