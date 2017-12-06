@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS category;
 DROP TABLE IF EXISTS to_do;
 DROP TABLE IF EXISTS usr_info;
+DROP TABLE IF EXISTS to_do_list;
 
 CREATE TABLE category (
   cat_id INTEGER PRIMARY KEY,
@@ -10,8 +11,8 @@ CREATE TABLE category (
 
 CREATE TABLE to_do_list (
   toDoList_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  toDO_description VARCHAR NOT NULL,
-  toDo_isCompleted BIT NOT NULL DEFAULT 0,
+  toDoList_name VARCHAR NOT NULL,
+  toDoList_isCompleted BIT NOT NULL DEFAULT 0,
   cat_id INTEGER REFERENCES category NOT NULL,
   usr_id INTEGER REFERENCES usr_info NOT NULL
 );
