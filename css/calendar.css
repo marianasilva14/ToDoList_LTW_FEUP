@@ -39,9 +39,12 @@
 }
 
 .deadline{
+  text-align: center;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  width: 95%;
-  height: 2.5em;
+  width: 75%;
+  height: 1.5em;
   font-size:1em;
+  border: solid 1px gray;
+  border-radius: 5px;
 }
