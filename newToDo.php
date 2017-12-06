@@ -7,12 +7,11 @@ include_once('database/category.php');
 
 // Ler dados vindos do post
 $description = $_POST['Description'];
-$category = $_POST['Category'];
-$priority= $_POST['priority'];
-$deadline=$_POST['deadline'];
+$priority = $_POST['Priority'];
+$deadline = $_POST['Deadline'];
+$toDo =$_POST['toDo'];
 
-
-insert_new_toDoList($category,$description,$priority,$deadline);
+insert_new_toDo($toDo,$description,$priority,$deadline);
 
 header("Location: logged.php");
 

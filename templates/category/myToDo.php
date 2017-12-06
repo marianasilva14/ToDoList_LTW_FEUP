@@ -1,6 +1,6 @@
 <table id="todolists">
-    <?php foreach ($toDoLists as $toDoList) { ?>
-     <tr><td><li><a class="table_toDo" href="toDoList.php?toDoList_id=<?=$toDoList['toDoList_id']?>"><?=$toDoList['toDoList_name']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</a></li></td>
+    <?php foreach ($toDoList as $toDo) { ?>
+     <tr><td><li><a class="table_toDo" href="toDo.php?toDo_id=<?=$toDo['toDoList_id']?>"><?=$toDo['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</a></li></td>
       </tr>
    <?php } ?>
 </table>

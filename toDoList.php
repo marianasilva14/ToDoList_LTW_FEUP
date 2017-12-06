@@ -4,10 +4,10 @@ include_once('database/connection.php');
 include_once('database/category.php');
 
 if(isset($_GET)){
-  $toDoLists = getAllToDoListsByCategory($_GET['cat_id']);
+  $toDoList = getAllToDoByToDoLists($_GET['toDoList_id']);
 }
-
+echo $toDoList[0];
 include_once('templates/common/header.php');
-include_once('templates/category/myCategory.php');
+include_once('templates/category/myToDo.php');
 include_once('templates/common/footer.php');
 ?>

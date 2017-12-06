@@ -8,9 +8,17 @@
 
   function getAllToDoListsByCategory($cat_id) {
     global $dbh;
-    $stmt = $dbh->prepare("SELECT toDo_id, toDO_description, toDO_priority,toDO_deadline FROM to_do JOIN to_do_list ON(to_do_list.toDoList_id = to_do.toDoList_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE to_do_list.toDoList_id=?
-    AND usr_info.usr_id=? AND to_do.toDo_isCompleted=?");
+    $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN category ON(to_do_list.cat_id = category.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.toDoList_id=?
+    AND usr_info.usr_id=? AND to_do_list.toDoList_isCompleted=?");
     $stmt->execute(array($cat_id,$_SESSION['usr_info']['usr_id'],0));
+    return $stmt->fetchAll();
+  }
+
+  function getAllToDoByToDoLists($toDoList_id) {
+    global $dbh;
+    $stmt = $dbh->prepare("SELECT * FROM to_do JOIN to_do_list ON(to_do_list.toDoList_id = to_do.toDoList_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.toDoList_id=?
+    AND usr_info.usr_id=? AND to_do_list.toDoList_isCompleted=?");
+    $stmt->execute(array($toDoList_id,$_SESSION['usr_info']['usr_id'],0));
     return $stmt->fetchAll();
   }
 
@@ -35,7 +43,7 @@
     return $stmt->fetchAll();
   }
 
-function insert_new_toDoList($category,$description,$priority,$deadline){
+function insert_new_toDoList($category,$name){
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
   $stmt->execute(array($category));
@@ -44,15 +52,28 @@ function insert_new_toDoList($category,$description,$priority,$deadline){
   if(!$result)
       header("Location: logged.php");
 
-  $stmt2 =$dbh->prepare("INSERT INTO to_do(toDO_description,toDO_priority,cat_id,usr_id,toDO_deadline)
-  VALUES (?,?,?,?,?)");
-  $stmt2->execute(array($description,$priority,$result['cat_id'], $_SESSION['usr_info']['usr_id'],$deadline));
+  $stmt2 =$dbh->prepare("INSERT INTO to_do_list(toDoList_name,cat_id,usr_id)
+  VALUES (?,?,?)");
+  $stmt2->execute(array($name,$result['cat_id'], $_SESSION['usr_info']['usr_id']));
 }
 
-function delete_toDo($category,$to_doID){
+function insert_new_toDo($toDoList,$description,$priority,$deadline){
   global $dbh;
-  $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
-  $stmt->execute(array($category));
+  $stmt = $dbh->prepare("SELECT * FROM to_do_list WHERE toDoList_name=?");
+  $stmt->execute(array($toDoList));
+  $result=$stmt->fetch();
+
+  if(!$result)
+      header("Location: logged.php");
+  $stmt2 =$dbh->prepare("INSERT INTO to_do(toDoList_id,toDO_description,toDO_priority,toDO_deadline)
+  VALUES (?,?,?,?)");
+  $stmt2->execute(array($result['toDoList_id'],$description, $priority,$deadline));
+}
+
+function delete_toDo($toDoList,$to_doID){
+  global $dbh;
+  $stmt = $dbh->prepare("SELECT * FROM to_do_list WHERE toDoList_name=?");
+  $stmt->execute(array($toDoList));
   $result=$stmt->fetch();
 
   if(!$result)

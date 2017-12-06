@@ -15,20 +15,14 @@
   <div class="popup-addTask" data-popup-addTask="popup-1">
       <div class="popup-inner-addTask">
 
-      <form action="new_todo.php" method="post">
+      <form action="newToDoList.php" method="post">
             <select class="dropdown"name="Category" >
               <?php $categories = getAllCategories(); ?>
               <?php foreach ($categories as $category) { ?>
                 <li><option class="cat" id="Category" name="Category" href="#"><?=$category['cat_name']?></option></li>
               <?php } ?>
             </select>
-          <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
-          <input class="deadline" type="date" name="deadline" id="deadline">
-          <select class=priority name="priority" >
-              <li><option class="priority1" name="priority" id="priority" href="#">High priority</option></li>
-              <li><option class="priority2" name="priority" id="priority" href="#">Medium priority</option></li>
-              <li><option class="priority3" name="priority" id="priority" href="#">Low priority</option></li>
-          </select>
+          <input class="inputField-addTask" type="text" id="Name" required="required" name="Name" placeholder="Name">
           <br></br>
           <input id="submit" type="submit" value ="AddTask">
       </form>

@@ -147,32 +147,30 @@ background-color: #4e96b4;
   margin-right: 12em;
   margin-bottom: 2em;
   order: 2;
-}
-table{
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Poppins', sans-serif;
-}
-
-table tr:first-child{
-  font-size: 1.5em;
-}
-
-table tr td:first-child{
-    font-size: 1.5em;
 
 }
 
-table tr td:nth-last-child(1000n+2){
-  font-size: 1.2em;
+#todolists li a{
+  display: block;
+   text-decoration: none;
+   padding: 1em;
+   color: black;
+   border-radius: 10px;
 }
 
-table tr td img{
-  width: 50px;
-  height: 50px;
+#todolists li {
+  margin: 3px;
+  border: 1px solid #000000;
+  line-height: 150%;
+  padding: 3px;
+  color: #000000;
+  display: block;
+  border-radius: 10px;
 }
 
-table tr td:nth-of-type(2n+2){
-  font-size: 1.2em;
+#todolists li a:hover{
+  background-color: #333;
+  color: white;
 }
 
 
