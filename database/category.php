@@ -65,9 +65,11 @@ function insert_new_toDo($toDoList,$description,$priority,$deadline){
 
   if(!$result)
       header("Location: logged.php");
-  $stmt2 =$dbh->prepare("INSERT INTO to_do(toDoList_id,toDO_description,toDO_priority,toDO_deadline)
-  VALUES (?,?,?,?)");
-  $stmt2->execute(array($result['toDoList_id'],$description, $priority,$deadline));
+  $stmt2 =$dbh->prepare("INSERT INTO to_do(toDoList_id,toDO_description,toDO_priority,toDO_deadline,usr_id)
+  VALUES (?,?,?,?,?)");
+    echo $result['toDoList_id'];
+  $stmt2->execute(array($result['toDoList_id'],$description, $priority,$deadline, $_SESSION['usr_info']['usr_id']));
+  echo "ali";
 }
 
 function delete_toDo($toDoList,$to_doID){

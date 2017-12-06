@@ -46,9 +46,9 @@
   <div class="popup-addTask" data-popup-addTask="popup-1">
     <div class="popup-inner-addTask">
       <form action="newToDo.php" method="post">
-        <select class="dropdown"name="Category" >
+        <select class="dropdown"name="toDo" >
           <?php foreach ($toDoLists as $toDoList) { ?>
-            <li><option class="cat" id="toDo" name="toDo" href="category.php?cat_id=<?=$toDoList['cat_id']?>"><?=$toDoList['toDoList_name']?></option></li>
+            <li><option class="cat" id="toDo" name="toDo" href="#"><?=$toDoList['toDoList_name']?></option></li>
           <?php } ?>
         </select>
         <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">

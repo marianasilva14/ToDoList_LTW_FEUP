@@ -229,3 +229,31 @@ background-color: #4e96b4;
 #all p{
   font-size: 1.3em;
 }
+
+#to_do{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-right: 12em;
+  margin-bottom: 2em;
+  order: 2;
+}
+table {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+table tr td {
+  font-size: 1.2em;
+}
+
+table tr td img{
+  width: 50px;
+  height: 50px;
+}
+
+table tr td:nth-of-type(2n+2){
+  font-size: 1.2em;
+}
