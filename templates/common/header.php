@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="css/pop-ups.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="scripts/list_categories.js" defer></script>
-  <script type="text/javascript" src="scripts/add-to-do.js" defer></script>
+  <script type="text/javascript" src="scripts/list_categories.js"></script>
+  <script type="text/javascript" src="scripts/add-to-do.js"></script>
   <script src="scripts/header_color.js" defer></script>
-  <script type="text/javascript" src="scripts/mark-as-completed.js" defer></script>
-  <script type="text/javascript" src="scripts/delete-to-do.js" defer></script>
-  <script type="text/javascript" src="scripts/calendar.js" defer></script>
+  <script type="text/javascript" src="scripts/mark-as-completed.js"></script>
+  <script type="text/javascript" src="scripts/delete-to-do.js"></script>
+  <script type="text/javascript" src="scripts/calendar.js"></script>
 </head>
 
 <body>
