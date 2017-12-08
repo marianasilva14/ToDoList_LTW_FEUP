@@ -240,8 +240,6 @@
   font-family: 'Poppins', sans-serif;
   border-radius: 5px;
   width: 75%;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 5px;
   font-size: 1em;
 }
@@ -284,7 +282,7 @@
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   margin: 10px;
-  padding-left: 10px;
+  padding-left: 12px;
   border: solid 1px gray;
   font-size: 10px;
   text-align: center;
@@ -294,12 +292,12 @@
   font-family: 'Poppins', sans-serif;
   color: #333;
   margin: 10px;
-  width: 75%;
-  height: 1.5em;
+  width: 79%;
+  height: 2.8em;
   padding-left: 10px;
   border: solid 1px gray;
   border-radius:5px;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -307,15 +305,14 @@
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   color: #333;
-  height: 1.5em;
   margin: 10px;
-  width: 75%;
+  width: 79%;
+  height: 2.8em;
   padding-left: 10px;
   border: solid 1px gray;
   border-radius:5px;
-  font-size: 10px;
-  text-align: center;
-  background-color: white;
+  font-size: 12px;
+  text-align: center
 
 }
 .delete_task{

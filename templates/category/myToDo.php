@@ -26,7 +26,7 @@
 
       <form action="mark_as_completed.php" method="post">
          <select class="dropdown"name="Category" >
-            <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
+            <li><option class="cat" id="Category" name="Category" href="#"><?=$ToDoList_name[0]['toDoList_name']?></option></li>
         </select>
         <input class="inputField-markTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">
         <br></br>
@@ -58,10 +58,9 @@
   <div class="popup-addTask" data-popup-addTask="popup-1">
     <div class="popup-inner-addTask">
       <form action="newToDo.php" method="post">
-        <select class="dropdown"name="Category" >
-          <?php foreach ($toDoLists as $toDoList) { ?>
-            <li><option class="cat" id="toDo" name="toDo" href="category.php?cat_id=<?=$toDoList['cat_id']?>"><?=$toDoList['toDoList_name']?></option></li>
-          <?php } ?>
+        <select class="dropdown" name="toDo" >
+          <?php $ToDoList_name= getToDoListName($toDoList[0]['toDoList_id']);?>
+            <li><option class="cat" id="toDo" name="toDo" href="#"><?=$ToDoList_name[0]['toDoList_name']?></option></li>
         </select>
         <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
         <input class="deadline" type="date" name="Deadline" id="Deadline">

@@ -26,7 +26,7 @@
 
        <form action="newToDoList.php" method="post">
              <select class="dropdown"name="Category" >
-                                <?php $category_name= getCategoryName($toDoLists[0]['cat_id']);?>
+                <?php $category_name= getCategoryName($toDoLists[0]['cat_id']);?>
                  <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
              </select>
            <input class="inputField-addTask" type="text" id="Name" required="required" name="Name" placeholder="Name">

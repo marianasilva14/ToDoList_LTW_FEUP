@@ -9,11 +9,9 @@ include_once('database/category.php');
 $name = $_POST['Name'];
 $category = $_POST['Category'];
 
-echo $name;
-echo $category;
 insert_new_toDoList($category,$name);
 
-header("Location: logged.php");
+header("Location:  templates/category/myCategory.php");
 
 ob_end_flush();
 

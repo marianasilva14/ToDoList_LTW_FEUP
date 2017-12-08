@@ -9,11 +9,11 @@ include_once('database/category.php');
 $description = $_POST['Description'];
 $priority = $_POST['Priority'];
 $deadline = $_POST['Deadline'];
-$toDo = $_POST['toDo'];
+$toDo_name = $_POST['toDo'];
 
-insert_new_toDo($toDo,$description,$priority,$deadline);
+insert_new_toDo($toDo_name,$description,$priority,$deadline);
 
-header("Location: templates/category/myCategory");
+header("Location: templates/category/myToDo");
 
 ob_end_flush();
 
