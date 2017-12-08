@@ -16,6 +16,7 @@
   <script type="text/javascript" src="scripts/delete-to-do.js"></script>
   <script type="text/javascript" src="scripts/calendar.js"></script>
   <script type="text/javascript" src="scripts/header_color.js"></script>
+  <script src="scripts/script.js" defer></script>
 </head>
 
 <body>

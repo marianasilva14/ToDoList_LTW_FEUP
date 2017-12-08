@@ -31,7 +31,7 @@ function getAllToDoListsCompleted() {
 
 function getAllToDoListsNotCompleted() {
   global $dbh;
-  $stmt = $dbh->prepare(" SELECT toDoList_name FROM to_do JOIN to_do_list ON(to_do_list.toDoList_id = to_do.toDoList_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE usr_info.usr_id=? AND to_do_list.toDoList_isCompleted=?");
+  $stmt = $dbh->prepare("SELECT toDoList_name FROM to_do JOIN to_do_list ON(to_do_list.toDoList_id = to_do.toDoList_id) JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE usr_info.usr_id=? AND to_do_list.toDoList_isCompleted=?");
   $stmt->execute(array($_SESSION['usr_info']['usr_id'],0));
   return $stmt->fetchAll();
 }

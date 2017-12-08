@@ -8,12 +8,12 @@
        <a class="table_toDo" href="toDoList.php?toDoList_id=<?=$toDoList['toDoList_id']?>">
        <div class="front">
          <div class="box1">
-           <p><?=$toDoList['toDoList_name']?></p>
+           <p><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></p>
          </div>
        </div>
        <div class="back">
          <div class="box2">
-           <p><?=$toDoList['toDoList_name']?></p>
+           <p><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></p>
          </div>
        </div></a>
      </div>
@@ -46,9 +46,9 @@
   <div class="popup-markTask" data-popup-markTask="popup-1">
     <div class="popup-inner-markTask">
 
-      <form action="mark_as_completed.php" method="post">
+      <form id=markTask action="mark_as_completed.php" method="post">
          <select class="dropdown"name="Category" >
-            <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
+            <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
         </select>
         <input class="inputField-markTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">
         <br></br>
@@ -63,9 +63,9 @@
   <div class="popup-deleteTask" data-popup-deleteTask="popup-1">
     <div class="popup-inner-deleteTask">
 
-      <form action="delete_toDo.php" method="post">
+      <form id=delete_task action="delete_toDo.php" method="post" onsubmit="return closeSelf(this);">
          <select class="dropdown"name="Category" >
-            <li><option class="cat" id="Category" name="Category" href="#"><?=$categories[0]['cat_name']?></option></li>
+            <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
         </select>
         <input class="inputField-deleteTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">
         <br></br>
