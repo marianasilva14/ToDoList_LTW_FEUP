@@ -8,7 +8,7 @@
 
   function getAllToDoListsByCategory($cat_id) {
     global $dbh;
-    $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN category ON(to_do_list.cat_id = category.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.toDoList_id=?
+    $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN category ON(to_do_list.cat_id = category.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.cat_id=?
     AND usr_info.usr_id=? AND to_do_list.toDoList_isCompleted=?");
     $stmt->execute(array($cat_id,$_SESSION['usr_info']['usr_id'],0));
     return $stmt->fetchAll();
@@ -43,12 +43,20 @@
     return $stmt->fetchAll();
   }
 
+  function getCategoryName($cat_id){
+    global $dbh;
+    $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_id=?");
+    $stmt->execute(array($cat_id));
+    return $stmt->fetchAll();
+  }
+
 function insert_new_toDoList($category,$name){
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
   $stmt->execute(array($category));
   $result=$stmt->fetch();
 
+  echo $result['cat_id'];
   if(!$result)
       header("Location: logged.php");
 

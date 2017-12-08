@@ -1,6 +1,7 @@
-<table id="todolists">
+
+<aside id="todolists">
     <?php foreach ($toDoLists as $toDoList) { ?>
-     <tr><td><li>
+      <li>
        <div class="wrapper">
        <div class="col_third">
         <div class="hover panel">
@@ -17,10 +18,27 @@
        </div></a>
      </div>
    </div>
- </div></li></td>
-      </tr>
-   <?php } ?>
-</table>
+ </div>
+   <?php  } ?>
+   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></a>
+   <div class="popup-addTask" data-popup-addTask="popup-1">
+       <div class="popup-inner-addTask">
+
+       <form action="newToDoList.php" method="post">
+             <select class="dropdown"name="Category" >
+                                <?php $category_name= getCategoryName($toDoLists[0]['cat_id']);?>
+                 <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
+             </select>
+           <input class="inputField-addTask" type="text" id="Name" required="required" name="Name" placeholder="Name">
+           <br></br>
+           <input id="submit" type="submit" value ="AddTask">
+       </form>
+
+         <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
+       </div>
+     </div>
+ </li>
+</aside>
 
 
 <aside id="buttons_MyCategory">
@@ -56,30 +74,6 @@
       </form>
 
       <a class="popup-close-deleteTask" data-popup-close-deleteTask="popup-1" href="#"></a>
-    </div>
-  </div>
-
-  <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></a>
-  <div class="popup-addTask" data-popup-addTask="popup-1">
-    <div class="popup-inner-addTask">
-      <form action="newToDo.php" method="post">
-        <select class="dropdown"name="toDo" >
-          <?php foreach ($toDoLists as $toDoList) { ?>
-            <li><option class="cat" id="toDo" name="toDo" href="#"><?=$toDoList['toDoList_name']?></option></li>
-          <?php } ?>
-        </select>
-        <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
-        <input class="deadline" type="date" name="Deadline" id="Deadline">
-        <select class=priority name="Priority" >
-            <li><option class="priority1" name="Priority" id="Priority" href="#">High priority</option></li>
-            <li><option class="priority2" name="Priority" id="Priority" href="#">Medium priority</option></li>
-            <li><option class="priority3" name="Priority" id="Priority" href="#">Low priority</option></li>
-        </select>
-        <br></br>
-        <input id="submit" type="submit" value ="AddTask">
-      </form>
-
-      <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
     </div>
   </div>
 
