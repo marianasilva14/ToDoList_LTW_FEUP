@@ -146,7 +146,11 @@ background-color: #4e96b4;
   margin-bottom: 30em;
   order: 2;
 }
-
+#todolists a img:only-child{
+  margin-left: 50px;
+  width: 50px;
+  height: 50px;
+}
 #todolists  li{
   display: block;
 }
