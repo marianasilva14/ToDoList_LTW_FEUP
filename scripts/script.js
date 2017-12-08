@@ -5,15 +5,31 @@ if (list != null) {
     let forms = document.getElementsByTagName('form');
     
     forms[2].addEventListener('submit', function (event) {
-        console.log("working i guess");
+        let category = forms[2].children[0].value;
+        let id = forms[2].children[1].value;
+        let index = 0;
+
+        for (index; index < list.length; index++) {
+            if (id == parseInt(list[index].innerText, 10)) {
+                list[index].parentNode.removeChild(list[index]);
+                break;
+            }
+        }
+
+        if (index < list.length) { 
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "delete_to_do_list.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState === 4 || this.status === 200){ 
+                    console.log(this.responseText); // echo from php
+                }       
+            };
+            xmlhttp.send("to_do_listID=" + id,"category=" + category);
+        }
+
         event.preventDefault();
     })
-   /* for (let index = 0; index < list.length; index++) {
-        if (9 == parseInt(list[index].innerText, 10))
-            list[index].parentNode.removeChild(list[index]);   
-    }*/
+
 }
 
-function closeSelf () {
-    window.close();
- }

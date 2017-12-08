@@ -25,7 +25,7 @@
        <div class="popup-inner-addTask">
 
        <form action="newToDoList.php" method="post">
-             <select class="dropdown"name="Category" >
+             <select class="dropdown0"name="Category" >
                  <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
              </select>
            <input class="inputField-addTask" type="text" id="Name" required="required" name="Name" placeholder="Name">
@@ -47,7 +47,7 @@
     <div class="popup-inner-markTask">
 
       <form id=markTask action="mark_as_completed.php" method="post">
-         <select class="dropdown"name="Category" >
+         <select class="dropdown1"name="Category" >
             <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
         </select>
         <input class="inputField-markTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">
@@ -63,8 +63,8 @@
   <div class="popup-deleteTask" data-popup-deleteTask="popup-1">
     <div class="popup-inner-deleteTask">
 
-      <form id=delete_task action="delete_toDo.php" method="post" onsubmit="return closeSelf(this);">
-         <select class="dropdown"name="Category" >
+      <form id=delete_task action="delete_toDo.php" method="post">
+         <select class="dropdown2"name="Category" >
             <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
         </select>
         <input class="inputField-deleteTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">

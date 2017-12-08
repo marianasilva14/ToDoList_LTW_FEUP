@@ -85,6 +85,19 @@ function insert_new_toDo($toDoList,$description,$priority,$deadline){
   $stmt2->execute(array($result['toDoList_id'],$description, $priority,$deadline, $_SESSION['usr_info']['usr_id']));
 }
 
+function delete_to_do_list($cat_name,$to_do_listID){
+  global $dbh;
+  $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
+  $stmt->execute(array($cat_name));
+  $result=$stmt->fetch();
+
+  if(!$result)
+   return false;
+
+  $stmt2 =$dbh->prepare("DELETE FROM to_do_list WHERE toDoList_id IN (SELECT toDoList_id FROM to_do_list JOIN category ON(category.cat_id = to_do_list.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE category.cat_id=? AND usr_info.usr_id=? AND to_do_list.toDoList_id=?)");
+  $stmt2->execute(array($result['cat_id'], $_SESSION['usr_info']['usr_id'], $to_do_listID));
+}
+
 function delete_toDo($toDoList,$to_doID){
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM to_do_list WHERE toDoList_name=?");
