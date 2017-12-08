@@ -137,7 +137,7 @@ background-color: #4e96b4;
     #categories {
         flex-flow: column;
     }
-}
+  }
 
 #todolists{
   font-family: 'Permanent Marker', cursive;
@@ -145,6 +145,7 @@ background-color: #4e96b4;
   margin-top: 50px;
   margin-bottom: 30em;
   order: 2;
+
 }
 #todolists a img:only-child{
   margin-left: 50px;
@@ -164,7 +165,12 @@ background-color: #4e96b4;
   height: 50px;
 }
 
-
+@media screen and (max-width: 1000px) {
+  #todolists{
+    display: flex;
+    flex-direction: column;
+  }
+}
 .col_half { width: 49%; }
 .col_third { width: 32%; }
 .col_fourth { width: 23.5%; }
