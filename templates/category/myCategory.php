@@ -55,7 +55,7 @@
     </select>
 
       <br></br>
-        <input id="submit" type="submit" value ="Mark Task as Completed">
+        <input id="submit" type="submit" value ="Complete">
       </form>
 
       <a class="popup-close-markTask" data-popup-close-markTask="popup-1" href="#"></a>

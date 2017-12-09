@@ -9,28 +9,9 @@
   <input class="search_bar" type="text" name="search"  id="search" placeholder="Search.." >
   </form>
   <div>
+  
   <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>
   <a href="completedTasks.php"><img src="images/completed.png"></a>
-  <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></i></a>
-  <div class="popup-addTask" data-popup-addTask="popup-1">
-      <div class="popup-inner-addTask">
-
-      <form action="newToDoList.php" method="post">
-            <select class="dropdown"name="Category" >
-              <?php $categories = getAllCategories(); ?>
-              <?php foreach ($categories as $category) { ?>
-                <li><option class="cat" id="Category" name="Category" href="#"><?=$category['cat_name']?></option></li>
-              <?php } ?>
-            </select>
-          <input class="inputField-addTask" type="text" id="Name" required="required" name="Name" placeholder="Name">
-          <br></br>
-          <input id="submit" type="submit" value ="AddTask">
-      </form>
-
-        <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
-      </div>
-    </div>
-
   <a class="edit_profile" data-popup-open="popup-1" href="#"><img src="images/edit.png"></a>
 
   <div class="popup" data-popup="popup-1">
