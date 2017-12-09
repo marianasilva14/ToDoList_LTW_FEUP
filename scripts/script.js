@@ -7,6 +7,7 @@ if (list != null) {
     forms[2].addEventListener('submit', function (event) {
         let id = forms[2].children[0].value;
         let index = 0;
+        id=parseInt(id, 10)
         for (index; index < list.length; index++) {
             if (id == parseInt(list[index].innerText, 10)) {
                 list[index].parentNode.removeChild(list[index]);
