@@ -57,9 +57,9 @@
   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></a>
   <div class="popup-addTask" data-popup-addTask="popup-1">
     <div class="popup-inner-addTask">
+
       <form action="newToDo.php" method="post">
         <select class="dropdown" name="toDo" >
-          <?php $ToDoList_name= getToDoListName($toDoList[0]['toDoList_id']);?>
             <li><option class="cat" id="toDo" name="toDo" href="#"><?=$ToDoList_name[0]['toDoList_name']?></option></li>
         </select>
         <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
@@ -72,7 +72,6 @@
         <br></br>
         <input id="submit" type="submit" value ="AddTask">
       </form>
-
       <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
     </div>
   </div>

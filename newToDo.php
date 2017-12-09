@@ -12,8 +12,8 @@ $deadline = $_POST['Deadline'];
 $toDo_name = $_POST['toDo'];
 
 insert_new_toDo($toDo_name,$description,$priority,$deadline);
-
-header("Location: templates/category/myToDo");
+echo "FEZ A QUERIE";
+header("Location: templates/category/myToDo.php");
 
 ob_end_flush();
 
