@@ -20,12 +20,17 @@
    </div>
  </div>
    <?php  } ?>
-   <a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></a>
+ </li>
+</aside>
+
+
+<aside id="buttons_MyCategory">
+<a class="NewTask" data-popup-addTask-open="popup-1" href="#"><img src="images/plus.png"></a>
    <div class="popup-addTask" data-popup-addTask="popup-1">
        <div class="popup-inner-addTask">
 
-       <form action="newToDoList.php" method="post">
-             <select class="dropdown0"name="Category" >
+       <form action="newToDoList.php" >
+             <select class="dropdown"name="Category" >
                  <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
              </select>
            <input class="inputField-addTask" type="text" id="Name" required="required" name="Name" placeholder="Name">
@@ -36,23 +41,21 @@
          <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
        </div>
      </div>
- </li>
-</aside>
-
-
-<aside id="buttons_MyCategory">
 
 <a class="markTask" data-popup-markTask-open="popup-1" href="#"><img src="images/completed.png"></a>
   <div class="popup-markTask" data-popup-markTask="popup-1">
     <div class="popup-inner-markTask">
 
-      <form id=markTask action="mark_as_completed.php" method="post">
-         <select class="dropdown1"name="Category" >
-            <li><option class="cat" id="Category" name="Category" href="#"><?=$category_name[0]['cat_name']?></option></li>
-        </select>
-        <input class="inputField-markTask" type="number" id="to_doID" required="required" name="to_doID" placeholder="Task ID">
-        <br></br>
-        <input id="submit" type="submit" value ="markTask">
+      <form id=markTask >
+          
+      <select class="dropdown" id="todolistToMark" name="todolistToMark" >
+      <?php foreach ($toDoLists as $toDoList) { ?>
+       <li> <option class="inputField-deleteTask" id="todolistToMark_id" name="todolistToMark_id" href="#"><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></option></li>
+       <?php } ?>
+    </select>
+
+      <br></br>
+        <input id="submit" type="submit" value ="Mark Task as Completed">
       </form>
 
       <a class="popup-close-markTask" data-popup-close-markTask="popup-1" href="#"></a>

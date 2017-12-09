@@ -9,7 +9,7 @@ include_once('database/category.php');
 $id = $_POST['to_do_listID'];
 
 delete_to_do_list($id);
-echo "done";
+
 ob_end_flush();
 
 ?>

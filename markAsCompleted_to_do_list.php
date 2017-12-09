@@ -1,16 +1,15 @@
 <?php
-  ob_start();
+ob_start();
 
 include_once('includes/session_start.php');
 include_once('includes/init.php');
 include_once('database/category.php');
 
 // Ler dados vindos do post
-$name = $_POST['name'];
-$category = $_POST['category'];
+$id = $_POST['to_do_listID'];
 
-$result= insert_new_toDoList($category,$name);
-echo $result;
+markAsCompleted_to_do_list($id);
+
 ob_end_flush();
 
 ?>

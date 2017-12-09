@@ -62,14 +62,18 @@ function insert_new_toDoList($category,$name){
   $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_name=?");
   $stmt->execute(array($category));
   $result=$stmt->fetch();
-
-  echo $result['cat_id'];
+  
   if(!$result)
   header("Location: logged.php");
 
   $stmt2 =$dbh->prepare("INSERT INTO to_do_list(toDoList_name,cat_id,usr_id)
   VALUES (?,?,?)");
   $stmt2->execute(array($name,$result['cat_id'], $_SESSION['usr_info']['usr_id']));
+
+  $stmt3 =$dbh->prepare("SELECT MAX(toDoList_id) As ID FROM to_do_list");
+  $stmt3->execute();
+  $returnID = $stmt3->fetch();
+  return $returnID['ID'];
 }
 
 function insert_new_toDo($toDoList,$description,$priority,$deadline){
@@ -115,5 +119,11 @@ function markAsCompleted_toDo($category,$to_doID){
 
   $stmt2 = $dbh->prepare('UPDATE to_do SET toDo_isCompleted = 1 WHERE to_do.toDo_id = ?');
   return $stmt2->execute(array($to_doID));
+}
+
+function markAsCompleted_to_do_list($id){
+  global $dbh;
+  $stmt2 = $dbh->prepare('UPDATE to_do_list SET toDoList_isCompleted = 1 WHERE to_do_list.toDoList_id = ?');
+  return $stmt2->execute(array($id));
 }
 ?>
