@@ -7,9 +7,10 @@ if (list != null) {
     forms[2].addEventListener('submit', function (event) {
         let id = forms[2].children[0].value;
         let index = 0;
+        id = parseInt(id, 10);
         
         for (index; index < list.length; index++) {
-            if (id == list[index].innerText) {
+            if (id == parseInt(list[index].innerText, 10)) {
                 list[index].parentNode.removeChild(list[index]);
                 break;
             }
@@ -17,13 +18,12 @@ if (list != null) {
 
         var selectobject=document.getElementById("todolistToEliminate");
         for (var i=0; i<selectobject.length; i++){
-            if (selectobject.options[i].value == id) {
+            if (parseInt(selectobject.options[i].value) == id) {
                 selectobject.remove(i);
                 break;
             } 
         }
-        
-        id = parseInt(id, 10);
+
         if (index < list.length) {
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.open("POST", "delete_to_do_list.php", true);
