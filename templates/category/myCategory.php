@@ -65,7 +65,7 @@
 
       <form id=delete_task>
      
-      <select class="dropdown"name="todolistToElimnate" >
+      <select class="dropdown" id="todolistToEliminate" name="todolistToElimnate" >
         <?php foreach ($toDoLists as $toDoList) { ?>
          <li> <option class="inputField-deleteTask" id="to_do_list_delete_ID" name="to_do_list_delete_ID" href="#"><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></option></li>
          <?php } ?>
