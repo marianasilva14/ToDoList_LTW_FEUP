@@ -1,5 +1,5 @@
 
-<aside id="todolists">
+<section id="todolists">
     <?php foreach ($toDoLists as $toDoList) { ?>
       <li>
        <div class="wrapper">
@@ -21,7 +21,7 @@
  </div>
    <?php  } ?>
  </li>
-</aside>
+</section>
 
 
 <aside id="buttons_MyCategory">

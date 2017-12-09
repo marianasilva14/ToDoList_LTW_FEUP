@@ -1,7 +1,7 @@
-list = document.getElementsByClassName("wrapper");
+let todolists = document.getElementById("todolists")
 
-if (list != null) {
-    
+if (todolists != null) {
+    let list = document.getElementsByClassName("wrapper");
     let forms = document.getElementsByTagName('form');
     let todolists=document.getElementById("todolists")
     forms[2].addEventListener('submit', function (event) {
