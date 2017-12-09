@@ -7,9 +7,9 @@ include_once('database/category.php');
 
 // Ler dados vindos do post
 $id = $_POST['to_do_listID'];
-echo $id;
-delete_to_do_list($id);
 
+delete_to_do_list($id);
+echo "done";
 ob_end_flush();
 
 ?>

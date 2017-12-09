@@ -8,7 +8,7 @@ if (list != null) {
         let id = forms[2].children[0].value;
         let index = 0;
         id = parseInt(id, 10);
-        
+
         for (index; index < list.length; index++) {
             if (id == parseInt(list[index].innerText, 10)) {
                 list[index].parentNode.removeChild(list[index]);
@@ -24,7 +24,9 @@ if (list != null) {
             } 
         }
 
-        if (index < list.length) {
+
+        if (index < list.length+1) {
+            console.log("LEGIT?")
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.open("POST", "delete_to_do_list.php", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
