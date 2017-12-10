@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/categories.css">
   <link rel="stylesheet" href="css/calendar.css">
   <link rel="stylesheet" href="css/pop-ups.css">
+  <link rel="stylesheet" href="css/toDo.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="scripts/list_categories.js"></script>

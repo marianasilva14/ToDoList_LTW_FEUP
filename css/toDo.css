@@ -1,0 +1,32 @@
+#todolistid{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-top: 2px;
+  color: 	#000000;
+  opacity:0.9;
+  border-radius: 10px;
+}
+#todo_s{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20em;
+  margin-left: 50px;
+  font-size: 1.2em;
+  order:2;
+}
+
+#todo_sform{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-top: 2px;
+  color: 	#000000;
+  opacity:0.9;
+  border-radius: 10px;
+}

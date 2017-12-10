@@ -1,7 +1,8 @@
 <?php
   ob_start();
-include_once('includes/init.php');
-include_once('database/user.php');
+  session_start();
+  include_once('includes/init.php');
+  include_once('database/user.php');
 
   if (isLoginCorrect($_POST['username'], $_POST['password'])) {
     $_SESSION['success_messages'][] = "Login Successful!";
