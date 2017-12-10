@@ -9,11 +9,11 @@ include_once('database/query.php');
 $description = $_POST['Description'];
 $priority = $_POST['Priority'];
 $deadline = $_POST['Deadline'];
-$toDo_name = $_POST['toDo'];
+$List_id = $_POST['ListID'];
 
-insert_new_toDo($toDo_name,$description,$priority,$deadline);
-echo "FEZ A QUERIE";
-header("Location: templates/category/myToDo.php");
+echo $List_id;
+insert_new_toDo($List_id,$description,$priority,$deadline);
+
 
 ob_end_flush();
 

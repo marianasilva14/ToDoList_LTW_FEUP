@@ -1,19 +1,19 @@
 <?php
 ob_start();
-
 include_once('includes/session_start.php');
 include_once('includes/init.php');
 include_once('database/query.php');
 
 // Ler dados vindos do post
 $id = $_POST['to_doID'];
-$category = $_POST['Category'];
+$listid = $_POST['listid'];
 
+complete_toDo($id);
 
-markAsCompleted_toDo($category,$id);
-
-header("Location: logged.php");
+$result = getAllToDoByToDoLists($listid);
+print_r (json_encode($result));
 
 ob_end_flush();
 
 ?>
+
