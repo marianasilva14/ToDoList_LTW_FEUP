@@ -1,7 +1,4 @@
 <?php
-  session_start();
-
-
 function getErrorMessages() {
   if (isset($_SESSION['error_messages']))
     return $_SESSION['error_messages'];
