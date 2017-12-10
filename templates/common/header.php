@@ -23,6 +23,6 @@
 
   <header>
     <div id="info">
-      <h1><a href='index.php'>Time management? <br>  Need it!</a></h1>
+      <h1><a href='logged.php'>Time management? <br>  Need it!</a></h1>
     </div>
   </header>
