@@ -1,7 +1,7 @@
 <?php
 include_once('includes/session_start.php');
 include_once('database/connection.php');
-include_once('database/category.php');
+include_once('database/query.php');
 //echo $_GET['toDoList_id'];
 if(isset($_GET)){
   $toDoList = getAllToDoByToDoLists($_GET['toDoList_id']);
