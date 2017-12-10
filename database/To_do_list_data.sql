@@ -30,7 +30,7 @@ CREATE TABLE to_do (
 CREATE TABLE usr_info (
   usr_id INTEGER PRIMARY KEY AUTOINCREMENT,
   usr_name VARCHAR NOT NULL,
-  usr_username VARCHAR NOT NULL,
+  usr_username VARCHAR NOT NULL UNIQUE,
   usr_password VARCHAR NOT NULL,
   usr_age Integer NOT NULL,
   usr_email VARCHAR NOT NULL,
