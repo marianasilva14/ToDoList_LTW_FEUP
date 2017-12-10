@@ -118,3 +118,6 @@ function add_to_do_list(id_added, category, name) {
     option.text = option.value = id_added + " : " + name;
     selectobject.appendChild(option);
 }
+
+let id = document.getElementById("todolistid");
+console.log(id.value);

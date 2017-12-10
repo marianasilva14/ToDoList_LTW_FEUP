@@ -1,24 +1,7 @@
-<table id="to_do">
-  <?php foreach ($toDoList as $toDo) { ?>
-   <tr><td><li><class="table_toDo" href="toDo.php?toDo_id=<?=$toDo['toDoList_id']?>"><?=$toDo['toDO_description']?>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</li></td>
-     <td><class="table_toDo_priority" type="text" ><?=$toDo['toDO_priority']?></td>
-     <?php if($toDo['toDO_priority']=='High priority'){
-       $imagem= "images/higher.png";
-     }
-     else if($toDo['toDO_priority']=='Medium priority'){
-        $imagem= "images/medium.png";
-     }
-     else{
-        $imagem= "images/lower.png";
-     }?>
-     <td>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src="<?php echo $imagem;?>"></td>
-     <td><class="table_toDo_deadline" type="text" >&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<?=$toDo['toDO_deadline']?></td>
-    </tr>
-    <?php } ?>
-</table>
+<input id="todolistid" type="hidden" value=<?=$toDoListid?>>
 
 
-<aside id="buttons_MyCategory">
+<section id="buttons_MyCategory">
 
 <a class="markTask" data-popup-markTask-open="popup-1" href="#"><img src="images/completed.png"></a>
   <div class="popup-markTask" data-popup-markTask="popup-1">
@@ -77,7 +60,7 @@
   </div>
 
   <a href="back.php"><img src="images/back.png"></a>
-</aside>
+</section>
 
 <section id="calendar">
 <script>displayCalendar()</script>
