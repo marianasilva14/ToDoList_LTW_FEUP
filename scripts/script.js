@@ -1,60 +1,62 @@
-let todolists = document.getElementById("todolists")
+let list = document.getElementsByClassName("wrapper");
+let todolists = document.getElementById("todolists");
 
 if (todolists != null) {
-    let list = document.getElementsByClassName("wrapper");
+
     let forms = document.getElementsByTagName('form');
-    let todolists=document.getElementById("todolists")
-    forms[2].addEventListener('submit', function (event) {
-        let id = forms[2].children[0].value;
-        id = parseInt(id, 10);
+    
+    if (forms != null) {
+        forms[2].addEventListener('submit', function (event) {
+            let id = forms[2].children[0].value;
+            id = parseInt(id, 10);
 
-        let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("POST", "delete_to_do_list.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 || this.status === 200) {
-                updateDropdownsAndScreen_Todolists(id); 
-            }
-        };
-        xmlhttp.send("to_do_listID=" + id);
-        event.preventDefault();
-    });
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "delete_to_do_list.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 || this.status === 200) {
+                    updateDropdownsAndScreen_Todolists(id);
+                }
+            };
+            xmlhttp.send("to_do_listID=" + id);
+            event.preventDefault();
+        });
 
-    forms[1].addEventListener('submit', function (event) {
-        let id = forms[1].children[0].value;
-        id = parseInt(id, 10);
+        forms[1].addEventListener('submit', function (event) {
+            let id = forms[1].children[0].value;
+            id = parseInt(id, 10);
 
-        let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("POST", "markAsCompleted_to_do_list.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 || this.status === 200) {
-                updateDropdownsAndScreen_Todolists(id); 
-            }
-        };
-        xmlhttp.send("to_do_listID=" + id);
-        event.preventDefault();
-    });
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "markAsCompleted_to_do_list.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 || this.status === 200) {
+                    updateDropdownsAndScreen_Todolists(id);
+                }
+            };
+            xmlhttp.send("to_do_listID=" + id);
+            event.preventDefault();
+        });
 
-    forms[0].addEventListener('submit', function (event) {
-        let category = forms[0].children[0].value;
-        let name = forms[0].children[1].value;
-        
+        forms[0].addEventListener('submit', function (event) {
+            let category = forms[0].children[0].value;
+            let name = forms[0].children[1].value;
 
-        let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("POST", "newToDoList.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 || this.status === 200) {
-                let id_added = this.responseText;
-                if(id_added!="" && id_added != null)
-                add_to_do_list(id_added, category, name);
-            }
-        };
-        xmlhttp.send("category=" + category + "&name=" + name);
-        event.preventDefault();
-    });
 
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "newToDoList.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 || this.status === 200) {
+                    let id_added = this.responseText;
+                    if (id_added != "" && id_added != null)
+                        add_to_do_list(id_added, category, name);
+                }
+            };
+            xmlhttp.send("category=" + category + "&name=" + name);
+            event.preventDefault();
+        });
+    }
 }
 
 function updateDropdownsAndScreen_Todolists(id) {
@@ -83,9 +85,9 @@ function updateDropdownsAndScreen_Todolists(id) {
     }
 }
 
-function add_to_do_list(id_added, category, name) { 
-    document.getElementById("todolists").innerHTML +=
-`<li>
+function add_to_do_list(id_added, category, name) {
+    todolists.innerHTML +=
+        `<li>
     <div class="wrapper">
         <div class="col_third">
             <div class="hover panel">
