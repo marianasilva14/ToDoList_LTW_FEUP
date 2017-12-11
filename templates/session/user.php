@@ -16,7 +16,7 @@
   <?php } ?>
 </div>
 
-<aside id="register">
+<section id="register">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="scripts/register.js"></script>
   <img src="images/signup.png">
@@ -38,4 +38,4 @@
         <a class="popup-close-register" data-popup-register-close="popup-1" href="#"></a>
       </div>
     </div>
-</aside>
+</section>
