@@ -12,7 +12,12 @@ $email        = $_POST['email'];
 $photo        = $_FILES['photo'];
 
 // chamar a função para inserir na bd
+try{
 insert_new_user($name, $username,$password, $age, $email,$photo);
+}
+catch(Exception $e){
+  $_SESSION['error_messages']="Username already exists";
+}
 
 header('Location: index.php');
 

@@ -146,12 +146,12 @@ if (todo_sForm != null) {
     todo_sForm.addEventListener('submit', function (event) {
         let inputs = todo_sForm.getElementsByTagName('div');
 
-        for (var i = 0; i < inputs.length - 1; i++){
+        for (var i = 0; i < inputs.length - 1; i++) {
             if (inputs[i].children[0].checked) {
                 if (document.activeElement.getAttribute('value') == "Complete")
-                    delete_completeTodo_s(inputs[i].children[0].value,"complete_toDo.php");
+                    delete_completeTodo_s(inputs[i].children[0].value, "complete_toDo.php");
                 else if (document.activeElement.getAttribute('value') == "Delete")
-                    delete_completeTodo_s(inputs[i].children[0].value,"delete_toDo.php");
+                    delete_completeTodo_s(inputs[i].children[0].value, "delete_toDo.php");
             }
         }
 
@@ -183,7 +183,7 @@ if (todo_sForm != null) {
 }
 
 
-function delete_completeTodo_s(id_to_change,header) {
+function delete_completeTodo_s(id_to_change, header) {
 
     let delete_complete_xmlhttp = new XMLHttpRequest();
     delete_complete_xmlhttp.open("POST", header, true);
@@ -207,14 +207,29 @@ function updateScreen(todo_s) {
     todo_sForm.innerHTML = ``;
     if (todo_s.length > 0) {
         todo_s.forEach(element => {
-            todo_sForm.innerHTML += `<div>
-        <input class="box" type="checkbox" id=${element.toDO_id} name="to_do" value="${element.toDO_id}">
+            if (element.toDO_priority == "High priority") {
+                priority = "images/higher.png";
+            }
+            else if (element.toDO_priority == "Medium priority") {
+                priority = "images/medium.png";
+            }
+            else {
+                priority = "images/lower.png";
+            }
+            if (parseInt(element.toDo_isCompleted)){
+                completed = "images/check.png";
+            }
+            else {
+                completed = "images/uncheck.png";
+            }
+            todo_sForm.innerHTML += `<div class="box">
+        <input type="checkbox" id=${element.toDO_id} name="to_do" value="${element.toDO_id}">
         <label for="${element.toDO_id}"> ${element.toDO_description}
         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;${element.toDO_deadline}
         &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
-        ${element.toDO_priority}
+        <img src="${priority}" height=25px width=25px>
         &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
-        ${element.toDo_isCompleted}
+        <img src="${completed}" height=25px width=25px>
         </label>
       </div>`;
         });

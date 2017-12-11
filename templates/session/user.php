@@ -16,6 +16,14 @@
   <?php } ?>
 </div>
 
+<?php if(isset($_SESSION['error_messages'])){ ?>
+  
+  <section>
+  <p><?=$_SESSION['error_messages']?>  
+  </p>
+  </section>
+  <?php ;unset($_SESSION['error_messages']);}?>
+  
 <section id="register">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="scripts/register.js"></script>
