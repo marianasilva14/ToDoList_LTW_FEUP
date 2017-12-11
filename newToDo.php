@@ -11,11 +11,19 @@ $priority = $_POST['Priority'];
 $deadline = $_POST['Deadline'];
 $List_id = $_POST['ListID'];
 
-insert_new_toDo($List_id,$description,$priority,$deadline);
-
-$result = getAllToDoByToDoLists($List_id);
-print_r (json_encode($result));
-
+if ( !preg_match ("/^[a-zA-Z\s]+$/", $description) ) {
+    print_r(json_encode("Error"));
+}
+else{
+  try{
+    insert_new_toDo($List_id,$description,$priority,$deadline);
+    $result = getAllToDoByToDoLists($List_id);
+    print_r (json_encode($result));
+  }
+  catch(Exception $e){
+    print_r(json_encode("Error"));
+  }
+}
 ob_end_flush();
 
 ?>

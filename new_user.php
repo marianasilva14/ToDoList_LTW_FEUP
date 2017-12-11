@@ -11,14 +11,17 @@ $age          = $_POST['age'];
 $email        = $_POST['email'];
 $photo        = $_FILES['photo'];
 
-// chamar a função para inserir na bd
-try{
-insert_new_user($name, $username,$password, $age, $email,$photo);
+if ( !preg_match ("/^[a-zA-Z\s]+$/", $name) && !preg_match ("/^[a-zA-Z\s]+$/", $username) ) {
+  $_SESSION['error_messages']= 'Error: Name and Username can only contain spaces or letters';
 }
-catch(Exception $e){
-  $_SESSION['error_messages']="Username already exists";
+else{
+  try{
+    insert_new_user($name, $username,$password, $age, $email,$photo);
+  }
+  catch(Exception $e){
+    $_SESSION['error_messages']="Username already exists";
+  }
 }
-
 header('Location: index.php');
 
   ob_end_flush();

@@ -49,7 +49,10 @@ if (todolists != null) {
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState === 4 || this.status === 200) {
                     let id_added = this.responseText;
-                    if (id_added != "" && id_added != null)
+
+                    if (id_added == "Error") {
+                        alert("Error: Check if the name of the list you tryed to create only contains letters and spaces.\nTry again!");
+                    } else if (id_added != "" && id_added != null)
                         add_to_do_list(id_added, category, name);
                 }
             };
@@ -129,7 +132,7 @@ function add_to_do_list(id_added, category, name) {
 
 
 let todo_sForm = document.getElementById("todo_sform");
-let listid = document.getElementById("todolistid").value;
+let listid = document.getElementById("todolistid");
 
 if (todo_sForm != null) {
 
@@ -138,7 +141,7 @@ if (todo_sForm != null) {
     request.addEventListener('load', receiveTodo_s);
     request.open('POST', 'getTodosByListID.php', true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    request.send("listid=" + listid);
+    request.send("listid=" + listid.value);
 
 
 
@@ -172,10 +175,15 @@ if (todo_sForm != null) {
         add_xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 || this.status === 200) {
                 let todo_s = JSON.parse(this.responseText);
-                updateScreen(todo_s);
+                
+                if (todo_s == "Error") {
+                    alert("Error: Check if the description of the task you tryed to create only contains letters and spaces.\nTry again!");
+                } else {
+                    updateScreen(todo_s);
+                }
             }
         };
-        add_xmlhttp.send("ListID=" + listid + "&Description=" + description + "&Priority=" + priority + "&Deadline=" + date);
+        add_xmlhttp.send("ListID=" + listid.value + "&Description=" + description + "&Priority=" + priority + "&Deadline=" + date);
 
         event.preventDefault();
     });
@@ -194,7 +202,7 @@ function delete_completeTodo_s(id_to_change, header) {
             updateScreen(todo_s);
         }
     };
-    delete_complete_xmlhttp.send("to_doID=" + id_to_change + "&listid=" + listid);
+    delete_complete_xmlhttp.send("to_doID=" + id_to_change + "&listid=" + listid.value);
     event.preventDefault();
 }
 
@@ -216,7 +224,7 @@ function updateScreen(todo_s) {
             else {
                 priority = "images/lower.png";
             }
-            if (parseInt(element.toDo_isCompleted)){
+            if (parseInt(element.toDo_isCompleted)) {
                 completed = "images/check.png";
             }
             else {

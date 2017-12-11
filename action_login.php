@@ -5,7 +5,6 @@
   include_once('database/user.php');
 
   if (isLoginCorrect($_POST['username'], $_POST['password'])) {
-    $_SESSION['success_messages'] = "Login Successful!";
     header("Location: logged.php");
     exit();
   } else {
