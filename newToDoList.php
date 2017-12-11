@@ -2,7 +2,7 @@
   ob_start();
 
 include_once('includes/session_start.php');
-include_once('includes/init.php');
+include_once('database/connection.php');
 include_once('database/query.php');
 
 // Ler dados vindos do post

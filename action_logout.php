@@ -1,6 +1,6 @@
 <?php
   ob_start();
-  include_once('includes/init.php');
+  include_once('database/connection.php');
   session_destroy();
   session_start();
   header('Location: index.php');

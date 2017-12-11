@@ -1,7 +1,7 @@
 <?php
   ob_start();
   session_start();
-  include_once('includes/init.php');
+  include_once('database/connection.php');
   include_once('database/user.php');
 
   if (isLoginCorrect($_POST['username'], $_POST['password'])) {

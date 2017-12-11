@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
-include_once('includes/init.php');
+include_once('database/connection.php');
 include_once('database/query.php');
 
 $search = $_POST['search'];

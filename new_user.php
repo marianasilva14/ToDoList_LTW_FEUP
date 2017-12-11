@@ -1,7 +1,7 @@
 <?php
 include_once('includes/session_start.php');
 include_once('database/user.php');
-include_once('includes/init.php');
+include_once('database/connection.php');
 
 // Ler dados vindos do post
 $name         = $_POST['name'];
