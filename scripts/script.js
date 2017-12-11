@@ -130,6 +130,7 @@ function add_to_do_list(id_added, category, name) {
 
 let todo_sForm = document.getElementById("todo_sform");
 let listid = document.getElementById("todolistid").value;
+
 if (todo_sForm != null) {
 
 
@@ -152,30 +153,48 @@ if (todo_sForm != null) {
                 else if (document.activeElement.getAttribute('value') == "Delete")
                     delete_completeTodo_s(inputs[i].children[0].value,"delete_toDo.php");
             }
-
         }
 
         event.preventDefault();
     });
 
 
+    let addTask = document.getElementById("addTaskForm");
+
+    addTask.addEventListener('submit', function (event) {
+        let description = addTask.children[0].value;
+        let date = addTask.children[1].value;
+        let priority = addTask.children[2].value;
+ 
+        let add_xmlhttp = new XMLHttpRequest();
+        add_xmlhttp.open("POST", "newToDo.php", true);
+        add_xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        add_xmlhttp.onreadystatechange = function () {
+            if (this.readyState === 4 || this.status === 200) {
+                let todo_s = JSON.parse(this.responseText);
+                updateScreen(todo_s);
+            }
+        };
+        add_xmlhttp.send("ListID=" + listid + "&Description=" + description + "&Priority=" + priority + "&Deadline=" + date);
+
+        event.preventDefault();
+    });
 
 }
 
 
-function delete_completeTodo_s(id_todelete,header) { 
-    console.log(id_todelete);
+function delete_completeTodo_s(id_to_change,header) { 
 
-    let deletexmlhttp = new XMLHttpRequest();
-    deletexmlhttp.open("POST", header, true);
-    deletexmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    deletexmlhttp.onreadystatechange = function () {
+    let delete_complete_xmlhttp = new XMLHttpRequest();
+    delete_complete_xmlhttp.open("POST", header, true);
+    delete_complete_xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    delete_complete_xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 || this.status === 200) {
             let todo_s = JSON.parse(this.responseText);
             updateScreen(todo_s);
         }
     };
-    deletexmlhttp.send("to_doID=" + id_todelete + "&listid=" + listid);
+    delete_complete_xmlhttp.send("to_doID=" + id_to_change + "&listid=" + listid);
     event.preventDefault();
 }
 

@@ -11,9 +11,10 @@ $priority = $_POST['Priority'];
 $deadline = $_POST['Deadline'];
 $List_id = $_POST['ListID'];
 
-echo $List_id;
 insert_new_toDo($List_id,$description,$priority,$deadline);
 
+$result = getAllToDoByToDoLists($List_id);
+print_r (json_encode($result));
 
 ob_end_flush();
 
