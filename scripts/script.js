@@ -4,7 +4,7 @@ let todolists = document.getElementById("todolists");
 if (todolists != null) {
 
     let forms = document.getElementsByTagName('form');
-    
+
     if (forms != null) {
         forms[2].addEventListener('submit', function (event) {
             let id = forms[2].children[0].value;
@@ -147,8 +147,8 @@ if (todo_sForm != null) {
         let inputs = todo_sForm.getElementsByTagName('div');
 
         for (var i = 0; i < inputs.length - 1; i++){
-            if (inputs[i].children[0].checked) { 
-                if (document.activeElement.getAttribute('value') == "Complete")          
+            if (inputs[i].children[0].checked) {
+                if (document.activeElement.getAttribute('value') == "Complete")
                     delete_completeTodo_s(inputs[i].children[0].value,"complete_toDo.php");
                 else if (document.activeElement.getAttribute('value') == "Delete")
                     delete_completeTodo_s(inputs[i].children[0].value,"delete_toDo.php");
@@ -165,7 +165,7 @@ if (todo_sForm != null) {
         let description = addTask.children[0].value;
         let date = addTask.children[1].value;
         let priority = addTask.children[2].value;
- 
+
         let add_xmlhttp = new XMLHttpRequest();
         add_xmlhttp.open("POST", "newToDo.php", true);
         add_xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -183,7 +183,7 @@ if (todo_sForm != null) {
 }
 
 
-function delete_completeTodo_s(id_to_change,header) { 
+function delete_completeTodo_s(id_to_change,header) {
 
     let delete_complete_xmlhttp = new XMLHttpRequest();
     delete_complete_xmlhttp.open("POST", header, true);
@@ -201,29 +201,27 @@ function delete_completeTodo_s(id_to_change,header) {
 function receiveTodo_s() {
     let todo_s = JSON.parse(this.responseText);
     updateScreen(todo_s);
-} 
+}
 
 function updateScreen(todo_s) {
     todo_sForm.innerHTML = ``;
     if (todo_s.length > 0) {
-        todo_s.forEach(element => {      
+        todo_s.forEach(element => {
             todo_sForm.innerHTML += `<div>
-        <input type="checkbox" id=${element.toDO_id} name="to_do" value="${element.toDO_id}">
-        <label for="${element.toDO_id}"> ${element.toDO_description} 
+        <input class="box" type="checkbox" id=${element.toDO_id} name="to_do" value="${element.toDO_id}">
+        <label for="${element.toDO_id}"> ${element.toDO_description}
         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;${element.toDO_deadline}
         &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
         ${element.toDO_priority}
         &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
         ${element.toDo_isCompleted}
         </label>
-      </div>`;           
+      </div>`;
         });
 
         todo_sForm.innerHTML += `<div id=formbuttons>
-        <input id="Complete Tasks" type="submit" value ="Complete">
-        <input id="Delete Tasks" type="submit" value ="Delete">
-        </div>`; 
+        <input id="CompleteTasks" type="submit" value ="Complete">
+        <input id="DeleteTasks" type="submit" value ="Delete">
+        </div>`;
     }
 }
-
-

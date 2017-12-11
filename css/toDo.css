@@ -20,12 +20,38 @@
 }
 
 #todo_sform{
+
+}
+
+#CompleteTasks{
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2em;
+  font-size: 0.6em;
   padding-bottom: 2px;
   padding-top: 2px;
-  margin-top: 2px;
+  margin-top: 10px;
+  color: 	#000000;
+  opacity:0.9;
+  border-radius: 10px;
+}
+
+
+#DeleteTasks{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.6em;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-top: 10px;
+  color: 	#000000;
+  opacity:0.9;
+  border-radius: 10px;
+}
+
+#box{
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-top: 10px;
   color: 	#000000;
   opacity:0.9;
   border-radius: 10px;

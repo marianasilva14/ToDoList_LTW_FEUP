@@ -11,7 +11,7 @@ CREATE TABLE category (
 
 CREATE TABLE to_do_list (
   toDoList_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  toDoList_name VARCHAR NOT NULL UNIQUE,
+  toDoList_name VARCHAR NOT NULL,
   toDoList_isCompleted BIT NOT NULL DEFAULT 0,
   cat_id INTEGER REFERENCES category NOT NULL,
   usr_id INTEGER REFERENCES usr_info NOT NULL
@@ -30,12 +30,11 @@ CREATE TABLE to_do (
 CREATE TABLE usr_info (
   usr_id INTEGER PRIMARY KEY AUTOINCREMENT,
   usr_name VARCHAR NOT NULL,
-  usr_username VARCHAR NOT NULL UNIQUE,
+  usr_username VARCHAR NOT NULL,
   usr_password VARCHAR NOT NULL,
   usr_age Integer NOT NULL,
   usr_email VARCHAR NOT NULL,
-  usr_photo VARCHAR( 100 ) NOT NULL,
-  UNIQUE (usr_name,usr_username)
+  usr_photo VARCHAR( 100 ) NOT NULL
 );
 
 INSERT INTO category VALUES (1, 'Finances', 'images/finances.png');
