@@ -7,7 +7,8 @@
 <aside id="buttons" >
   <form method="post" action="search.php" >
   <input class="search_bar" type="text" name="search"  id="search" placeholder="Search.." >
-  </form>
+  
+</form>
   <div>
     <a href="sharedLists.php"><img alt="Shared lists" src="images/users.png"></a>
     <a class="shareLists" data-popup-deleteTask-open="popup-1" href="#"><img alt="Share list" src="images/share.png"></a>
@@ -32,7 +33,7 @@
         </select>
 
           <br></br>
-          <input id="submit" type="submit" value ="Share">
+          <input class="submit" id="submitSearch" type="submit" value ="Share">
         </form>
 
         <a class="popup-close-deleteTask" data-popup-close-deleteTask="popup-1" href="#"></a>
@@ -48,18 +49,18 @@
 
         <form action="change_name.php" method="post">
           <input class="inputField" type="text" id="name" required="required" name="name" placeholder="New name">
-          <input class= "editSubmit" id="submit" type="submit" value ="Change">
+          <input class= "submit" id="editNameSubmit" type="submit" value ="Change">
 
         </form>
         <form action="change_email.php" method="post">
           <input class="inputField" type="email" id="email" required="required" name="email" placeholder="New email">
-          <input class= "editSubmit" id="submit" type="submit" value ="Change">
+          <input class= "submit" id="editEmailSubmit" type="submit" value ="Change">
         </form>
 
         <form action="change_password.php" onsubmit="return validate(this);" method="post">
 						<input class="inputField" type="password" minlength="8" id="password" name="password" required="required" placeholder="New password">
 						<input class="inputField" type="password" id="passwordConfirm" name="passwordConfirm" required="required" placeholder="Confirm password">
-						<input id="submit" type="submit" value ="Submit">
+						<input class="submit" id="editPassSubmit" type="submit" value ="Submit">
 				</form>
 
         <a class="popup-close" data-popup-close="popup-1" href="#"></a>

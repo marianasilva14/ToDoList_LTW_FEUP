@@ -97,7 +97,7 @@
   background:rgba(0,0,0,0.75);
 }
 
-.popup #submit {
+.popup .submit, #submitSearch {
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
   font-size: 0.7em;
