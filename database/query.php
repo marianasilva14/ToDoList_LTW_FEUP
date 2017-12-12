@@ -16,9 +16,8 @@ function getAllToDoListsByCategory($cat_id) {
 
 function getAllToDoByToDoLists($toDoList_id) {
   global $dbh;
-  $stmt = $dbh->prepare("SELECT * FROM to_do JOIN to_do_list ON(to_do_list.toDoList_id = to_do.toDoList_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.toDoList_id=?
-  AND usr_info.usr_id=?");
-  $stmt->execute(array($toDoList_id,$_SESSION['usr_info']['usr_id']));
+  $stmt = $dbh->prepare("SELECT * FROM to_do JOIN to_do_list ON(to_do_list.toDoList_id = to_do.toDoList_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.toDoList_id=?");
+  $stmt->execute(array($toDoList_id));
   return $stmt->fetchAll();
 }
 
