@@ -142,13 +142,13 @@ let todo_sForm = document.getElementById("todo_sform");
 let listid = document.getElementById("todolistid");
 
 if (todo_sForm != null) {
-
+    listid = parseInt(listid.innerText);
 
     let request = new XMLHttpRequest();
     request.addEventListener('load', receiveTodo_s);
     request.open('POST', 'getTodosByListID.php', true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    request.send("listid=" + listid.value);
+    request.send("listid=" + listid);
 
 
 
@@ -190,7 +190,7 @@ if (todo_sForm != null) {
                 }
             }
         };
-        add_xmlhttp.send("ListID=" + listid.value + "&Description=" + description + "&Priority=" + priority + "&Deadline=" + date);
+        add_xmlhttp.send("ListID=" + listid + "&Description=" + description + "&Priority=" + priority + "&Deadline=" + date);
 
         event.preventDefault();
     });
@@ -209,7 +209,7 @@ function delete_completeTodo_s(id_to_change, header) {
             updateScreen(todo_s);
         }
     };
-    delete_complete_xmlhttp.send("to_doID=" + id_to_change + "&listid=" + listid.value);
+    delete_complete_xmlhttp.send("to_doID=" + id_to_change + "&listid=" + listid);
     event.preventDefault();
 }
 

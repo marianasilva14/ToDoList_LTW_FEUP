@@ -1,4 +1,6 @@
-<input id="todolistid" type="hidden" value=<?=$toDoListid?>>
+<div>
+<p id="todolistid" hidden><?=$toDoListid?></p>
+</div>
 
 <section id="todo_s">
 <form id="todo_sform">
