@@ -14,7 +14,7 @@ if (todolists != null) {
             xmlhttp.open("POST", "delete_to_do_list.php", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.onreadystatechange = function () {
-                if (this.readyState === 4 || this.status === 200) {
+                if (this.readyState === 4 && this.status === 200) {
                     updateDropdownsAndScreen_Todolists(id);
                 }
             };
@@ -30,7 +30,7 @@ if (todolists != null) {
             xmlhttp.open("POST", "markAsCompleted_to_do_list.php", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.onreadystatechange = function () {
-                if (this.readyState === 4 || this.status === 200) {
+                if (this.readyState === 4 && this.status === 200) {
                     updateDropdownsAndScreen_Todolists(id);
                 }
             };
@@ -47,7 +47,7 @@ if (todolists != null) {
             xmlhttp.open("POST", "newToDoList.php", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.onreadystatechange = function () {
-                if (this.readyState === 4 || this.status === 200) {
+                if (this.readyState === 4 && this.status === 200) {
                     let id_added = this.responseText;
 
                     if (id_added == "Error") {
@@ -173,7 +173,7 @@ if (todo_sForm != null) {
         add_xmlhttp.open("POST", "newToDo.php", true);
         add_xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         add_xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 || this.status === 200) {
+            if (this.readyState === 4 && this.status === 200) {
                 let todo_s = JSON.parse(this.responseText);
 
                 if (todo_s == "Error") {
@@ -197,7 +197,7 @@ function delete_completeTodo_s(id_to_change, header) {
     delete_complete_xmlhttp.open("POST", header, true);
     delete_complete_xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     delete_complete_xmlhttp.onreadystatechange = function () {
-        if (this.readyState === 4 || this.status === 200) {
+        if (this.readyState === 4 && this.status === 200) {
             let todo_s = JSON.parse(this.responseText);
             updateScreen(todo_s);
         }
@@ -247,4 +247,6 @@ function updateScreen(todo_s) {
         <input id="DeleteTasks" type="submit" value ="Delete">
         </div>`;
     }
+
+    displayCalendar();
 }
