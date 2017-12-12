@@ -124,8 +124,8 @@ function delete_to_do_list($to_do_listID){
 function delete_toDo($to_doID){
   global $dbh;
 
-  $stmt2 =$dbh->prepare("DELETE FROM to_do WHERE toDO_id IN (SELECT toDO_id FROM to_do JOIN usr_info ON(usr_info.usr_id = to_do.usr_id) WHERE usr_info.usr_id=? AND to_do.toDO_id=?)");
-  $stmt2->execute(array($_SESSION['usr_info']['usr_id'], $to_doID));
+  $stmt2 =$dbh->prepare("DELETE FROM to_do WHERE toDO_id IN (SELECT toDO_id FROM to_do WHERE to_do.toDO_id=?)");
+  return $stmt2->execute(array($to_doID));
 }
 
 
