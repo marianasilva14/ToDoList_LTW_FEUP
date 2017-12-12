@@ -21,13 +21,6 @@ function getAllToDoByToDoLists($toDoList_id) {
   return $stmt->fetchAll();
 }
 
-function qq() {
-  global $dbh;
-  $stmt = $dbh->prepare("SELECT * FROM share");
-  $stmt->execute();
-  return $stmt->fetchAll();
-}
-
 function getAllToDoLists() {
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE usr_info.usr_id=?");
@@ -44,10 +37,6 @@ function getAllUsers() {
 
 function insertShareList($toDoList,$userId){
   global $dbh;
-  /*$stmt = $dbh->prepare("SELECT * FROM usr_info WHERE toDoList_id=? AND usr_id=?");
-  echo $stmt;
-  $stmt->execute(array($toDoList, $userId));*/
-
   $stmt =$dbh->prepare("INSERT INTO share(toDoList_id,usr_id)
   VALUES (?,?)");
   $stmt->execute(array($toDoList, $userId));
@@ -93,13 +82,6 @@ function getCategoryName($cat_id){
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM category WHERE cat_id=?");
   $stmt->execute(array($cat_id));
-  return $stmt->fetchAll();
-}
-
-function getToDoListName($ToDoList_id){
-  global $dbh;
-  $stmt = $dbh->prepare("SELECT * FROM to_do_list WHERE toDoList_id=?");
-  $stmt->execute(array($ToDoList_id));
   return $stmt->fetchAll();
 }
 

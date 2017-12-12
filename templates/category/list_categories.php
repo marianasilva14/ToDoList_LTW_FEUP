@@ -39,7 +39,7 @@
       </div>
     </div>
 
-<!--  <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>-->
+  <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>
   <a href="completedTasks.php"><img src="images/completed.png"></a>
   <a class="edit_profile" data-popup-open="popup-1" href="#"><img src="images/edit.png"></a>
 

@@ -64,21 +64,10 @@ footer {
   order: 5;
 }
 
-#messages article {
+#messages  {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
-  color: white;
-}
-
-#messages article p {
-  margin: 2px;
-  padding: 0.5em;
-}
-
-#messages article.error {
-  background-color: #F66;
-}
-
-#messages article.success {
-  background-color: #6D6;
-
+  color: #D8000C;
+  background-color: #FFBABA;
 }
