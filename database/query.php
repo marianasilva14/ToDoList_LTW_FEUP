@@ -56,8 +56,9 @@ function insertShareList($toDoList,$userId){
 
 function getShareList(){
   global $dbh;
-  $stmt =$dbh->prepare("SELECT * FROM share JOIN to_do_list ON (share.toDoList_id = to_do_list.toDoList_id)");
-  $stmt->execute();
+  $stmt =$dbh->prepare("SELECT * FROM share JOIN to_do_list ON (share.toDoList_id = to_do_list.toDoList_id)
+  JOIN usr_info ON (share.usr_id = usr_info.usr_id) WHERE usr_info.usr_id=?");
+  $stmt->execute(array($_SESSION['usr_info']['usr_id']));
   return $stmt->fetchAll();
 }
 

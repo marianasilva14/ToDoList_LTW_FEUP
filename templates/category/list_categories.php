@@ -1,4 +1,5 @@
-<?php ?>
+<?php foreach ($allUsers as $user) { ?>
+<?php print_r( $user['usr_id']); }?>
 <aside id="categories">
     <?php foreach ($categories as $category) { ?>
       <a href="category.php?cat_id=<?=$category['cat_id']?>"><img src="<?php echo $category['cat_photo']?>">&nbsp; &nbsp; &nbsp; &nbsp;<?=$category['cat_name']?></a>
@@ -17,20 +18,18 @@
 
         <form id=delete_task action="share.php" method="post">
 
-        <select class="dropdown" id="allLists" name="allLists" >
+        <select class="dropdown" id="list_id" name="list_id" >
           <?php foreach ($allLists as $list) { ?>
 
-           <li> <option class="inputField-share" id="list_id" name="list_id" href="#">
-             <?=$list['toDoList_id']?> : <?=$list['toDoList_name']?></option></li>
-             <input value ="<?=$list['toDoList_id']?>" type="hidden" name="list_id"> </input>
+            <option class="inputField-share" id="list_id" value="<?=$list['toDoList_id']?>" href="#">
+             <?=$list['toDoList_name']?></option>
            <?php } ?>
         </select>
 
-        <select class="dropdown" id="users" name="users" >
+        <select class="dropdown" id="user_id" name="user_id" >
           <?php foreach ($allUsers as $user) { ?>
-           <li> <option class="inputField-share" id="user_id" name="user_id" href="#">
-             <?=$user['usr_id']?> : <?=$user['usr_name']?></option></li>
-             <input value ="<?=$user['usr_id']?>" type="hidden" name="user_id" />
+            <option class="inputField-share" id="user_id" value="<?=$user['usr_id']?>" href="#">
+             <?=$user['usr_name']?></option>
            <?php } ?>
         </select>
 
