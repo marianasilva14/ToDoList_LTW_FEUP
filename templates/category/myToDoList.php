@@ -3,6 +3,8 @@
 <section id="todo_s">
 <form id="todo_sform">
 </form>
+<div id="calendar">
+</div>
 </section>
 
 <section id="buttons_MyCategory">
@@ -27,8 +29,4 @@
   </div>
 
   <a href="back.php"><img src="images/back.png"></a>
-</section>
-
-<section id="calendar">
-
 </section>

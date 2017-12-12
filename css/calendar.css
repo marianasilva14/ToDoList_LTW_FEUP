@@ -1,12 +1,9 @@
 #calendar{
-  grid-area: user;
-  grid-column: 3;
-  margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 800px;
   margin-bottom: 5em;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Poppins', sans-serif;
-  order:3;
+  order:2;
 }
 
 .monthPre{
