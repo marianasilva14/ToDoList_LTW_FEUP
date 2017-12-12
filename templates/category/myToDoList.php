@@ -1,6 +1,4 @@
-<div>
-<p id="todolistid" hidden><?=$toDoListid?></p>
-</div>
+<input id="todolistid" type="hidden" value=<?=$toDoListid?>>
 
 <section id="todo_s">
 <form id="todo_sform">
@@ -19,9 +17,9 @@
         <input class="inputField-addTask" type="text" id="Description" required="required" name="Description" placeholder="Description">
         <input class="deadline" type="date" name="Deadline" id="Deadline">
         <select class=priority name="Priority" >
-            <li><option class="priority1" name="Priority" id="Priority" href="#">High priority</option></li>
-            <li><option class="priority2" name="Priority" id="Priority" href="#">Medium priority</option></li>
-            <li><option class="priority3" name="Priority" id="Priority" href="#">Low priority</option></li>
+            <li><option class="priority1" name="Priority" id="Priority" value="1" href="#">High priority</option></li>
+            <li><option class="priority2" name="Priority" id="Priority" value="2" href="#">Medium priority</option></li>
+            <li><option class="priority3" name="Priority" id="Priority" value="3" href="#">Low priority</option></li>
         </select>
         <br></br>
         <input id="submit" type="submit" value ="Add Task">

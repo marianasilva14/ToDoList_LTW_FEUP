@@ -21,7 +21,7 @@ CREATE TABLE to_do_list (
 CREATE TABLE to_do (
   toDO_id INTEGER PRIMARY KEY AUTOINCREMENT,
   toDO_description VARCHAR NOT NULL,
-  toDO_priority VARCHAR NOT NULL,
+  toDO_priority INTEGER NOT NULL,
   toDO_deadline DATE,
   toDo_isCompleted BIT NOT NULL DEFAULT 0,
   toDoList_id INTEGER REFERENCES to_do_list NOT NULL,
