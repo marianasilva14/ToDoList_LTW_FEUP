@@ -51,7 +51,7 @@ if (todolists != null) {
                     let id_added = this.responseText;
 
                     if (id_added == "Error") {
-                        alert("Error: Check if the name of the list you tryed to create only contains letters and spaces.\nTry again!");
+                        alert("Error: Check if the name of the list you tryed to create only contains letters,numbers and spaces.\nTry again!");
                     } else if (id_added != "" && id_added != null)
                         add_to_do_list(id_added, category, name);
                 }
@@ -175,9 +175,9 @@ if (todo_sForm != null) {
         add_xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 || this.status === 200) {
                 let todo_s = JSON.parse(this.responseText);
-                
+
                 if (todo_s == "Error") {
-                    alert("Error: Check if the description of the task you tryed to create only contains letters and spaces.\nTry again!");
+                    alert("Error: Check if the description of the task you tryed to create only contains letters,numbers and spaces.\nTry again!");
                 } else {
                     updateScreen(todo_s);
                 }

@@ -10,7 +10,7 @@ include_once('database/query.php');
 $name = $_POST['name'];
 $category = $_POST['category'];
 
-if ( !preg_match ("/^[a-zA-Z\s]+$/", $name) ) {
+if ( !preg_match ("/^[a-zA-Z0-9\s]+$/", $name) ) {
   echo "Error";
 }
 else{

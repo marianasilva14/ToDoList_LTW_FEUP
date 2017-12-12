@@ -11,7 +11,7 @@ $priority = $_POST['Priority'];
 $deadline = $_POST['Deadline'];
 $List_id = $_POST['ListID'];
 
-if ( !preg_match ("/^[a-zA-Z\s]+$/", $description) ) {
+if ( !preg_match ("/^[a-zA-Z0-9\s]+$/", $description) ) {
     print_r(json_encode("Error"));
 }
 else{
