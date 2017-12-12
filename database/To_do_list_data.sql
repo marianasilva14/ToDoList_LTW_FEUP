@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS category;
 DROP TABLE IF EXISTS to_do;
 DROP TABLE IF EXISTS usr_info;
 DROP TABLE IF EXISTS to_do_list;
+DROP TABLE IF EXISTS share;
 
 CREATE TABLE category (
   cat_id INTEGER PRIMARY KEY,
@@ -35,6 +36,12 @@ CREATE TABLE usr_info (
   usr_age Integer NOT NULL,
   usr_email VARCHAR NOT NULL,
   usr_photo VARCHAR( 100 ) NOT NULL
+);
+
+CREATE TABLE share (
+  share_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  toDoList_id INTEGER REFERENCES to_do_list NOT NULL,
+  usr_id INTEGER REFERENCES usr_info NOT NULL
 );
 
 INSERT INTO category VALUES (1, 'Finances', 'images/finances.png');

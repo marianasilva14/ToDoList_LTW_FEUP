@@ -1,3 +1,4 @@
+<?php ?>
 <aside id="categories">
     <?php foreach ($categories as $category) { ?>
       <a href="category.php?cat_id=<?=$category['cat_id']?>"><img src="<?php echo $category['cat_photo']?>">&nbsp; &nbsp; &nbsp; &nbsp;<?=$category['cat_name']?></a>
@@ -9,8 +10,37 @@
   <input class="search_bar" type="text" name="search"  id="search" placeholder="Search.." >
   </form>
   <div>
-  
-  <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>
+    <a href="sharedLists.php"><img src="images/users.png"></a>
+    <a class="shareLists" data-popup-deleteTask-open="popup-1" href="#"><img src="images/share.png"></a>
+    <div class="popup-deleteTask" data-popup-deleteTask="popup-1">
+      <div class="popup-inner-deleteTask">
+
+        <form id=delete_task action="share.php" method="post">
+
+        <select class="dropdown" id="allLists" name="allLists" >
+          <?php foreach ($allLists as $list) { ?>
+
+           <li> <option class="inputField-share" value ="<?=$list['toDoList_id']?>" id="list_id" name="list_id" href="#">
+             <?=$list['toDoList_id']?> : <?=$list['toDoList_name']?></option></li>
+           <?php } ?>
+        </select>
+
+        <select class="dropdown" id="users" name="users" >
+          <?php foreach ($allUsers as $user) { ?>
+           <li> <option class="inputField-share" <?=$user['usr_name']?> id="user_id" name="user_id" href="#">
+             <?=$user['usr_id']?> : <?=$user['usr_name']?></option></li>
+           <?php } ?>
+        </select>
+
+          <br></br>
+          <input id="submit" type="submit" value ="Share">
+        </form>
+
+        <a class="popup-close-deleteTask" data-popup-close-deleteTask="popup-1" href="#"></a>
+      </div>
+    </div>
+
+<!--  <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>-->
   <a href="completedTasks.php"><img src="images/completed.png"></a>
   <a class="edit_profile" data-popup-open="popup-1" href="#"><img src="images/edit.png"></a>
 

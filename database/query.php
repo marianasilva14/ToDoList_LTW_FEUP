@@ -22,6 +22,45 @@ function getAllToDoByToDoLists($toDoList_id) {
   return $stmt->fetchAll();
 }
 
+function qq() {
+  global $dbh;
+  $stmt = $dbh->prepare("SELECT * FROM share");
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
+
+function getAllToDoLists() {
+  global $dbh;
+  $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE usr_info.usr_id=?");
+  $stmt->execute(array($_SESSION['usr_info']['usr_id']));
+  return $stmt->fetchAll();
+}
+
+function getAllUsers() {
+  global $dbh;
+  $stmt = $dbh->prepare("SELECT * FROM usr_info WHERE usr_id <>?");
+  $stmt->execute(array($_SESSION['usr_info']['usr_id']));
+  return $stmt->fetchAll();
+}
+
+function insertShareList($toDoList,$userId){
+  global $dbh;
+  /*$stmt = $dbh->prepare("SELECT * FROM usr_info WHERE toDoList_id=? AND usr_id=?");
+  echo $stmt;
+  $stmt->execute(array($toDoList, $userId));*/
+
+  $stmt =$dbh->prepare("INSERT INTO share(toDoList_id,usr_id)
+  VALUES (?,?)");
+  $stmt->execute(array($toDoList, $userId));
+}
+
+function getShareList(){
+  global $dbh;
+  $stmt =$dbh->prepare("SELECT * FROM share JOIN to_do_list ON (share.toDoList_id = to_do_list.toDoList_id)");
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
+
 function getAllToDoListsCompleted() {
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE usr_info.usr_id=? AND to_do_list.toDoList_isCompleted=?");

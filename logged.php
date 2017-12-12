@@ -4,6 +4,8 @@ include_once('database/connection.php');
 include_once('database/query.php');
 
 $categories = getAllCategories();
+$allLists = getAllToDoLists();
+$allUsers = getAllUsers();
 
 include_once('templates/common/header.php');
 include_once('templates/category/list_categories.php');
