@@ -1,4 +1,5 @@
 <?php
+
 function getAllCategories() {
   global $dbh;
   $stmt = $dbh->prepare("SELECT * FROM category ORDER BY cat_name");
@@ -66,8 +67,10 @@ function getAllToDoListsNotCompleted() {
 
 function getToDoList($ToDoList_name) {
   global $dbh;
-  $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN category ON(category.cat_id = to_do_list.cat_id) JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.toDoList_name=? AND usr_info.usr_id=?");
-  $stmt->execute(array($ToDoList_name,$_SESSION['usr_info']['usr_id']));
+  $stmt = $dbh->prepare("SELECT * FROM to_do_list JOIN category ON(category.cat_id = to_do_list.cat_id)
+  JOIN usr_info ON(usr_info.usr_id = to_do_list.usr_id) WHERE to_do_list.toDoList_name=? AND usr_info.usr_id=?");
+
+  $stmt->execute(array($ToDoList_name, $_SESSION['usr_info']['usr_id']));
   return $stmt->fetchAll();
 }
 

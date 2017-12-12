@@ -1,13 +1,12 @@
 <?php
 ob_start();
-
+include_once('includes/session_start.php');
 include_once('database/connection.php');
 include_once('database/query.php');
 
 $search = $_POST['search'];
 
-$toDoList= getToDoList($search);
-$toDo= getToDo($search);
+$toDoList= getToDoList("PersonalProject");
 
 if($toDo[0]['toDO_description']==$search){
 
@@ -24,6 +23,7 @@ else if($toDoList[0]['toDoList_name']==$search ){
   include_once('templates/common/footer.php');
 }
 else{
+  //echo var_dump("NO ELSE"); die();
     header("Location: logged.php");
 }
 
