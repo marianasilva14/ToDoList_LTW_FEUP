@@ -1,6 +1,6 @@
 <aside id="categories">
     <?php foreach ($categories as $category) { ?>
-      <a href="category.php?cat_id=<?=$category['cat_id']?>"><img src="<?php echo $category['cat_photo']?>">&nbsp; &nbsp; &nbsp; &nbsp;<?=$category['cat_name']?></a>
+      <a href="category.php?cat_id=<?=$category['cat_id']?>"><img alt="category photo" src="<?php echo $category['cat_photo']?>">&nbsp; &nbsp; &nbsp; &nbsp;<?=$category['cat_name']?></a>
     <?php } ?>
 </aside>
 
@@ -9,8 +9,8 @@
   <input class="search_bar" type="text" name="search"  id="search" placeholder="Search.." >
   </form>
   <div>
-    <a href="sharedLists.php"><img src="images/users.png"></a>
-    <a class="shareLists" data-popup-deleteTask-open="popup-1" href="#"><img src="images/share.png"></a>
+    <a href="sharedLists.php"><img alt="Shared lists" src="images/users.png"></a>
+    <a class="shareLists" data-popup-deleteTask-open="popup-1" href="#"><img alt="Share list" src="images/share.png"></a>
     <div class="popup-deleteTask" data-popup-deleteTask="popup-1">
       <div class="popup-inner-deleteTask">
 
@@ -39,9 +39,9 @@
       </div>
     </div>
 
-  <a href="allTasks.php"><img src="images/viewAllTasks.png"></a>
-  <a href="completedTasks.php"><img src="images/completed.png"></a>
-  <a class="edit_profile" data-popup-open="popup-1" href="#"><img src="images/edit.png"></a>
+  <a href="allTasks.php"><img alt="All tasks" src="images/viewAllTasks.png"></a>
+  <a href="completedTasks.php"><img alt="Completed tasks" src="images/completed.png"></a>
+  <a class="edit_profile" data-popup-open="popup-1" href="#"><img alt="edit profile" src="images/edit.png"></a>
 
   <div class="popup" data-popup="popup-1">
       <div class="popup-inner">
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-  <a href="action_logout.php"><img src="images/logout.jpg"></a>
+  <a href="action_logout.php"><img alt="Button logout" src="images/logout.jpg"></a>
 </div>
 </aside>
 
