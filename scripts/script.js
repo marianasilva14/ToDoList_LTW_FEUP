@@ -64,8 +64,11 @@ if (todolists != null) {
 
 function updateDropdownsAndScreen_Todolists(id) {
     let index = 0;
+
     for (index; index < list.length; index++) {
-        if (id == parseInt(list[index].innerText, 10)) {
+        currentId=list[index].firstElementChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.innerText;
+
+        if (id == parseInt(currentId, 10)) {
             list[index].parentNode.removeChild(list[index]);
             break;
         }
@@ -97,12 +100,14 @@ function add_to_do_list(id_added, category, name) {
                 <a class="table_toDo" href="toDoList.php?toDoList_id=${id_added}">
                     <div class="front">
                         <div class="box1">
-                            <p>${id_added} : ${name}</p>
+                            <p hidden>${id_added}</p>
+                            <p>${name}</p>
                         </div>
                     </div>
                     <div class="back">
                         <div class="box2">
-                            <p>${id_added} : ${name}</p>
+                            <p hidden>${id_added}</p>
+                            <p>${name}</p>
                         </div>
                     </div>
                 </a>
@@ -113,12 +118,14 @@ function add_to_do_list(id_added, category, name) {
 
     var selectobject = document.getElementById("todolistToEliminate");
     var option = document.createElement('option');
-    option.text = option.value = id_added + " : " + name;
+    option.text = name;
+    option.value = id_added;
     selectobject.appendChild(option);
 
     var selectobject = document.getElementById("todolistToMark");
     var option = document.createElement('option');
-    option.text = option.value = id_added + " : " + name;
+    option.text = name;
+    option.value = id_added;
     selectobject.appendChild(option);
 }
 

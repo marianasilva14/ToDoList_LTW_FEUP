@@ -1,26 +1,27 @@
-
 <section id="todolists">
-    <?php foreach ($toDoLists as $toDoList) { ?>
-      <li>
-       <div class="wrapper">
-       <div class="col_third">
-        <div class="hover panel">
-       <a class="table_toDo" href="toDoList.php?toDoList_id=<?=$toDoList['toDoList_id']?>">
-       <div class="front">
-         <div class="box1">
-           <p><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></p>
-         </div>
-       </div>
-       <div class="back">
-         <div class="box2">
-           <p><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></p>
-         </div>
-       </div></a>
+<?php foreach ($toDoLists as $toDoList) { ?>
+  <li>
+   <div class="wrapper">
+   <div class="col_third">
+    <div class="hover panel">
+   <a class="table_toDo" href="toDoList.php?toDoList_id=<?=$toDoList['toDoList_id']?>">
+   <div class="front">
+     <div class="box1">
+       <p hidden><?=$toDoList['toDoList_id']?></p>
+       <p><?=$toDoList['toDoList_name']?></p>
      </div>
    </div>
+   <div class="back">
+     <div class="box2">
+       <p hidden><?=$toDoList['toDoList_id']?></p>
+       <p><?=$toDoList['toDoList_name']?></p>
+     </div>
+   </div></a>
  </div>
-   <?php  } ?>
- </li>
+</div>
+</div>
+<?php  } ?>
+</li>
 </section>
 
 
@@ -37,7 +38,7 @@
              </select>
            <input class="inputField-addTask" type="text" id="Name" required="required" name="Name" placeholder="Name">
            <br></br>
-           <input id="submit" type="submit" value ="AddTask">
+           <input id="submit" type="submit" value ="Add List">
        </form>
 
          <a class="popup-close-addTask" data-popup-close-addTask="popup-1" href="#"></a>
@@ -52,7 +53,7 @@
           
       <select class="dropdown" id="todolistToMark" name="todolistToMark" >
       <?php foreach ($toDoLists as $toDoList) { ?>
-       <li> <option class="inputField-deleteTask" id="todolistToMark_id" name="todolistToMark_id" href="#"><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></option></li>
+        <li> <option class="inputField-deleteTask" id="todolistToMark_id" name="todolistToMark_id" href="#" value="<?=$toDoList['toDoList_id']?>"><?=$toDoList['toDoList_name']?></option></li>
        <?php } ?>
     </select>
 
@@ -72,12 +73,12 @@
      
       <select class="dropdown" id="todolistToEliminate" name="todolistToElimnate" >
         <?php foreach ($toDoLists as $toDoList) { ?>
-         <li> <option class="inputField-deleteTask" id="to_do_list_delete_ID" name="to_do_list_delete_ID" href="#"><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></option></li>
+          <li> <option class="inputField-deleteTask" id="todolistToMark_id" name="todolistToMark_id" href="#" value="<?=$toDoList['toDoList_id']?>"><?=$toDoList['toDoList_name']?></option></li>
          <?php } ?>
       </select>
 
         <br></br>
-        <input id="submit" type="submit" value ="DeleteTask">
+        <input id="submit" type="submit" value ="Delete">
       </form>
 
       <a class="popup-close-deleteTask" data-popup-close-deleteTask="popup-1" href="#"></a>

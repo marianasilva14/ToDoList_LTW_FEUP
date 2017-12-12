@@ -7,12 +7,12 @@
    <a class="table_toDo" href="toDoList.php?toDoList_id=<?=$toDoList['toDoList_id']?>">
    <div class="front">
      <div class="box1">
-       <p><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></p>
+       <p><?=$toDoList['toDoList_name']?></p>
      </div>
    </div>
    <div class="back">
      <div class="box2">
-       <p><?=$toDoList['toDoList_id']?> : <?=$toDoList['toDoList_name']?></p>
+       <p><?=$toDoList['toDoList_name']?></p>
      </div>
    </div></a>
  </div>
