@@ -20,15 +20,17 @@
         <select class="dropdown" id="allLists" name="allLists" >
           <?php foreach ($allLists as $list) { ?>
 
-           <li> <option class="inputField-share" value ="<?=$list['toDoList_id']?>" id="list_id" name="list_id" href="#">
+           <li> <option class="inputField-share" id="list_id" name="list_id" href="#">
              <?=$list['toDoList_id']?> : <?=$list['toDoList_name']?></option></li>
+             <input value ="<?=$list['toDoList_id']?>" type="hidden" name="list_id"> </input>
            <?php } ?>
         </select>
 
         <select class="dropdown" id="users" name="users" >
           <?php foreach ($allUsers as $user) { ?>
-           <li> <option class="inputField-share" <?=$user['usr_name']?> id="user_id" name="user_id" href="#">
+           <li> <option class="inputField-share" id="user_id" name="user_id" href="#">
              <?=$user['usr_id']?> : <?=$user['usr_name']?></option></li>
+             <input value ="<?=$user['usr_id']?>" type="hidden" name="user_id" />
            <?php } ?>
         </select>
 
