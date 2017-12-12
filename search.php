@@ -6,8 +6,8 @@ include_once('database/query.php');
 
 $search = $_POST['search'];
 
-$toDoList= getToDoList("PersonalProject");
-
+$toDoList= getToDoList($search);
+$toDo=getToDo($search);
 if($toDo[0]['toDO_description']==$search){
 
   include_once('templates/common/header.php');
