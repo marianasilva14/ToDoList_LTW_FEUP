@@ -14,3 +14,7 @@
       <td><class="table_toDo_deadline" type="text" >&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<?=$toDo[0]['toDO_deadline']?></td>
      </tr>
 </table>
+
+<aside id="buttons_MyCategory">
+  <a href="back.php"><img src="images/back.png"></a>
+</aside>
