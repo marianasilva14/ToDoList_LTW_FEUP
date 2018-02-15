@@ -19,11 +19,11 @@ web.fe.up.pt/~up201506197/ToDoList_LTW_FEUP/
 
 To access the website, the following credentials can be used:
 
-username:JLopes
-password:jlopestest
+username: JLopes
+password: jlopestest
 
-username:AOR
-password:aorteste
+username: AOR
+password: aorteste
 
 
 ![Demo](https://media.giphy.com/media/l49K0EEUPSDouzAJ2/giphy.gif)
