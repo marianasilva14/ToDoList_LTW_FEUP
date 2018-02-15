@@ -29,3 +29,10 @@ password: aorteste
 ![Demo](https://media.giphy.com/media/l49K0EEUPSDouzAJ2/giphy.gif)
 
 ![Demo](https://media.giphy.com/media/3o751YQOIjgVu2nTOw/giphy.gif)
+
+#### Group members
+
+- Francisca Leão Cerquinho Ribeiro da Fonseca - up201505791
+- Mariana Lopes Silva - up201506197
+- Rúben José da Silva Torres - up201405612
+
